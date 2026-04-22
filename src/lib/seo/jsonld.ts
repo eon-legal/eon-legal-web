@@ -17,12 +17,36 @@ export function jsonLdScript<T extends Record<string, unknown>>(
 // Common schema builders for legal-tech landing pages
 // ──────────────────────────────────────────────────────────────
 
-export function organizationSchema() {
+export function organizationSchema(): string {
   return jsonLdScript({
     "@type": "Organization",
     name: siteConfig.name,
     url: siteConfig.url,
     logo: `${siteConfig.url}${siteConfig.logo}`,
+    description: siteConfig.description,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: siteConfig.contact.address,
+      postalCode: siteConfig.contact.postalCode,
+      addressLocality: siteConfig.contact.city,
+      addressRegion: siteConfig.contact.region,
+      addressCountry: siteConfig.contact.countryCode,
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: siteConfig.contact.phone,
+      contactType: "Customer Service",
+      email: siteConfig.contact.email,
+      availableLanguage: ["es", "en"],
+      areaServed: "ES",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: siteConfig.rating.value,
+      reviewCount: siteConfig.rating.count,
+      bestRating: siteConfig.rating.bestRating,
+      worstRating: siteConfig.rating.worstRating,
+    },
     sameAs: [
       // Add social profiles here when available
       // "https://twitter.com/eonlegal",
@@ -32,17 +56,21 @@ export function organizationSchema() {
 }
 
 export function legalServiceSchema({
+  name = siteConfig.name,
   description,
-  providerName = siteConfig.name,
+  url = siteConfig.url,
+  serviceType = "Legal Technology",
 }: {
+  name?: string;
   description: string;
-  providerName?: string;
-}) {
+  url?: string;
+  serviceType?: string;
+}): string {
   return jsonLdScript({
     "@type": "LegalService",
-    name: providerName,
+    name,
     description,
-    url: siteConfig.url,
+    url,
     provider: {
       "@type": "Organization",
       name: siteConfig.name,
@@ -52,7 +80,7 @@ export function legalServiceSchema({
       "@type": "Country",
       name: "Spain",
     },
-    serviceType: "Legal Technology",
+    serviceType,
   });
 }
 
@@ -64,7 +92,7 @@ export function webPageSchema({
   title: string;
   description: string;
   url?: string;
-}) {
+}): string {
   return jsonLdScript({
     "@type": "WebPage",
     name: title,
@@ -81,7 +109,7 @@ export function webPageSchema({
 
 export function faqPageSchema(
   items: Array<{ question: string; answer: string }>
-) {
+): string {
   return jsonLdScript({
     "@type": "FAQPage",
     mainEntity: items.map((item) => ({
@@ -91,6 +119,22 @@ export function faqPageSchema(
         "@type": "Answer",
         text: item.answer,
       },
+    })),
+  });
+}
+
+export function breadcrumbSchema(
+  items: ReadonlyArray<{ name: string; url: string }>
+): string {
+  return jsonLdScript({
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: item.url.startsWith("http")
+        ? item.url
+        : `${siteConfig.url}${item.url}`,
     })),
   });
 }
