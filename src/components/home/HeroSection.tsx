@@ -1,3 +1,5 @@
+import Image from "next/image";
+import { ReviewBadge } from "@/components/ui/ReviewBadge";
 import { siteConfig } from "@/lib/config";
 
 export function HeroSection(): React.ReactElement {
@@ -50,6 +52,8 @@ export function HeroSection(): React.ReactElement {
             </a>
           </div>
 
+          <ReviewBadge />
+
           <dl className="flex flex-wrap gap-x-10 gap-y-4 pt-6 text-sm text-muted">
             <div className="flex items-baseline gap-2">
               <dt className="font-mono text-xs uppercase tracking-widest text-subtle">
@@ -78,26 +82,47 @@ export function HeroSection(): React.ReactElement {
           aria-label="Especialidades destacadas"
           className="relative hidden lg:block"
         >
-          <div className="sticky top-28 space-y-6 rounded-md border border-border bg-surface p-8">
-            <p className="font-mono text-xs uppercase tracking-widest text-subtle">
-              Especialidades
-            </p>
-            <ul className="space-y-5 text-base leading-relaxed">
-              {hero_specialties.map((item, i) => (
-                <li
-                  key={item.title}
-                  className="flex gap-4 border-b border-border pb-5 last:border-0 last:pb-0"
-                >
-                  <span className="font-mono text-xs text-subtle pt-1">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <div className="space-y-1">
-                    <p className="font-medium text-foreground">{item.title}</p>
-                    <p className="text-sm text-muted">{item.description}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
+          <div className="sticky top-28 space-y-6">
+            <figure className="relative aspect-[4/5] w-full overflow-hidden rounded-md border border-border bg-surface">
+              <Image
+                src="https://images.unsplash.com/photo-1589216532372-1c2a367900d9?auto=format&fit=crop&w=1400&q=80"
+                alt="Detalle arquitectónico de biblioteca jurídica, atmósfera sobria y profesional."
+                fill
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                className="object-cover grayscale"
+                priority={false}
+              />
+              <figcaption className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-4 border-t border-border bg-background/80 px-6 py-4 backdrop-blur">
+                <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-subtle">
+                  Despacho · {siteConfig.contact.city}
+                </span>
+                <span className="font-display text-sm font-semibold text-foreground">
+                  Estudio jurídico
+                </span>
+              </figcaption>
+            </figure>
+
+            <div className="space-y-6 rounded-md border border-border bg-surface p-8">
+              <p className="font-mono text-xs uppercase tracking-widest text-subtle">
+                Especialidades
+              </p>
+              <ul className="space-y-5 text-base leading-relaxed">
+                {hero_specialties.map((item, i) => (
+                  <li
+                    key={item.title}
+                    className="flex gap-4 border-b border-border pb-5 last:border-0 last:pb-0"
+                  >
+                    <span className="font-mono text-xs text-subtle pt-1">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <div className="space-y-1">
+                      <p className="font-medium text-foreground">{item.title}</p>
+                      <p className="text-sm text-muted">{item.description}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </aside>
       </div>
