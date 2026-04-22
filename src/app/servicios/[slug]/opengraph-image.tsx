@@ -1,3 +1,5 @@
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 import { ImageResponse } from "next/og";
 import { siteConfig } from "@/lib/config";
 import { getServiceById, serviceCategories } from "@/lib/data/services";
@@ -23,6 +25,11 @@ export default async function Image({
   const index = service?.index ?? "00";
   const eyebrow = service?.shortTitle ?? "Despacho de extranjería";
 
+  const [poppinsSemiBold, poppinsMedium] = await Promise.all([
+    readFile(join(process.cwd(), "public/fonts/Poppins-SemiBold.ttf")),
+    readFile(join(process.cwd(), "public/fonts/Poppins-Medium.ttf")),
+  ]);
+
   return new ImageResponse(
     (
       <div
@@ -35,8 +42,7 @@ export default async function Image({
           padding: "72px 80px",
           background: "#000000",
           color: "#FFFFFF",
-          fontFamily:
-            'system-ui, -apple-system, "Segoe UI", sans-serif',
+          fontFamily: "Poppins",
           position: "relative",
         }}
       >
@@ -138,6 +144,22 @@ export default async function Image({
         </div>
       </div>
     ),
-    { ...size },
+    {
+      ...size,
+      fonts: [
+        {
+          name: "Poppins",
+          data: poppinsMedium,
+          style: "normal",
+          weight: 500,
+        },
+        {
+          name: "Poppins",
+          data: poppinsSemiBold,
+          style: "normal",
+          weight: 600,
+        },
+      ],
+    },
   );
 }
