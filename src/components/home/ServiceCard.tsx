@@ -25,13 +25,7 @@ export function ServiceCard({ service }: ServiceCardProps): React.ReactElement {
         id={`service-${service.id}-title`}
         className="mt-8 font-display text-2xl font-semibold leading-tight tracking-tight text-foreground"
       >
-        <Link
-          href={`/servicios/${service.id}`}
-          className="outline-none before:absolute before:inset-0 before:content-[''] focus-visible:text-accent-hover"
-          aria-label={`Ver detalle del servicio: ${service.title}`}
-        >
-          {service.title}
-        </Link>
+        {service.title}
       </h3>
 
       <p className="mt-4 text-pretty text-sm leading-relaxed text-muted">
@@ -51,18 +45,25 @@ export function ServiceCard({ service }: ServiceCardProps): React.ReactElement {
       </ul>
 
       <div className="mt-8 flex items-center justify-between border-t border-border pt-6">
-        <span
-          aria-hidden="true"
-          className="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-foreground"
+        <Link
+          href={`/servicios/${service.id}`}
+          aria-label={`Ver detalle del servicio: ${service.title}`}
+          className="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-foreground outline-none before:absolute before:inset-0 before:content-[''] focus-visible:text-accent-hover"
         >
           <span className="relative inline-block pb-1">
             Ver servicio
-            <span className="absolute inset-x-0 bottom-0 h-px origin-left scale-x-100 bg-foreground transition-transform duration-500 group-hover:scale-x-0" />
+            <span
+              aria-hidden="true"
+              className="absolute inset-x-0 bottom-0 h-px origin-left scale-x-100 bg-foreground transition-transform duration-500 group-hover:scale-x-0"
+            />
           </span>
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-border-strong text-foreground transition-all duration-300 group-hover:translate-x-1 group-hover:border-foreground group-hover:bg-foreground group-hover:text-background">
+          <span
+            aria-hidden="true"
+            className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-border-strong text-foreground transition-all duration-300 group-hover:translate-x-1 group-hover:border-foreground group-hover:bg-foreground group-hover:text-background"
+          >
             →
           </span>
-        </span>
+        </Link>
       </div>
     </article>
   );
