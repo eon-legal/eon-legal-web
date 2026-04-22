@@ -15,6 +15,8 @@ export const siteConfig = {
       : "http://localhost:3000"),
   locale: "en_US",
   twitterHandle: "@eonlegal",
+  logo: "/logo/logo.png",
+  logoInverted: "/logo/logo-inverted.png",
   authors: [
     {
       name: "Eon Legal Team",

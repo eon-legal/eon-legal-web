@@ -22,7 +22,7 @@ export function organizationSchema() {
     "@type": "Organization",
     name: siteConfig.name,
     url: siteConfig.url,
-    logo: `${siteConfig.url}/logo.png`,
+    logo: `${siteConfig.url}${siteConfig.logo}`,
     sameAs: [
       // Add social profiles here when available
       // "https://twitter.com/eonlegal",
