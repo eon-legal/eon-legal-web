@@ -1,25 +1,25 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/lib/config";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
-  ],
+  themeColor: "#ffffff",
 };
 
 export const metadata: Metadata = {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     default: siteConfig.name,
     template: `%s | ${siteConfig.name}`,
   },
-  description: siteConfig.tagline,
+  description: siteConfig.description,
   keywords: [...siteConfig.keywords],
   authors: [...siteConfig.authors],
   creator: siteConfig.authors[0].name,
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
       default: siteConfig.name,
       template: `%s | ${siteConfig.name}`,
     },
-    description: siteConfig.tagline,
+    description: siteConfig.description,
     images: [
       {
         url: "/opengraph-image.png",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
       default: siteConfig.name,
       template: `%s | ${siteConfig.name}`,
     },
-    description: siteConfig.tagline,
+    description: siteConfig.description,
     images: ["/opengraph-image.png"],
     creator: siteConfig.twitterHandle,
   },
@@ -81,13 +81,15 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>): React.ReactElement {
   return (
     <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      lang={siteConfig.language}
+      className={`${inter.variable} ${poppins.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-background text-foreground">
+        {children}
+      </body>
     </html>
   );
 }
