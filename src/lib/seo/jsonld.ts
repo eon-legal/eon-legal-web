@@ -1,4 +1,9 @@
 import { siteConfig } from "@/lib/config";
+import {
+  hreflangTag,
+  localizePath,
+  type Locale,
+} from "@/lib/i18n/config";
 
 /**
  * Generate a JSON-LD script tag for structured data.
@@ -13,17 +18,35 @@ export function jsonLdScript<T extends Record<string, unknown>>(
   });
 }
 
+/**
+ * Resolves a site-relative path against the configured origin, ensuring
+ * the active locale prefix is present so JSON-LD references the correct
+ * per-language canonical URL.
+ */
+function localizedUrl(locale: Locale, path: string): string {
+  if (/^https?:\/\//i.test(path)) return path;
+  const base = siteConfig.url.replace(/\/$/, "");
+  const withLocale = localizePath(locale, path || "/");
+  return `${base}${withLocale}`;
+}
+
 // ──────────────────────────────────────────────────────────────
 // Common schema builders for legal-tech landing pages
 // ──────────────────────────────────────────────────────────────
 
-export function organizationSchema(): string {
+export function organizationSchema({
+  locale,
+  description,
+}: {
+  locale: Locale;
+  description: string;
+}): string {
   return jsonLdScript({
     "@type": "Organization",
     name: siteConfig.name,
-    url: siteConfig.url,
-    logo: `${siteConfig.url}${siteConfig.logo}`,
-    description: siteConfig.description,
+    url: localizedUrl(locale, "/"),
+    logo: `${siteConfig.url.replace(/\/$/, "")}${siteConfig.logo}`,
+    description,
     address: {
       "@type": "PostalAddress",
       streetAddress: siteConfig.contact.address,
@@ -56,25 +79,29 @@ export function organizationSchema(): string {
 }
 
 export function legalServiceSchema({
+  locale,
   name = siteConfig.name,
   description,
-  url = siteConfig.url,
+  url,
   serviceType = "Legal Technology",
 }: {
+  locale: Locale;
   name?: string;
   description: string;
   url?: string;
   serviceType?: string;
 }): string {
+  const resolvedUrl = url ?? localizedUrl(locale, "/");
   return jsonLdScript({
     "@type": "LegalService",
     name,
     description,
-    url,
+    url: resolvedUrl,
+    inLanguage: hreflangTag[locale],
     provider: {
       "@type": "Organization",
       name: siteConfig.name,
-      url: siteConfig.url,
+      url: localizedUrl(locale, "/"),
     },
     areaServed: {
       "@type": "Country",
@@ -85,20 +112,23 @@ export function legalServiceSchema({
 }
 
 export function webPageSchema({
+  locale,
   title,
   description,
-  url = siteConfig.url,
+  url,
 }: {
+  locale: Locale;
   title: string;
   description: string;
   url?: string;
 }): string {
+  const resolvedUrl = url ?? localizedUrl(locale, "/");
   return jsonLdScript({
     "@type": "WebPage",
     name: title,
     description,
-    url,
-    inLanguage: siteConfig.locale,
+    url: resolvedUrl,
+    inLanguage: hreflangTag[locale],
     isPartOf: {
       "@type": "WebSite",
       name: siteConfig.name,
@@ -108,10 +138,12 @@ export function webPageSchema({
 }
 
 export function faqPageSchema(
-  items: Array<{ question: string; answer: string }>
+  items: ReadonlyArray<{ question: string; answer: string }>,
+  locale: Locale
 ): string {
   return jsonLdScript({
     "@type": "FAQPage",
+    inLanguage: hreflangTag[locale],
     mainEntity: items.map((item) => ({
       "@type": "Question",
       name: item.question,
@@ -124,7 +156,8 @@ export function faqPageSchema(
 }
 
 export function breadcrumbSchema(
-  items: ReadonlyArray<{ name: string; url: string }>
+  items: ReadonlyArray<{ name: string; url: string }>,
+  locale: Locale
 ): string {
   return jsonLdScript({
     "@type": "BreadcrumbList",
@@ -132,9 +165,7 @@ export function breadcrumbSchema(
       "@type": "ListItem",
       position: index + 1,
       name: item.name,
-      item: item.url.startsWith("http")
-        ? item.url
-        : `${siteConfig.url}${item.url}`,
+      item: localizedUrl(locale, item.url),
     })),
   });
 }

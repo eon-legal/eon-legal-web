@@ -6,10 +6,6 @@
 export const siteConfig = {
   name: "Eon Legal",
   shortName: "Eon Legal",
-  tagline:
-    "Despacho especializado en extranjería, nacionalidad y residencia en España.",
-  description:
-    "Eon Legal ofrece asesoría jurídica integral en extranjería: arraigo social, nacionalidad española, visados, reagrupación familiar y trámites ante la DGT. Atención personalizada en A Coruña y en toda España.",
   url:
     process.env.NEXT_PUBLIC_SITE_URL ??
     (process.env.VERCEL_URL

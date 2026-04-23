@@ -1,22 +1,33 @@
 import { siteConfig } from "@/lib/config";
+import type { Dictionary } from "@/lib/i18n/dictionaries/es";
+import { interpolate } from "@/lib/i18n/utils";
 
 interface ReviewBadgeProps {
+  readonly dict: Dictionary["site"]["common"];
   readonly variant?: "inline" | "stacked";
   readonly className?: string;
 }
 
 /**
- * Social proof badge showing Google review score.
- * Reads data from `siteConfig.rating`. Links out to the source.
+ * Social proof badge showing the Google review score. Reads numeric data
+ * from `siteConfig.rating` and all visible copy from the locale
+ * dictionary so the component stays agnostic of the active language.
  */
 export function ReviewBadge({
+  dict,
   variant = "inline",
   className,
 }: ReviewBadgeProps): React.ReactElement {
   const { value, count, bestRating, source, sourceUrl } = siteConfig.rating;
   const rounded = Math.round(value * 2) / 2;
 
-  const label = `${value} sobre ${bestRating} en ${source}. ${count} reseñas verificadas.`;
+  const label = interpolate(dict.reviewBadgeAriaLabel, {
+    value,
+    bestRating,
+    source,
+    count,
+  });
+  const caption = interpolate(dict.reviewBadgeSource, { source, count });
 
   return (
     <a
@@ -45,7 +56,7 @@ export function ReviewBadge({
           {value.toFixed(1)}
         </span>
         <span className="font-mono text-xs uppercase tracking-[0.18em] text-subtle">
-          {source} · {count} reseñas
+          {caption}
         </span>
       </span>
     </a>

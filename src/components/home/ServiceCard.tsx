@@ -1,11 +1,20 @@
 import Link from "next/link";
 import type { ServiceCategory } from "@/lib/data/services";
+import { type Locale, localizePath } from "@/lib/i18n/config";
+import type { Dictionary } from "@/lib/i18n/dictionaries/es";
+import { interpolate } from "@/lib/i18n/utils";
 
 interface ServiceCardProps {
   readonly service: ServiceCategory;
+  readonly dict: Dictionary["home"]["services"]["card"];
+  readonly locale: Locale;
 }
 
-export function ServiceCard({ service }: ServiceCardProps): React.ReactElement {
+export function ServiceCard({
+  service,
+  dict,
+  locale,
+}: ServiceCardProps): React.ReactElement {
   return (
     <article
       aria-labelledby={`service-${service.id}-title`}
@@ -46,12 +55,14 @@ export function ServiceCard({ service }: ServiceCardProps): React.ReactElement {
 
       <div className="mt-8 flex items-center justify-between border-t border-border pt-6">
         <Link
-          href={`/servicios/${service.id}`}
-          aria-label={`Ver detalle del servicio: ${service.title}`}
+          href={localizePath(locale, `/servicios/${service.id}`)}
+          aria-label={interpolate(dict.viewServiceAria, {
+            title: service.title,
+          })}
           className="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-foreground outline-none before:absolute before:inset-0 before:content-[''] focus-visible:text-accent-hover"
         >
           <span className="relative inline-block pb-1">
-            Ver servicio
+            {dict.viewService}
             <span
               aria-hidden="true"
               className="absolute inset-x-0 bottom-0 h-px origin-left scale-x-100 bg-foreground transition-transform duration-500 group-hover:scale-x-0"
