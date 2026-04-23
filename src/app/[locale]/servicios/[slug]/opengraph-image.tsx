@@ -2,20 +2,54 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { ImageResponse } from "next/og";
 import { siteConfig } from "@/lib/config";
+import { getServiceById, serviceSlugs } from "@/lib/data/services";
+import { type Locale, isLocale, locales } from "@/lib/i18n/config";
 
-export const alt =
-  "Eon Legal — Abogados de extranjería en A Coruña";
+export const alt = "Eon Legal — Servicios de extranjería";
 export const size = { width: 1200, height: 630 } as const;
 export const contentType = "image/png";
 
-export default async function Image(): Promise<ImageResponse> {
+export function generateStaticParams(): Array<{
+  locale: Locale;
+  slug: string;
+}> {
+  return locales.flatMap((locale) =>
+    serviceSlugs.map(({ id }) => ({ locale, slug: id }))
+  );
+}
+
+const copy: Readonly<
+  Record<Locale, { readonly fallbackEyebrow: string; readonly tagline: string }>
+> = {
+  es: {
+    fallbackEyebrow: "Despacho de extranjería",
+    tagline: "Extranjería · Nacionalidad · Residencia",
+  },
+  en: {
+    fallbackEyebrow: "Spanish immigration firm",
+    tagline: "Immigration · Citizenship · Residency",
+  },
+};
+
+interface OgImageProps {
+  readonly params: Promise<{ locale: string; slug: string }>;
+}
+
+export default async function Image({
+  params,
+}: OgImageProps): Promise<ImageResponse> {
+  const { locale: rawLocale, slug } = await params;
+  const locale: Locale = isLocale(rawLocale) ? rawLocale : "es";
+  const t = copy[locale];
+  const service = getServiceById(slug, locale);
+  const title = service?.title ?? siteConfig.name;
+  const index = service?.index ?? "00";
+  const eyebrow = service?.shortTitle ?? t.fallbackEyebrow;
+
   const [poppinsSemiBold, poppinsMedium] = await Promise.all([
     readFile(join(process.cwd(), "public/fonts/Poppins-SemiBold.ttf")),
     readFile(join(process.cwd(), "public/fonts/Poppins-Medium.ttf")),
   ]);
-
-  const rating = siteConfig.rating.value.toFixed(1);
-  const reviewCount = siteConfig.rating.count;
 
   return new ImageResponse(
     (
@@ -38,17 +72,17 @@ export default async function Image(): Promise<ImageResponse> {
             position: "absolute",
             top: 0,
             right: 0,
-            fontSize: 480,
+            fontSize: 560,
             lineHeight: 0.8,
-            fontWeight: 600,
+            fontWeight: 700,
             color: "#FFFFFF",
             opacity: 0.05,
-            letterSpacing: -16,
-            padding: "40px 40px 0 0",
+            letterSpacing: -20,
+            padding: "20px 40px 0 0",
             display: "flex",
           }}
         >
-          {rating}
+          {index}
         </div>
 
         <div
@@ -65,16 +99,9 @@ export default async function Image(): Promise<ImageResponse> {
         >
           <div style={{ display: "flex" }}>{siteConfig.name}</div>
           <div
-            style={{
-              width: 48,
-              height: 1,
-              background: "#708090",
-              display: "flex",
-            }}
+            style={{ width: 48, height: 1, background: "#708090", display: "flex" }}
           />
-          <div style={{ display: "flex", color: "#708090" }}>
-            A Coruña
-          </div>
+          <div style={{ display: "flex", color: "#708090" }}>A Coruña</div>
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 32 }}>
@@ -89,16 +116,11 @@ export default async function Image(): Promise<ImageResponse> {
               color: "#708090",
             }}
           >
-            <div style={{ display: "flex", color: "#FFFFFF" }}>Despacho</div>
+            <div style={{ display: "flex", color: "#FFFFFF" }}>{index}</div>
             <div
-              style={{
-                width: 32,
-                height: 1,
-                background: "#708090",
-                display: "flex",
-              }}
+              style={{ width: 32, height: 1, background: "#708090", display: "flex" }}
             />
-            <div style={{ display: "flex" }}>Especializado en extranjería</div>
+            <div style={{ display: "flex" }}>{eyebrow}</div>
           </div>
           <div
             style={{
@@ -111,7 +133,7 @@ export default async function Image(): Promise<ImageResponse> {
               maxWidth: 960,
             }}
           >
-            Extranjería, nacionalidad y residencia en España.
+            {title}
           </div>
         </div>
 
@@ -124,26 +146,8 @@ export default async function Image(): Promise<ImageResponse> {
             color: "#708090",
           }}
         >
-          <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="#FFFFFF"
-              style={{ display: "flex" }}
-            >
-              <path d="M12 2l2.95 6.97L22 9.98l-5.5 4.86L18.18 22 12 18.27 5.82 22l1.68-7.16L2 9.98l7.05-1.01z" />
-            </svg>
-            <div style={{ display: "flex", color: "#FFFFFF", fontWeight: 500 }}>
-              {rating}
-            </div>
-            <div style={{ display: "flex" }}>
-              Google · {reviewCount} reseñas verificadas
-            </div>
-          </div>
-          <div style={{ display: "flex", color: "#FFFFFF" }}>
-            eon-legal.com
-          </div>
+          <div style={{ display: "flex" }}>{t.tagline}</div>
+          <div style={{ display: "flex", color: "#FFFFFF" }}>eon-legal.com</div>
         </div>
       </div>
     ),
@@ -153,6 +157,6 @@ export default async function Image(): Promise<ImageResponse> {
         { name: "Poppins", data: poppinsMedium, style: "normal", weight: 500 },
         { name: "Poppins", data: poppinsSemiBold, style: "normal", weight: 600 },
       ],
-    },
+    }
   );
 }
