@@ -1,8 +1,15 @@
 import Image from "next/image";
 import { ReviewBadge } from "@/components/ui/ReviewBadge";
 import { siteConfig } from "@/lib/config";
+import type { Dictionary } from "@/lib/i18n/dictionaries/es";
+import { interpolate } from "@/lib/i18n/utils";
 
-export function HeroSection(): React.ReactElement {
+interface HeroSectionProps {
+  readonly dict: Dictionary;
+}
+
+export function HeroSection({ dict }: HeroSectionProps): React.ReactElement {
+  const t = dict.home.hero;
   return (
     <section
       aria-labelledby="hero-heading"
@@ -16,22 +23,25 @@ export function HeroSection(): React.ReactElement {
         <div className="space-y-10">
           <div className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-subtle">
             <span aria-hidden="true" className="h-px w-8 bg-border-strong" />
-            Derecho de extranjería · España
+            {t.eyebrow}
           </div>
 
           <h1
             id="hero-heading"
             className="font-display text-balance text-5xl font-semibold leading-[1.05] tracking-tight text-foreground md:text-6xl lg:text-7xl"
           >
-            Residencia legal en España
-            <span className="block font-normal text-subtle">con certeza jurídica.</span>
+            {t.headingLead}
+            <span className="block font-normal text-subtle">
+              {t.headingTrail}
+            </span>
           </h1>
 
           <p className="max-w-xl text-pretty text-lg leading-relaxed text-muted md:text-xl">
-            {siteConfig.name} guía tu proceso de residencia, visados y
-            nacionalidad con estrategia clara y atención continua. Especialistas
-            en <strong className="font-semibold text-foreground">arraigo social</strong>,
-            reagrupación familiar y nacionalidad española.
+            {interpolate(t.descriptionPrefix, { brand: siteConfig.name })}
+            <strong className="font-semibold text-foreground">
+              {t.descriptionStrong}
+            </strong>
+            {t.descriptionSuffix}
           </p>
 
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -39,7 +49,7 @@ export function HeroSection(): React.ReactElement {
               href="#contacto"
               className="inline-flex h-12 items-center justify-center gap-2 rounded-md bg-accent px-7 text-sm font-medium text-accent-foreground transition-colors hover:bg-accent-hover"
             >
-              Agenda una consulta
+              {t.ctaPrimary}
               <span aria-hidden="true" className="font-mono">
                 →
               </span>
@@ -48,16 +58,16 @@ export function HeroSection(): React.ReactElement {
               href="#servicios"
               className="inline-flex h-12 items-center justify-center gap-2 rounded-md border border-border-strong px-7 text-sm font-medium text-foreground transition-colors hover:border-foreground"
             >
-              Ver servicios
+              {t.ctaSecondary}
             </a>
           </div>
 
-          <ReviewBadge />
+          <ReviewBadge dict={dict.site.common} />
 
           <dl className="flex flex-wrap gap-x-10 gap-y-4 pt-6 text-sm text-muted">
             <div className="flex items-baseline gap-2">
               <dt className="font-mono text-xs uppercase tracking-widest text-subtle">
-                Sede
+                {t.stats.officeLabel}
               </dt>
               <dd className="text-foreground">
                 {siteConfig.contact.city}, {siteConfig.contact.region}
@@ -65,28 +75,25 @@ export function HeroSection(): React.ReactElement {
             </div>
             <div className="flex items-baseline gap-2">
               <dt className="font-mono text-xs uppercase tracking-widest text-subtle">
-                Cobertura
+                {t.stats.coverageLabel}
               </dt>
-              <dd className="text-foreground">Todo el territorio español</dd>
+              <dd className="text-foreground">{t.stats.coverageValue}</dd>
             </div>
             <div className="flex items-baseline gap-2">
               <dt className="font-mono text-xs uppercase tracking-widest text-subtle">
-                Idiomas
+                {t.stats.languagesLabel}
               </dt>
-              <dd className="text-foreground">ES · EN</dd>
+              <dd className="text-foreground">{t.stats.languagesValue}</dd>
             </div>
           </dl>
         </div>
 
-        <aside
-          aria-label="Especialidades destacadas"
-          className="relative hidden lg:block"
-        >
+        <aside aria-label={t.aside.ariaLabel} className="relative hidden lg:block">
           <div className="sticky top-28 space-y-6">
             <figure className="relative aspect-[4/5] w-full overflow-hidden rounded-md border border-border bg-surface">
               <Image
                 src="https://images.unsplash.com/photo-1589216532372-1c2a367900d9?auto=format&fit=crop&w=1400&q=80"
-                alt="Detalle arquitectónico de biblioteca jurídica, atmósfera sobria y profesional."
+                alt={t.aside.figureAlt}
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
                 className="object-cover grayscale"
@@ -94,20 +101,22 @@ export function HeroSection(): React.ReactElement {
               />
               <figcaption className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-4 border-t border-border bg-background/80 px-6 py-4 backdrop-blur">
                 <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-subtle">
-                  Despacho · {siteConfig.contact.city}
+                  {interpolate(t.aside.figureEyebrow, {
+                    city: siteConfig.contact.city,
+                  })}
                 </span>
                 <span className="font-display text-sm font-semibold text-foreground">
-                  Estudio jurídico
+                  {t.aside.figureTitle}
                 </span>
               </figcaption>
             </figure>
 
             <div className="space-y-6 rounded-md border border-border bg-surface p-8">
               <p className="font-mono text-xs uppercase tracking-widest text-subtle">
-                Especialidades
+                {t.aside.specialtiesHeading}
               </p>
               <ul className="space-y-5 text-base leading-relaxed">
-                {hero_specialties.map((item, i) => (
+                {t.aside.specialties.map((item, i) => (
                   <li
                     key={item.title}
                     className="flex gap-4 border-b border-border pb-5 last:border-0 last:pb-0"
@@ -129,24 +138,3 @@ export function HeroSection(): React.ReactElement {
     </section>
   );
 }
-
-const hero_specialties: ReadonlyArray<{
-  readonly title: string;
-  readonly description: string;
-}> = [
-  {
-    title: "Arraigo social y laboral",
-    description:
-      "Acompañamiento desde la valoración de requisitos hasta la resolución favorable.",
-  },
-  {
-    title: "Nacionalidad española",
-    description:
-      "Preparación integral del expediente y seguimiento ante el Ministerio de Justicia.",
-  },
-  {
-    title: "Reagrupación familiar",
-    description:
-      "Estrategia documental para reunir a tu familia con garantías jurídicas.",
-  },
-];

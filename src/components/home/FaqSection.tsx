@@ -1,7 +1,19 @@
 import { Reveal } from "@/components/ui/Reveal";
-import { homeFaqs } from "@/lib/data/faqs";
+import { getHomeFaqs } from "@/lib/data/faqs";
+import type { Locale } from "@/lib/i18n/config";
+import type { Dictionary } from "@/lib/i18n/dictionaries/es";
 
-export function FaqSection(): React.ReactElement {
+interface FaqSectionProps {
+  readonly dict: Dictionary;
+  readonly locale: Locale;
+}
+
+export function FaqSection({
+  dict,
+  locale,
+}: FaqSectionProps): React.ReactElement {
+  const t = dict.home.faq;
+  const faqs = getHomeFaqs(locale);
   return (
     <section
       id="faq"
@@ -13,24 +25,23 @@ export function FaqSection(): React.ReactElement {
           <header className="space-y-6">
             <div className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-subtle">
               <span aria-hidden="true" className="h-px w-8 bg-border-strong" />
-              Preguntas frecuentes
+              {t.eyebrow}
             </div>
             <h2
               id="faq-heading"
               className="font-display text-balance text-4xl font-semibold leading-[1.1] tracking-tight text-foreground md:text-5xl"
             >
-              Respuestas directas a las dudas más comunes.
+              {t.heading}
             </h2>
             <p className="text-pretty text-base leading-relaxed text-muted">
-              Si tu caso no aparece aquí, escríbenos. Cada expediente es
-              distinto y merece una valoración individual.
+              {t.description}
             </p>
           </header>
         </Reveal>
 
         <Reveal delay={0.1}>
           <dl className="divide-y divide-border border-y border-border">
-          {homeFaqs.map((faq) => (
+          {faqs.map((faq) => (
             <details
               key={faq.question}
               className="group py-6 [&_summary::-webkit-details-marker]:hidden"

@@ -2,8 +2,12 @@ import type { ReactNode } from "react";
 import { Reveal } from "@/components/ui/Reveal";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { SiteHeader } from "@/components/site/SiteHeader";
+import type { Locale } from "@/lib/i18n/config";
+import type { Dictionary } from "@/lib/i18n/dictionaries/es";
 
 interface LegalPageLayoutProps {
+  readonly dict: Dictionary;
+  readonly locale: Locale;
   readonly eyebrow: string;
   readonly title: string;
   readonly description: string;
@@ -18,6 +22,8 @@ interface LegalPageLayoutProps {
  * and SiteFooter. Optionally injects JSON-LD scripts above the main content.
  */
 export function LegalPageLayout({
+  dict,
+  locale,
   eyebrow,
   title,
   description,
@@ -25,6 +31,7 @@ export function LegalPageLayout({
   jsonLd,
   children,
 }: LegalPageLayoutProps): React.ReactElement {
+  const layoutDict = dict.legal.layout;
   return (
     <>
       {jsonLd?.map((schema, index) => (
@@ -36,7 +43,7 @@ export function LegalPageLayout({
           dangerouslySetInnerHTML={{ __html: schema }}
         />
       ))}
-      <SiteHeader />
+      <SiteHeader dict={dict.site} locale={locale} />
       <main id="main" className="flex-1">
         <section
           aria-labelledby="legal-page-heading"
@@ -67,14 +74,14 @@ export function LegalPageLayout({
 
             <Reveal delay={0.15}>
               <p className="mt-8 font-mono text-xs uppercase tracking-widest text-subtle">
-                Última actualización · {lastUpdated}
+                {layoutDict.lastUpdatedLabel} · {lastUpdated}
               </p>
             </Reveal>
           </div>
         </section>
 
         <section
-          aria-label="Contenido legal"
+          aria-label={layoutDict.contentAriaLabel}
           className="border-b border-border bg-background"
         >
           <div className="mx-auto max-w-3xl px-6 py-20 md:py-24 lg:px-10">
@@ -84,7 +91,7 @@ export function LegalPageLayout({
           </div>
         </section>
       </main>
-      <SiteFooter />
+      <SiteFooter dict={dict.site} locale={locale} />
     </>
   );
 }
