@@ -57,16 +57,15 @@ export function TestimonialsSection(): React.ReactElement {
                       </p>
                       <VerifiedBadge />
                     </div>
-                    <dl className="grid grid-cols-2 gap-x-4 gap-y-2 text-xs">
-                      <dt className="font-mono uppercase tracking-widest text-subtle">
-                        Ciudad
-                      </dt>
-                      <dd className="text-right text-muted">{t.city}</dd>
-                      <dt className="font-mono uppercase tracking-widest text-subtle">
-                        Expediente
-                      </dt>
-                      <dd className="text-right text-muted">{t.matter}</dd>
-                    </dl>
+                    <div className="flex items-center gap-3">
+                      <Stars
+                        rating={t.rating}
+                        aria-label={`${t.rating} de 5 estrellas`}
+                      />
+                      <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-subtle">
+                        Reseña en Google
+                      </span>
+                    </div>
                   </figcaption>
                 </figure>
               </li>
@@ -97,6 +96,38 @@ function VerifiedBadge(): React.ReactElement {
         />
       </svg>
       Verificado
+    </span>
+  );
+}
+
+interface StarsProps {
+  readonly rating: number;
+  readonly "aria-label"?: string;
+}
+
+function Stars({ rating, ...rest }: StarsProps): React.ReactElement {
+  const filled = Math.round(rating);
+  return (
+    <span
+      role="img"
+      aria-label={rest["aria-label"]}
+      className="flex items-center gap-0.5 text-foreground"
+    >
+      {Array.from({ length: 5 }, (_, i) => (
+        <svg
+          key={i}
+          width="12"
+          height="12"
+          viewBox="0 0 20 20"
+          aria-hidden="true"
+          fill={i < filled ? "currentColor" : "none"}
+          stroke="currentColor"
+          strokeWidth="1.2"
+          strokeLinejoin="round"
+        >
+          <path d="M10 1.5l2.7 5.47 6.05.88-4.38 4.27 1.03 6.02L10 15.3l-5.4 2.84 1.03-6.02L1.25 7.85l6.05-.88L10 1.5z" />
+        </svg>
+      ))}
     </span>
   );
 }

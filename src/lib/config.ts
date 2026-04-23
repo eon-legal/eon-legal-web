@@ -50,8 +50,8 @@ export const siteConfig = {
     countryCode: "ES",
   },
   rating: {
-    value: 4.9,
-    count: 47,
+    value: 5,
+    count: 18,
     bestRating: 5,
     worstRating: 1,
     source: "Google",

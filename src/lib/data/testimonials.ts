@@ -1,44 +1,36 @@
 /**
- * Client testimonials for the home page. Names are abbreviated to protect
- * the clients' privacy in line with the mandato de confidencialidad
- * profesional. Each entry is a verified case handled by the firm.
+ * Client testimonials for the home page. Transcribed verbatim from the
+ * firm's verified Google Business profile. No case details are shown,
+ * in line with the mandato de confidencialidad profesional.
  */
 
 export interface Testimonial {
   readonly id: string;
   readonly quote: string;
   readonly name: string;
-  readonly role: string;
-  readonly city: string;
-  readonly matter: string;
+  readonly rating: number;
 }
 
 export const homeTestimonials: readonly Testimonial[] = [
   {
-    id: "maria-v",
+    id: "diana-perez",
     quote:
-      "Nos explicaron con claridad qué vía de arraigo encajaba mejor y prepararon el expediente al detalle. La resolución llegó sin incidencias y el acompañamiento fue constante.",
-    name: "María V.",
-    role: "Cliente particular",
-    city: "A Coruña",
-    matter: "Arraigo social",
+      "Felicidades a este equipo. Muchas gracias por haberme ayudado con todos mis trámites y por haber aclarado con paciencia y profesionalidad todas nuestras dudas. Sin duda los volveremos a contratar. Un saludo.",
+    name: "Diana Pérez",
+    rating: 5,
   },
   {
-    id: "omar-k",
+    id: "diana-jordan",
     quote:
-      "Tras una denegación previa con otro despacho, el equipo revisó todo el fondo documental, replanteó la estrategia y obtuvimos la autorización. Trato profesional y seguimiento puntual.",
-    name: "Omar K.",
-    role: "Trabajador por cuenta ajena",
-    city: "Santiago de Compostela",
-    matter: "Residencia y trabajo",
+      "Son muy profesionales y me han ayudado muchísimo con mis trámites. Siempre me respondieron en tiempo y me acompañaron muy profesionalmente durante todo el tiempo. Muchas gracias siempre por la ayuda.",
+    name: "Diana Jordan",
+    rating: 5,
   },
   {
-    id: "lucia-r",
+    id: "viene-perez",
     quote:
-      "Llevaron la reagrupación familiar de mi madre desde el primer informe hasta la entrega del visado. Cumplieron plazos, anticiparon requisitos y respondieron a cada duda.",
-    name: "Lucía R.",
-    role: "Reagrupante",
-    city: "Ferrol",
-    matter: "Reagrupación familiar",
+      "Estoy encantada con el trato de estas profesionales, extremadamente confiables, con una comunicación muy asertiva y resolución sinceramente eficaz y transparente. Las recomiendo 200%.",
+    name: "Viene Pérez",
+    rating: 5,
   },
 ] as const;
