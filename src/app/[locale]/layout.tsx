@@ -57,7 +57,7 @@ export async function generateMetadata({
       template: `%s | ${siteConfig.name}`,
     },
     description,
-    keywords: [...siteConfig.keywords],
+    keywords: [...siteConfig.keywords[locale]],
     authors: [...siteConfig.authors],
     creator: siteConfig.authors[0].name,
     robots: {
