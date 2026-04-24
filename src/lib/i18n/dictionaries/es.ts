@@ -59,10 +59,9 @@ export const dictionary = {
   },
   home: {
     metadata: {
-      title:
-        "Abogados de extranjería en A Coruña · Residencia, nacionalidad y arraigo",
+      title: "Abogados de extranjería en A Coruña",
       description:
-        "Despacho especializado en extranjería en España con sede en A Coruña. Gestionamos arraigo social, nacionalidad española, visados y reagrupación familiar con presentación telemática y atención personalizada.",
+        "Despacho de extranjería en A Coruña. Tramitamos arraigo social, nacionalidad española, visados y reagrupación familiar con presentación telemática.",
     },
     hero: {
       eyebrow: "Derecho de extranjería · España",

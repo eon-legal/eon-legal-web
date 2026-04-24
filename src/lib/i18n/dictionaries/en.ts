@@ -61,10 +61,9 @@ export const dictionary: Dictionary = {
   },
   home: {
     metadata: {
-      title:
-        "Immigration lawyers in A Coruña · Residency, citizenship & arraigo",
+      title: "Spanish immigration lawyers in A Coruña",
       description:
-        "Spanish immigration law firm based in A Coruña. We handle arraigo social, Spanish citizenship, work visas and family reunification with online filing and personal guidance.",
+        "Spanish immigration law firm in A Coruña. Arraigo, citizenship, work visas and family reunification with online filing and personal guidance.",
     },
     hero: {
       eyebrow: "Spanish immigration law",
