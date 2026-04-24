@@ -7,21 +7,46 @@ interface RouteDefinition {
   readonly path: string;
   readonly changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
   readonly priority: number;
+  readonly lastModified: string;
 }
 
+const HOME_LAST_MODIFIED = "2026-04-22";
+const SERVICES_LAST_MODIFIED = "2026-04-22";
+const LEGAL_LAST_MODIFIED = "2026-04-22";
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
   const base = siteConfig.url.replace(/\/$/, "");
 
   const routes: readonly RouteDefinition[] = [
-    { path: "", changeFrequency: "weekly", priority: 1 },
-    { path: "/aviso-legal", changeFrequency: "yearly", priority: 0.3 },
-    { path: "/privacidad", changeFrequency: "yearly", priority: 0.3 },
-    { path: "/cookies", changeFrequency: "yearly", priority: 0.3 },
+    {
+      path: "",
+      changeFrequency: "weekly",
+      priority: 1,
+      lastModified: HOME_LAST_MODIFIED,
+    },
+    {
+      path: "/aviso-legal",
+      changeFrequency: "yearly",
+      priority: 0.3,
+      lastModified: LEGAL_LAST_MODIFIED,
+    },
+    {
+      path: "/privacidad",
+      changeFrequency: "yearly",
+      priority: 0.3,
+      lastModified: LEGAL_LAST_MODIFIED,
+    },
+    {
+      path: "/cookies",
+      changeFrequency: "yearly",
+      priority: 0.3,
+      lastModified: LEGAL_LAST_MODIFIED,
+    },
     ...serviceSlugs.map((service) => ({
       path: `/servicios/${service.id}`,
       changeFrequency: "monthly" as const,
       priority: 0.8,
+      lastModified: SERVICES_LAST_MODIFIED,
     })),
   ];
 
@@ -33,7 +58,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     return locales.map((locale) => ({
       url: `${base}/${locale}${route.path}`,
-      lastModified: now,
+      lastModified: route.lastModified,
       changeFrequency: route.changeFrequency,
       priority: route.priority,
       alternates: { languages },
