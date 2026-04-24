@@ -63,13 +63,6 @@ export function organizationSchema({
       availableLanguage: ["es", "en"],
       areaServed: "ES",
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: siteConfig.rating.value,
-      reviewCount: siteConfig.rating.count,
-      bestRating: siteConfig.rating.bestRating,
-      worstRating: siteConfig.rating.worstRating,
-    },
     sameAs: [
       // Add social profiles here when available
       // "https://twitter.com/eonlegal",
@@ -78,26 +71,46 @@ export function organizationSchema({
   });
 }
 
+const defaultServiceType: Record<Locale, string> = {
+  es: "Derecho de extranjería",
+  en: "Immigration law",
+};
+
 export function legalServiceSchema({
   locale,
   name = siteConfig.name,
   description,
   url,
-  serviceType = "Legal Technology",
+  serviceType,
+  includeAggregateRating = false,
 }: {
   locale: Locale;
   name?: string;
   description: string;
   url?: string;
   serviceType?: string;
+  includeAggregateRating?: boolean;
 }): string {
   const resolvedUrl = url ?? localizedUrl(locale, "/");
+  const resolvedServiceType = serviceType ?? defaultServiceType[locale];
+  const baseUrl = siteConfig.url.replace(/\/$/, "");
   return jsonLdScript({
     "@type": "LegalService",
     name,
     description,
     url: resolvedUrl,
     inLanguage: hreflangTag[locale],
+    image: `${baseUrl}${siteConfig.logo}`,
+    telephone: siteConfig.contact.phone,
+    email: siteConfig.contact.email,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: siteConfig.contact.address,
+      postalCode: siteConfig.contact.postalCode,
+      addressLocality: siteConfig.contact.city,
+      addressRegion: siteConfig.contact.region,
+      addressCountry: siteConfig.contact.countryCode,
+    },
     provider: {
       "@type": "Organization",
       name: siteConfig.name,
@@ -107,7 +120,18 @@ export function legalServiceSchema({
       "@type": "Country",
       name: "Spain",
     },
-    serviceType,
+    serviceType: resolvedServiceType,
+    ...(includeAggregateRating
+      ? {
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: siteConfig.rating.value,
+            reviewCount: siteConfig.rating.count,
+            bestRating: siteConfig.rating.bestRating,
+            worstRating: siteConfig.rating.worstRating,
+          },
+        }
+      : {}),
   });
 }
 

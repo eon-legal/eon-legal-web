@@ -71,7 +71,11 @@ export default async function HomePage({
       locale,
       description: dict.site.brand.organizationDescription,
     }),
-    legalServiceSchema({ locale, description }),
+    legalServiceSchema({
+      locale,
+      description,
+      includeAggregateRating: true,
+    }),
     webPageSchema({ locale, title, description }),
     faqPageSchema(
       faqs.map((faq) => ({ ...faq })),
