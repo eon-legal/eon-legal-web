@@ -26,8 +26,6 @@ export const dictionary = {
     footer: {
       servicesHeading: "Servicios",
       infoHeading: "Información",
-      navServicesAria: "Servicios",
-      navInfoAria: "Información legal",
       labels: {
         email: "Email",
         phone: "Tel.",

@@ -78,10 +78,16 @@ export function SiteFooter({
           </dl>
         </div>
 
-        <nav aria-label={dict.footer.navServicesAria} className="space-y-4">
-          <h2 className="font-mono text-xs uppercase tracking-widest text-subtle">
+        <nav
+          aria-labelledby="footer-services-heading"
+          className="space-y-4"
+        >
+          <p
+            id="footer-services-heading"
+            className="font-mono text-xs uppercase tracking-widest text-subtle"
+          >
             {dict.footer.servicesHeading}
-          </h2>
+          </p>
           <ul className="space-y-2 text-sm">
             {services.map((service) => (
               <li key={service.id}>
@@ -96,10 +102,13 @@ export function SiteFooter({
           </ul>
         </nav>
 
-        <nav aria-label={dict.footer.navInfoAria} className="space-y-4">
-          <h2 className="font-mono text-xs uppercase tracking-widest text-subtle">
+        <nav aria-labelledby="footer-info-heading" className="space-y-4">
+          <p
+            id="footer-info-heading"
+            className="font-mono text-xs uppercase tracking-widest text-subtle"
+          >
             {dict.footer.infoHeading}
-          </h2>
+          </p>
           <ul className="space-y-2 text-sm">
             <li>
               <Link

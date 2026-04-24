@@ -28,8 +28,6 @@ export const dictionary: Dictionary = {
     footer: {
       servicesHeading: "Services",
       infoHeading: "Information",
-      navServicesAria: "Services",
-      navInfoAria: "Legal information",
       labels: {
         email: "Email",
         phone: "Phone",
