@@ -158,13 +158,13 @@ export const dictionary = {
         "Dos abogadas especializadas en extranjería que llevan personalmente cada expediente, sin intermediarios ni respuestas automatizadas.",
       members: [
         {
-          name: "Nombre Apellido",
+          name: "Lammay Pérez",
           role: "Socia · Abogada de extranjería",
           bio: "Lidera la estrategia jurídica del despacho. Especializada en arraigo social, nacionalidad española y procedimientos contenciosos ante la Administración.",
           imageAlt:
             "Retrato profesional de la primera socia del despacho Eon Legal.",
           credentials: [
-            { label: "Colegio", value: "ICA Coruña · Nº pendiente" },
+            { label: "Colegio", value: "Universidad de La Habana" },
             { label: "Idiomas", value: "Español · Inglés" },
           ],
         },

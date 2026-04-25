@@ -160,13 +160,13 @@ export const dictionary: Dictionary = {
         "Two immigration lawyers who handle each case personally — no intermediaries, no automated replies.",
       members: [
         {
-          name: "Nombre Apellido",
+          name: "Lammay Pérez",
           role: "Partner · Immigration lawyer",
           bio: "Leads the firm's legal strategy. Specialised in social roots, Spanish citizenship and contentious proceedings before the Administration.",
           imageAlt:
             "Professional portrait of the first partner at Eon Legal.",
           credentials: [
-            { label: "Bar", value: "ICA Coruña · No. pending" },
+            { label: "Bar", value: "Universidad de La Habana" },
             { label: "Languages", value: "Spanish · English" },
           ],
         },

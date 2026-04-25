@@ -15,8 +15,7 @@ export interface TeamMember {
 export const homeTeamMembers: readonly TeamMember[] = [
   {
     id: "member-1",
-    imageSrc:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80",
+    imageSrc: "/team/member-1.png",
   },
   {
     id: "member-2",
