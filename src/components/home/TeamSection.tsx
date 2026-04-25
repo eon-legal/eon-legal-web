@@ -87,9 +87,13 @@ function TeamMemberCard({
           priority={false}
         />
         <figcaption className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-4 border-t border-border bg-background/80 px-6 py-3 backdrop-blur">
-          <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-subtle">
-            {placeholderEyebrow}
-          </span>
+          {member.isPlaceholder ? (
+            <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-subtle">
+              {placeholderEyebrow}
+            </span>
+          ) : (
+            <span aria-hidden="true" />
+          )}
           <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-subtle">
             {copy.role.split("·")[0]?.trim()}
           </span>
