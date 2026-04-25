@@ -2,7 +2,10 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Poppins } from "next/font/google";
 import { notFound } from "next/navigation";
 import "../globals.css";
+import { AnalyticsProvider } from "@/components/site/AnalyticsProvider";
+import { CookieConsent } from "@/components/site/CookieConsent";
 import { siteConfig } from "@/lib/config";
+import { isFirebaseConfigured } from "@/lib/firebase/config";
 import { buildLanguageAlternates } from "@/lib/i18n/alternates";
 import {
   type Locale,
@@ -57,7 +60,7 @@ export async function generateMetadata({
       template: `%s | ${siteConfig.name}`,
     },
     description,
-    keywords: [...siteConfig.keywords],
+    keywords: [...siteConfig.keywords[locale]],
     authors: [...siteConfig.authors],
     creator: siteConfig.authors[0].name,
     robots: {
@@ -111,6 +114,12 @@ export default async function LocaleLayout({
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
 
+  // Firebase Analytics is only loaded in production and only after explicit
+  // consent via `CookieConsent` → see `src/lib/firebase/analytics.ts`.
+  const analyticsEnabled =
+    process.env.NODE_ENV === "production" && isFirebaseConfigured();
+  const dict = analyticsEnabled ? await getDictionary(locale) : null;
+
   return (
     <html
       lang={htmlLang[locale]}
@@ -118,6 +127,12 @@ export default async function LocaleLayout({
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         {children}
+        {analyticsEnabled && dict ? (
+          <>
+            <CookieConsent dict={dict.site.cookieConsent} locale={locale} />
+            <AnalyticsProvider />
+          </>
+        ) : null}
       </body>
     </html>
   );

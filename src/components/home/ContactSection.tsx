@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { TrackedExternalLink } from "@/components/site/TrackedExternalLink";
 import { siteConfig } from "@/lib/config";
 import type { Dictionary } from "@/lib/i18n/dictionaries/es";
 
@@ -73,12 +74,14 @@ export function ContactSection({
                     →
                   </span>
                 </a>
-                <a
+                <TrackedExternalLink
                   href={phoneHref}
+                  eventName="phone_click"
+                  eventParams={{ location: "contact_section_cta" }}
                   className="inline-flex h-12 items-center justify-center gap-2 rounded-md border border-border-strong px-7 text-sm font-medium text-foreground transition-colors hover:border-foreground"
                 >
                   {t.ctaPhone}
-                </a>
+                </TrackedExternalLink>
               </div>
             </div>
 
@@ -101,12 +104,14 @@ export function ContactSection({
                   {t.labels.phone}
                 </dt>
                 <dd>
-                  <a
+                  <TrackedExternalLink
                     href={phoneHref}
+                    eventName="phone_click"
+                    eventParams={{ location: "contact_section_details" }}
                     className="text-base font-medium text-foreground underline-offset-4 hover:underline"
                   >
                     {siteConfig.contact.phone}
-                  </a>
+                  </TrackedExternalLink>
                 </dd>
               </div>
               <div className="space-y-2">

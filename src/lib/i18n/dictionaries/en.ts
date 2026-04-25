@@ -28,8 +28,6 @@ export const dictionary: Dictionary = {
     footer: {
       servicesHeading: "Services",
       infoHeading: "Information",
-      navServicesAria: "Services",
-      navInfoAria: "Legal information",
       labels: {
         email: "Email",
         phone: "Phone",
@@ -58,13 +56,24 @@ export const dictionary: Dictionary = {
       googleReview: "Google review",
       starsAriaLabel: "{value} out of 5 stars",
     },
+    cookieConsent: {
+      ariaLabel: "Cookie notice",
+      message:
+        "We use analytics cookies to measure site usage and improve our services. They only activate if you accept.",
+      accept: "Accept",
+      reject: "Reject",
+      learnMore: "Learn more",
+      resetTitle: "Change your preferences",
+      resetDescription:
+        "You can reset your choice and bring the cookie notice back to decide again.",
+      resetButton: "Reset preferences",
+    },
   },
   home: {
     metadata: {
-      title:
-        "Immigration lawyers in A Coruña · Residency, citizenship & arraigo",
+      title: "Spanish immigration lawyers in A Coruña",
       description:
-        "Spanish immigration law firm based in A Coruña. We handle arraigo social, Spanish citizenship, work visas and family reunification with online filing and personal guidance.",
+        "Spanish immigration law firm in A Coruña. Arraigo, citizenship, work visas and family reunification with online filing and personal guidance.",
     },
     hero: {
       eyebrow: "Spanish immigration law",

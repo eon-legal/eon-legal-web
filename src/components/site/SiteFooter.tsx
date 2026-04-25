@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { TrackedExternalLink } from "@/components/site/TrackedExternalLink";
 import { siteConfig } from "@/lib/config";
 import { getServices } from "@/lib/data/services";
 import { type Locale, localizePath } from "@/lib/i18n/config";
@@ -59,12 +60,14 @@ export function SiteFooter({
                 {dict.footer.labels.phone}
               </dt>
               <dd>
-                <a
+                <TrackedExternalLink
                   href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
+                  eventName="phone_click"
+                  eventParams={{ location: "footer" }}
                   className="text-foreground underline-offset-4 hover:underline"
                 >
                   {siteConfig.contact.phone}
-                </a>
+                </TrackedExternalLink>
               </dd>
             </div>
             <div className="flex gap-3">
@@ -78,10 +81,16 @@ export function SiteFooter({
           </dl>
         </div>
 
-        <nav aria-label={dict.footer.navServicesAria} className="space-y-4">
-          <h2 className="font-mono text-xs uppercase tracking-widest text-subtle">
+        <nav
+          aria-labelledby="footer-services-heading"
+          className="space-y-4"
+        >
+          <p
+            id="footer-services-heading"
+            className="font-mono text-xs uppercase tracking-widest text-subtle"
+          >
             {dict.footer.servicesHeading}
-          </h2>
+          </p>
           <ul className="space-y-2 text-sm">
             {services.map((service) => (
               <li key={service.id}>
@@ -96,10 +105,13 @@ export function SiteFooter({
           </ul>
         </nav>
 
-        <nav aria-label={dict.footer.navInfoAria} className="space-y-4">
-          <h2 className="font-mono text-xs uppercase tracking-widest text-subtle">
+        <nav aria-labelledby="footer-info-heading" className="space-y-4">
+          <p
+            id="footer-info-heading"
+            className="font-mono text-xs uppercase tracking-widest text-subtle"
+          >
             {dict.footer.infoHeading}
-          </h2>
+          </p>
           <ul className="space-y-2 text-sm">
             <li>
               <Link

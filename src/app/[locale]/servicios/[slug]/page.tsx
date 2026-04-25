@@ -45,7 +45,8 @@ export async function generateMetadata({
     return { title: dict.services.common.notFoundTitle };
   }
 
-  const title = `${service.title} · ${siteConfig.name}`;
+  const title = service.title;
+  const socialTitle = `${service.title} | ${siteConfig.name}`;
   const description = service.longDescription;
   const path = `/servicios/${service.id}`;
   const canonical = canonicalFor(locale, path);
@@ -58,13 +59,13 @@ export async function generateMetadata({
       languages: buildLanguageAlternates(path),
     },
     openGraph: {
-      title,
+      title: socialTitle,
       description,
       url: canonical,
       type: "article",
       locale: siteConfig.locale,
     },
-    twitter: { title, description },
+    twitter: { title: socialTitle, description },
     robots: { index: true, follow: true },
   };
 }

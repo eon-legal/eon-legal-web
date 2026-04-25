@@ -26,8 +26,6 @@ export const dictionary = {
     footer: {
       servicesHeading: "Servicios",
       infoHeading: "Información",
-      navServicesAria: "Servicios",
-      navInfoAria: "Información legal",
       labels: {
         email: "Email",
         phone: "Tel.",
@@ -56,13 +54,24 @@ export const dictionary = {
       googleReview: "Reseña en Google",
       starsAriaLabel: "{value} de 5 estrellas",
     },
+    cookieConsent: {
+      ariaLabel: "Aviso de cookies",
+      message:
+        "Utilizamos cookies analíticas para medir el uso de la web y mejorar nuestros servicios. Solo se activan si las aceptas.",
+      accept: "Aceptar",
+      reject: "Rechazar",
+      learnMore: "Más información",
+      resetTitle: "Cambiar tus preferencias",
+      resetDescription:
+        "Puedes restablecer tu elección y volver a mostrar el aviso de cookies para volver a decidir.",
+      resetButton: "Restablecer preferencias",
+    },
   },
   home: {
     metadata: {
-      title:
-        "Abogados de extranjería en A Coruña · Residencia, nacionalidad y arraigo",
+      title: "Abogados de extranjería en A Coruña",
       description:
-        "Despacho especializado en extranjería en España con sede en A Coruña. Gestionamos arraigo social, nacionalidad española, visados y reagrupación familiar con presentación telemática y atención personalizada.",
+        "Despacho de extranjería en A Coruña. Tramitamos arraigo social, nacionalidad española, visados y reagrupación familiar con presentación telemática.",
     },
     hero: {
       eyebrow: "Derecho de extranjería · España",
