@@ -130,4 +130,26 @@ export const servicesContentEs: Readonly<
       "Certificado médico psicotécnico cuando sea exigible",
     ],
   },
+  "regularizacion-2026": {
+    title: "Regularización extraordinaria 2026",
+    shortTitle: "Regularización 2026",
+    summary:
+      "Proceso extraordinario aprobado por Real Decreto que permite a personas migrantes ya residentes en España obtener una autorización inicial de residencia y trabajo con vigencia de un año.",
+    longDescription:
+      "El Real Decreto de regularización extraordinaria abre una ventana única para que miles de personas migrantes que ya conviven en España accedan a una autorización de residencia y trabajo, a su número de afiliación a la Seguridad Social y a la tarjeta sanitaria del territorio en el que residan. Es una iniciativa con triple legitimidad —social, política y económica—: social porque toma el testigo de una iniciativa legislativa popular respaldada por más de 700.000 firmas y cerca de 900 asociaciones; política por el respaldo parlamentario obtenido en su toma en consideración; y económica por el apoyo expreso de patronal y sindicatos, que ven en este proceso una vía para reforzar derechos laborales y dotar de seguridad jurídica a las relaciones de trabajo. Eon Legal acompaña al solicitante en todo el procedimiento: revisión previa de viabilidad, recopilación y verificación de la prueba de estancia, presentación telemática a través de la plataforma única Mercurio del Ministerio de Inclusión, Seguridad Social y Migraciones, y respuesta a requerimientos de la Unidad de Tramitación de Expedientes de Extranjería (UTEX) hasta la resolución de la autorización.",
+    highlights: [
+      "Autorización inicial de residencia y trabajo con vigencia de un año",
+      "Alta y número de afiliación en la Seguridad Social",
+      "Acceso a la tarjeta sanitaria del territorio de residencia",
+      "Presentación telemática 24/7 a través de la plataforma Mercurio",
+      "Pasarela posterior a las figuras previstas en el Reglamento de Extranjería",
+    ],
+    requirements: [
+      "Encontrarse en España antes del 1 de enero de 2026",
+      "Haber permanecido en territorio español al menos cinco meses ininterrumpidos en el momento de la solicitud",
+      "Carecer de antecedentes penales y no suponer una amenaza para el orden o la seguridad pública",
+      "Acreditar la estancia mediante documentos públicos, privados o combinación de ambos, verificables, nominativos y con fecha",
+      "Presentar la solicitud antes del 30 de junio de 2026 por la vía telemática o presencial con cita previa",
+    ],
+  },
 };

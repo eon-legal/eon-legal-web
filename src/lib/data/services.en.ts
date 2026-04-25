@@ -130,4 +130,26 @@ export const servicesContentEn: Readonly<
       "Medical and psychotechnical certificate where required",
     ],
   },
+  "regularizacion-2026": {
+    title: "Extraordinary regularisation 2026",
+    shortTitle: "Regularisation 2026",
+    summary:
+      "Extraordinary process approved by Royal Decree that allows migrants already living in Spain to obtain an initial one-year residence and work permit.",
+    longDescription:
+      "The Royal Decree on extraordinary regularisation opens a unique window for thousands of migrants already living in Spain to access a residence and work permit, together with their Social Security affiliation number and the public health card of the region where they reside. It is an initiative with a threefold legitimacy —social, political and economic—: social, because it takes up a popular legislative initiative backed by more than 700,000 signatures and close to 900 associations; political, because of the broad parliamentary support obtained when the proposal was taken into consideration; and economic, because of the explicit endorsement of employers' organisations and trade unions, which see in this process a way to strengthen workers' rights and bring legal certainty to employment relationships. Eon Legal handles the entire procedure: preliminary eligibility review, gathering and verification of evidence of stay, online filing through the single Mercurio platform of the Ministry of Inclusion, Social Security and Migration, and responses to requests from the Immigration Case-Handling Unit (UTEX) until the permit is resolved.",
+    highlights: [
+      "Initial residence and work permit valid for one year",
+      "Social Security registration and affiliation number",
+      "Access to the public health card in the region of residence",
+      "24/7 online filing through the Mercurio platform",
+      "Subsequent route into the figures provided for in the Immigration Regulations",
+    ],
+    requirements: [
+      "Presence in Spain before 1 January 2026",
+      "At least five months of continuous stay in Spanish territory at the time of application",
+      "No criminal record and no threat to public order or security",
+      "Evidence of stay through public or private documents (or a combination of both) that are verifiable, named and dated",
+      "Application filed before 30 June 2026, online or in person with a prior appointment",
+    ],
+  },
 };

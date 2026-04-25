@@ -33,4 +33,16 @@ export const homeFaqsEs: readonly FaqItem[] = [
     answer:
       "Sí. Eon Legal gestiona expedientes de extranjería en toda España mediante presentación telemática ante la Administración, videoconsulta segura y custodia documental digital con respaldo físico en nuestra oficina de A Coruña.",
   },
+  {
+    question:
+      "¿Cuándo se pueden presentar las solicitudes del proceso de regularización extraordinaria de 2026?",
+    answer:
+      "La vía telemática se abre el jueves 16 de abril de 2026 y permanece disponible las 24 horas del día durante todo el periodo de solicitud. La cita previa para la atención presencial puede pedirse desde la misma fecha, mientras que la atención en oficinas comienza el lunes 20 de abril. El plazo para presentar la solicitud por cualquiera de las dos vías finaliza el 30 de junio de 2026.",
+  },
+  {
+    question:
+      "¿Qué es la plataforma Mercurio y qué papel tiene en la regularización extraordinaria?",
+    answer:
+      "Mercurio es la plataforma única del Ministerio de Inclusión, Seguridad Social y Migraciones a través de la cual se presenta toda la documentación del proceso de regularización extraordinaria. Desde Mercurio, la Unidad de Tramitación de Expedientes de Extranjería (UTEX) estudia el expediente, solicita subsanaciones y resuelve la autorización inicial de residencia y trabajo de un año.",
+  },
 ];
