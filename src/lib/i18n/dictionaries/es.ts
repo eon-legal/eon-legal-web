@@ -164,7 +164,7 @@ export const dictionary = {
           imageAlt:
             "Retrato profesional de la primera socia del despacho Eon Legal.",
           credentials: [
-            { label: "Colegio", value: "Universidad de La Habana" },
+            { label: "Formación", value: "Universidad de La Habana" },
             { label: "Idiomas", value: "Español · Inglés" },
           ],
         },
@@ -175,7 +175,7 @@ export const dictionary = {
           imageAlt:
             "Retrato profesional de la segunda socia del despacho Eon Legal.",
           credentials: [
-            { label: "Colegio", value: "ICA Coruña · Nº pendiente" },
+            { label: "Formación", value: "ICA Coruña · Nº pendiente" },
             { label: "Idiomas", value: "Español · Inglés" },
           ],
         },

@@ -166,7 +166,7 @@ export const dictionary: Dictionary = {
           imageAlt:
             "Professional portrait of the first partner at Eon Legal.",
           credentials: [
-            { label: "Bar", value: "Universidad de La Habana" },
+            { label: "Education", value: "Universidad de La Habana" },
             { label: "Languages", value: "Spanish · English" },
           ],
         },
@@ -177,7 +177,7 @@ export const dictionary: Dictionary = {
           imageAlt:
             "Professional portrait of the second partner at Eon Legal.",
           credentials: [
-            { label: "Bar", value: "ICA Coruña · No. pending" },
+            { label: "Education", value: "ICA Coruña · No. pending" },
             { label: "Languages", value: "Spanish · English" },
           ],
         },
