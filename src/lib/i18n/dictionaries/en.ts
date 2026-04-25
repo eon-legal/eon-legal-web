@@ -21,9 +21,34 @@ export const dictionary: Dictionary = {
         services: "Services",
         process: "Process",
         faq: "FAQ",
+        regularizacion: "Regularisation 2026",
       },
       cta: "Book a consultation",
       homeAriaLabel: "{brand} — Home",
+    },
+    urgent: {
+      ribbon: {
+        ariaLabel: "Featured campaign notice",
+        eyebrow: "Royal Decree · Transitional provision",
+        body: "Extraordinary regularisation open until 30 June 2026.",
+        cta: "See requirements",
+      },
+      modal: {
+        ariaLabel: "Notice · 2026 extraordinary regularisation",
+        eyebrow: "Limited window",
+        kicker: "Bulletin · Eon Legal",
+        headingLead: "Extraordinary",
+        headingTrail: "regularisation 2026.",
+        deadlineLabel: "Filing closes",
+        deadlineDate: "30 Jun · 2026",
+        body: "Single online filing through UTEX. If you have lived in Spain since before 1 January 2026 and have no criminal record, you may obtain residency and work authorisation for one year.",
+        ctaPrimary: "Check my case",
+        ctaSecondary: "Later",
+        close: "Close notice",
+        daysSingular: "{count} day left",
+        daysPlural: "{count} days left",
+        opensToday: "Closes today",
+      },
     },
     footer: {
       servicesHeading: "Services",
@@ -118,6 +143,59 @@ export const dictionary: Dictionary = {
           },
         ],
       },
+    },
+    urgent: {
+      ariaLabel: "Campaign · 2026 extraordinary regularisation",
+      kicker: "Special edition",
+      bulletinRef: "Royal Decree · Transitional provision",
+      eyebrow: "Reader notice",
+      headingLead: "Extraordinary regularisation.",
+      headingTrail: "A six-month legal window.",
+      lede: "The Spanish Government enables a single process for residents who lived in Spain before 1 January 2026. Centralised online filing at UTEX, positive silence resolution and an initial one-year authorisation with access to social security.",
+      deadlineLabel: "Filing closes",
+      deadlineDate: "30 Jun · 2026",
+      deadlineFootnote: "Non-extendable deadline. No applications after this date.",
+      criteria: {
+        eyebrow: "Who qualifies",
+        heading: "Three valid grounds",
+        items: [
+          {
+            label: "Social",
+            description:
+              "Continuous residence in Spain prior to 1 January 2026.",
+          },
+          {
+            label: "Political",
+            description:
+              "Holders of international protection or asylum claims under review.",
+          },
+          {
+            label: "Economic",
+            description:
+              "Workers with a verifiable employment link or a path to social security.",
+          },
+        ],
+      },
+      timeline: {
+        eyebrow: "Calendar",
+        heading: "Process milestones",
+        items: [
+          {
+            label: "16 Apr 2026",
+            description: "Online filing opens through the Mercurio platform.",
+          },
+          {
+            label: "20 Apr 2026",
+            description: "In-person attention starts (prior appointment required).",
+          },
+          {
+            label: "30 Jun 2026",
+            description: "Filing closes. No applications accepted after this date.",
+          },
+        ],
+      },
+      ctaPrimary: "Check my case",
+      ctaSecondary: "See full requirements",
     },
     services: {
       eyebrow: "Practice areas",

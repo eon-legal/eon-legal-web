@@ -19,9 +19,34 @@ export const dictionary = {
         services: "Servicios",
         process: "Proceso",
         faq: "Preguntas",
+        regularizacion: "Regularización 2026",
       },
       cta: "Consulta inicial",
       homeAriaLabel: "{brand} — Inicio",
+    },
+    urgent: {
+      ribbon: {
+        ariaLabel: "Aviso de campaña destacada",
+        eyebrow: "Disposición transitoria · Real Decreto",
+        body: "Regularización extraordinaria abierta hasta el 30 de junio de 2026.",
+        cta: "Ver requisitos",
+      },
+      modal: {
+        ariaLabel: "Aviso · Regularización extraordinaria 2026",
+        eyebrow: "Plazo limitado",
+        kicker: "Boletín · Eon Legal",
+        headingLead: "Regularización",
+        headingTrail: "extraordinaria 2026.",
+        deadlineLabel: "Cierre del plazo",
+        deadlineDate: "30 jun · 2026",
+        body: "Solicitud telemática única ante la UTEX. Si llevas en España desde antes del 1 de enero de 2026 y no tienes antecedentes, podrías obtener residencia y trabajo por un año.",
+        ctaPrimary: "Comprobar mi caso",
+        ctaSecondary: "Más adelante",
+        close: "Cerrar aviso",
+        daysSingular: "{count} día restante",
+        daysPlural: "{count} días restantes",
+        opensToday: "Cierra hoy",
+      },
     },
     footer: {
       servicesHeading: "Servicios",
@@ -116,6 +141,60 @@ export const dictionary = {
           },
         ],
       },
+    },
+    urgent: {
+      ariaLabel: "Campaña · Regularización extraordinaria 2026",
+      kicker: "Edición especial",
+      bulletinRef: "Real Decreto · Disposición transitoria",
+      eyebrow: "Aviso al lector",
+      headingLead: "Regularización extraordinaria.",
+      headingTrail: "Una ventana legal de seis meses.",
+      lede: "El Gobierno habilita un proceso único para residentes que vivían en España antes del 1 de enero de 2026. Solicitud telemática centralizada en la UTEX, resolución por silencio positivo y autorización inicial de un año con acceso a la Seguridad Social.",
+      deadlineLabel: "Cierre del plazo",
+      deadlineDate: "30 jun · 2026",
+      deadlineFootnote: "Plazo improrrogable. Sin solicitudes fuera de tiempo.",
+      criteria: {
+        eyebrow: "Quién encaja",
+        heading: "Tres legitimidades válidas",
+        items: [
+          {
+            label: "Social",
+            description:
+              "Permanencia continuada en España con anterioridad al 1 de enero de 2026.",
+          },
+          {
+            label: "Política",
+            description:
+              "Personas con autorización por protección internacional o asilo en revisión.",
+          },
+          {
+            label: "Económica",
+            description:
+              "Trabajadores con vínculo demostrable o vía a la Seguridad Social.",
+          },
+        ],
+      },
+      timeline: {
+        eyebrow: "Calendario",
+        heading: "Hitos del proceso",
+        items: [
+          {
+            label: "16 abr 2026",
+            description: "Apertura de la solicitud telemática vía Mercurio.",
+          },
+          {
+            label: "20 abr 2026",
+            description:
+              "Inicio de la atención presencial con cita previa.",
+          },
+          {
+            label: "30 jun 2026",
+            description: "Cierre del plazo. No se admiten solicitudes posteriores.",
+          },
+        ],
+      },
+      ctaPrimary: "Comprobar mi caso",
+      ctaSecondary: "Ver requisitos completos",
     },
     services: {
       eyebrow: "Áreas de práctica",
