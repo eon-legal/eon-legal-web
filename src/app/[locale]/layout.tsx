@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import "../globals.css";
 import { AnalyticsProvider } from "@/components/site/AnalyticsProvider";
 import { CookieConsent } from "@/components/site/CookieConsent";
+import { RemoteConfigProvider } from "@/components/site/RemoteConfigProvider";
 import { siteConfig } from "@/lib/config";
 import { isFirebaseConfigured } from "@/lib/firebase/config";
 import { buildLanguageAlternates } from "@/lib/i18n/alternates";
@@ -118,6 +119,10 @@ export default async function LocaleLayout({
   // consent via `CookieConsent` → see `src/lib/firebase/analytics.ts`.
   const analyticsEnabled =
     process.env.NODE_ENV === "production" && isFirebaseConfigured();
+  // Firebase Remote Config is loaded in any environment as long as Firebase
+  // is configured — flags are non-tracking configuration and need to be
+  // testable in dev. See `src/lib/firebase/remote-config.ts`.
+  const remoteConfigEnabled = isFirebaseConfigured();
   const dict = analyticsEnabled ? await getDictionary(locale) : null;
 
   return (
@@ -127,6 +132,7 @@ export default async function LocaleLayout({
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         {children}
+        {remoteConfigEnabled ? <RemoteConfigProvider /> : null}
         {analyticsEnabled && dict ? (
           <>
             <CookieConsent dict={dict.site.cookieConsent} locale={locale} />
