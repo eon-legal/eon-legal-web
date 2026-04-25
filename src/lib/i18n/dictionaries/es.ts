@@ -150,6 +150,38 @@ export const dictionary = {
         formatValue: "Presencial y telemático",
       },
     },
+    team: {
+      eyebrow: "Equipo",
+      headingLead: "Detrás de cada expediente,",
+      headingTrail: "un equipo cercano.",
+      description:
+        "Dos abogadas especializadas en extranjería que llevan personalmente cada expediente, sin intermediarios ni respuestas automatizadas.",
+      members: [
+        {
+          name: "Nombre Apellido",
+          role: "Socia · Abogada de extranjería",
+          bio: "Lidera la estrategia jurídica del despacho. Especializada en arraigo social, nacionalidad española y procedimientos contenciosos ante la Administración.",
+          imageAlt:
+            "Retrato profesional de la primera socia del despacho Eon Legal.",
+          credentials: [
+            { label: "Colegio", value: "ICA Coruña · Nº pendiente" },
+            { label: "Idiomas", value: "Español · Inglés" },
+          ],
+        },
+        {
+          name: "Nombre Apellido",
+          role: "Socia · Abogada de extranjería",
+          bio: "Coordina la tramitación documental y el seguimiento ante la Administración. Especializada en reagrupación familiar, visados y residencia por circunstancias excepcionales.",
+          imageAlt:
+            "Retrato profesional de la segunda socia del despacho Eon Legal.",
+          credentials: [
+            { label: "Colegio", value: "ICA Coruña · Nº pendiente" },
+            { label: "Idiomas", value: "Español · Inglés" },
+          ],
+        },
+      ],
+      placeholderEyebrow: "Foto provisional",
+    },
     process: {
       eyebrow: "Cómo trabajamos",
       heading: "Un proceso claro, sin ambigüedades.",

@@ -152,6 +152,38 @@ export const dictionary: Dictionary = {
         formatValue: "In-person & online",
       },
     },
+    team: {
+      eyebrow: "Team",
+      headingLead: "Behind every file,",
+      headingTrail: "a hands-on team.",
+      description:
+        "Two immigration lawyers who handle each case personally — no intermediaries, no automated replies.",
+      members: [
+        {
+          name: "Nombre Apellido",
+          role: "Partner · Immigration lawyer",
+          bio: "Leads the firm's legal strategy. Specialised in social roots, Spanish citizenship and contentious proceedings before the Administration.",
+          imageAlt:
+            "Professional portrait of the first partner at Eon Legal.",
+          credentials: [
+            { label: "Bar", value: "ICA Coruña · No. pending" },
+            { label: "Languages", value: "Spanish · English" },
+          ],
+        },
+        {
+          name: "Nombre Apellido",
+          role: "Partner · Immigration lawyer",
+          bio: "Coordinates documentary work and case tracking before the Administration. Specialised in family reunification, visas and residence on exceptional grounds.",
+          imageAlt:
+            "Professional portrait of the second partner at Eon Legal.",
+          credentials: [
+            { label: "Bar", value: "ICA Coruña · No. pending" },
+            { label: "Languages", value: "Spanish · English" },
+          ],
+        },
+      ],
+      placeholderEyebrow: "Placeholder photo",
+    },
     process: {
       eyebrow: "How we work",
       heading: "A clear process, with no grey areas.",
