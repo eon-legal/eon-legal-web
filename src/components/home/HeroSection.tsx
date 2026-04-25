@@ -92,12 +92,12 @@ export function HeroSection({ dict }: HeroSectionProps): React.ReactElement {
           <div className="sticky top-28 space-y-6">
             <figure className="relative aspect-[4/5] w-full overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1649653084130-06638e40ca25?auto=format&fit=crop&w=1400&q=80"
+                src="/hero/hero-image.webp"
                 alt={t.aside.figureAlt}
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
                 className="object-cover grayscale"
-                priority={false}
+                priority
               />
               <figcaption className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-4 border-t border-border bg-background/80 px-6 py-4 backdrop-blur">
                 <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-subtle">
