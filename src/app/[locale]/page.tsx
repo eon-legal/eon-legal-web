@@ -6,6 +6,7 @@ import { FaqSection } from "@/components/home/FaqSection";
 import { HeroSection } from "@/components/home/HeroSection";
 import { ProcessSection } from "@/components/home/ProcessSection";
 import { ServicesSection } from "@/components/home/ServicesSection";
+import { TeamSection } from "@/components/home/TeamSection";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { SiteHeader } from "@/components/site/SiteHeader";
@@ -100,6 +101,7 @@ export default async function HomePage({
         <HeroSection dict={dict} />
         <ServicesSection dict={dict} locale={locale} />
         <AboutSection dict={dict} />
+        <TeamSection dict={dict} />
         <ProcessSection dict={dict} />
         <TestimonialsSection dict={dict} />
         <FaqSection dict={dict} locale={locale} />

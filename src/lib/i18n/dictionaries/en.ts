@@ -96,7 +96,7 @@ export const dictionary: Dictionary = {
       aside: {
         ariaLabel: "Featured practice areas",
         figureAlt:
-          "Architectural detail of a legal library with a sober, professional atmosphere.",
+          "Lady Justice statue holding the scales, three-quarter view on a white background.",
         figureEyebrow: "Office · {city}",
         figureTitle: "Law studio",
         specialtiesHeading: "Specialties",
@@ -151,6 +151,38 @@ export const dictionary: Dictionary = {
         formatLabel: "Format",
         formatValue: "In-person & online",
       },
+    },
+    team: {
+      eyebrow: "Team",
+      headingLead: "Behind every file,",
+      headingTrail: "a hands-on team.",
+      description:
+        "Two immigration lawyers who handle each case personally — no intermediaries, no automated replies.",
+      members: [
+        {
+          name: "Lammay Pérez",
+          role: "Partner · Immigration lawyer",
+          bio: "Leads the firm's legal strategy. Specialised in social roots, Spanish citizenship and contentious proceedings before the Administration.",
+          imageAlt:
+            "Professional portrait of the first partner at Eon Legal.",
+          credentials: [
+            { label: "Education", value: "Univeristy of Havana" },
+            { label: "Languages", value: "Spanish · English" },
+          ],
+        },
+        {
+          name: "Yaimy Cruz",
+          role: "Senior Associate · Immigration lawyer",
+          bio: "Coordinates documentary work and case tracking before the Administration. Specialised in family reunification, visas and residence on exceptional grounds.",
+          imageAlt:
+            "Professional portrait of the second partner at Eon Legal.",
+          credentials: [
+            { label: "Education", value: "Univeristy of Havana" },
+            { label: "Languages", value: "Spanish · English" },
+          ],
+        },
+      ],
+      placeholderEyebrow: "Placeholder photo",
     },
     process: {
       eyebrow: "How we work",
