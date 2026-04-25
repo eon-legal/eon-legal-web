@@ -90,9 +90,9 @@ export function HeroSection({ dict }: HeroSectionProps): React.ReactElement {
 
         <aside aria-label={t.aside.ariaLabel} className="relative hidden lg:block">
           <div className="sticky top-28 space-y-6">
-            <figure className="relative aspect-[4/5] w-full overflow-hidden rounded-md border border-border bg-surface">
+            <figure className="relative aspect-[4/5] w-full overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1589216532372-1c2a367900d9?auto=format&fit=crop&w=1400&q=80"
+                src="https://images.unsplash.com/photo-1649653084130-06638e40ca25?auto=format&fit=crop&w=1400&q=80"
                 alt={t.aside.figureAlt}
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"

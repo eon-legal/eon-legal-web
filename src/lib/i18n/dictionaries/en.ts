@@ -96,7 +96,7 @@ export const dictionary: Dictionary = {
       aside: {
         ariaLabel: "Featured practice areas",
         figureAlt:
-          "Architectural detail of a legal library with a sober, professional atmosphere.",
+          "Lady Justice statue holding the scales, three-quarter view on a white background.",
         figureEyebrow: "Office · {city}",
         figureTitle: "Law studio",
         specialtiesHeading: "Specialties",
@@ -166,18 +166,18 @@ export const dictionary: Dictionary = {
           imageAlt:
             "Professional portrait of the first partner at Eon Legal.",
           credentials: [
-            { label: "Education", value: "Universidad de La Habana" },
+            { label: "Education", value: "Univeristy of Havana" },
             { label: "Languages", value: "Spanish · English" },
           ],
         },
         {
-          name: "Nombre Apellido",
-          role: "Partner · Immigration lawyer",
+          name: "Yaimy Cruz",
+          role: "Senior Associate · Immigration lawyer",
           bio: "Coordinates documentary work and case tracking before the Administration. Specialised in family reunification, visas and residence on exceptional grounds.",
           imageAlt:
             "Professional portrait of the second partner at Eon Legal.",
           credentials: [
-            { label: "Education", value: "ICA Coruña · No. pending" },
+            { label: "Education", value: "Univeristy of Havana" },
             { label: "Languages", value: "Spanish · English" },
           ],
         },

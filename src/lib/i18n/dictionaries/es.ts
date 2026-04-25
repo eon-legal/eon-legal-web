@@ -94,7 +94,7 @@ export const dictionary = {
       aside: {
         ariaLabel: "Especialidades destacadas",
         figureAlt:
-          "Detalle arquitectónico de biblioteca jurídica, atmósfera sobria y profesional.",
+          "Estatua de la dama de la justicia sosteniendo la balanza, vista de tres cuartos sobre fondo blanco.",
         figureEyebrow: "Despacho · {city}",
         figureTitle: "Estudio jurídico",
         specialtiesHeading: "Especialidades",
@@ -169,13 +169,13 @@ export const dictionary = {
           ],
         },
         {
-          name: "Nombre Apellido",
-          role: "Socia · Abogada de extranjería",
+          name: "Yaimy Cruz",
+          role: "Asociada Sénior · Abogada de extranjería",
           bio: "Coordina la tramitación documental y el seguimiento ante la Administración. Especializada en reagrupación familiar, visados y residencia por circunstancias excepcionales.",
           imageAlt:
             "Retrato profesional de la segunda socia del despacho Eon Legal.",
           credentials: [
-            { label: "Formación", value: "ICA Coruña · Nº pendiente" },
+            { label: "Formación", value: "Universidad de La Habana" },
             { label: "Idiomas", value: "Español · Inglés" },
           ],
         },
