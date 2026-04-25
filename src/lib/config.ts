@@ -4,8 +4,8 @@
  */
 
 export const siteConfig = {
-  name: "Eon Legal",
-  shortName: "Eon Legal",
+  name: "EonLegal Solutions",
+  shortName: "EonLegal",
   url:
     process.env.NEXT_PUBLIC_SITE_URL ??
     (process.env.VERCEL_URL
@@ -18,8 +18,8 @@ export const siteConfig = {
   logoInverted: "/logo/logo-inverted.png",
   authors: [
     {
-      name: "Eon Legal",
-      url: "https://eon-legal.com",
+      name: "EonLegal Solutions",
+      url: "https://eonlegalsolutions.com",
     },
   ],
   keywords: {
@@ -63,7 +63,7 @@ export const siteConfig = {
     value: 5,
     count: 18,
     bestRating: 5,
-    worstRating: 1,
+    worstRating: 5,
     source: "Google",
     sourceUrl:
       "https://www.google.com/search?q=eon+legal+solutions+a+coruna",

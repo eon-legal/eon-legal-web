@@ -17,13 +17,12 @@ export interface TeamMember {
 export const homeTeamMembers: readonly TeamMember[] = [
   {
     id: "member-1",
-    imageSrc: "/team/member-1.png",
+    imageSrc: "/team/member-1.webp",
     isPlaceholder: false,
   },
   {
     id: "member-2",
-    imageSrc:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=1200&q=80",
-    isPlaceholder: true,
+    imageSrc: "/team/member-2.webp",
+    isPlaceholder: false,
   },
 ] as const;
