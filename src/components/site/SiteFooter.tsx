@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { TrackedExternalLink } from "@/components/site/TrackedExternalLink";
 import { siteConfig } from "@/lib/config";
 import { getServices } from "@/lib/data/services";
 import { type Locale, localizePath } from "@/lib/i18n/config";
@@ -59,12 +60,14 @@ export function SiteFooter({
                 {dict.footer.labels.phone}
               </dt>
               <dd>
-                <a
+                <TrackedExternalLink
                   href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
+                  eventName="phone_click"
+                  eventParams={{ location: "footer" }}
                   className="text-foreground underline-offset-4 hover:underline"
                 >
                   {siteConfig.contact.phone}
-                </a>
+                </TrackedExternalLink>
               </dd>
             </div>
             <div className="flex gap-3">

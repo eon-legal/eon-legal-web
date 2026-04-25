@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { LegalPageLayout } from "@/components/legal/LegalPageLayout";
+import { ResetCookieConsent } from "@/components/site/ResetCookieConsent";
 import { siteConfig } from "@/lib/config";
+import { isFirebaseConfigured } from "@/lib/firebase/config";
 import {
   buildLanguageAlternates,
   canonicalFor,
@@ -68,6 +70,12 @@ export default async function CookiesPage({
     ),
   ];
 
+  // Only surface the reset action when the consent system is actually wired
+  // up (production + Firebase configured). In dev there is no banner, so a
+  // reset button would have nothing to reset.
+  const showReset =
+    process.env.NODE_ENV === "production" && isFirebaseConfigured();
+
   return (
     <LegalPageLayout
       dict={dict}
@@ -79,6 +87,9 @@ export default async function CookiesPage({
       jsonLd={jsonLd}
     >
       <CookiesBody locale={locale} />
+      {showReset ? (
+        <ResetCookieConsent dict={dict.site.cookieConsent} />
+      ) : null}
     </LegalPageLayout>
   );
 }
