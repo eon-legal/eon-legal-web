@@ -10,9 +10,9 @@ interface RouteDefinition {
   readonly lastModified: string;
 }
 
-const HOME_LAST_MODIFIED = "2026-04-22";
-const SERVICES_LAST_MODIFIED = "2026-04-22";
-const LEGAL_LAST_MODIFIED = "2026-04-22";
+const HOME_LAST_MODIFIED = "2026-04-25";
+const SERVICES_LAST_MODIFIED = "2026-04-25";
+const LEGAL_LAST_MODIFIED = "2026-04-25";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.url.replace(/\/$/, "");

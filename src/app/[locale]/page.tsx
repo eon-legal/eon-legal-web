@@ -8,8 +8,10 @@ import { ProcessSection } from "@/components/home/ProcessSection";
 import { ServicesSection } from "@/components/home/ServicesSection";
 import { TeamSection } from "@/components/home/TeamSection";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
+import { UrgentBannerSection } from "@/components/home/UrgentBannerSection";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { SiteHeader } from "@/components/site/SiteHeader";
+import { UrgentModal } from "@/components/site/UrgentModal";
 import { getHomeFaqs } from "@/lib/data/faqs";
 import {
   buildLanguageAlternates,
@@ -99,6 +101,7 @@ export default async function HomePage({
       <SiteHeader dict={dict.site} locale={locale} />
       <main id="main" className="flex-1">
         <HeroSection dict={dict} />
+        <UrgentBannerSection dict={dict} locale={locale} />
         <ServicesSection dict={dict} locale={locale} />
         <AboutSection dict={dict} />
         <TeamSection dict={dict} />
@@ -108,6 +111,7 @@ export default async function HomePage({
         <ContactSection dict={dict} />
       </main>
       <SiteFooter dict={dict.site} locale={locale} />
+      <UrgentModal dict={dict.site.urgent.modal} locale={locale} />
     </>
   );
 }

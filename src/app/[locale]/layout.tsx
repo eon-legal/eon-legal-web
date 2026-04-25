@@ -5,6 +5,7 @@ import "../globals.css";
 import { AnalyticsProvider } from "@/components/site/AnalyticsProvider";
 import { CookieConsent } from "@/components/site/CookieConsent";
 import { RemoteConfigProvider } from "@/components/site/RemoteConfigProvider";
+import { UrgentRibbon } from "@/components/site/UrgentRibbon";
 import { siteConfig } from "@/lib/config";
 import { isFirebaseConfigured } from "@/lib/firebase/config";
 import { buildLanguageAlternates } from "@/lib/i18n/alternates";
@@ -123,7 +124,7 @@ export default async function LocaleLayout({
   // is configured — flags are non-tracking configuration and need to be
   // testable in dev. See `src/lib/firebase/remote-config.ts`.
   const remoteConfigEnabled = isFirebaseConfigured();
-  const dict = analyticsEnabled ? await getDictionary(locale) : null;
+  const dict = await getDictionary(locale);
 
   return (
     <html
@@ -131,9 +132,14 @@ export default async function LocaleLayout({
       className={`${inter.variable} ${poppins.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
+        <UrgentRibbon
+          dict={dict.site.urgent.ribbon}
+          modalDict={dict.site.urgent.modal}
+          locale={locale}
+        />
         {children}
         {remoteConfigEnabled ? <RemoteConfigProvider /> : null}
-        {analyticsEnabled && dict ? (
+        {analyticsEnabled ? (
           <>
             <CookieConsent dict={dict.site.cookieConsent} locale={locale} />
             <AnalyticsProvider />
