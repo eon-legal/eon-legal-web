@@ -56,6 +56,18 @@ export const dictionary: Dictionary = {
       googleReview: "Google review",
       starsAriaLabel: "{value} out of 5 stars",
     },
+    cookieConsent: {
+      ariaLabel: "Cookie notice",
+      message:
+        "We use analytics cookies to measure site usage and improve our services. They only activate if you accept.",
+      accept: "Accept",
+      reject: "Reject",
+      learnMore: "Learn more",
+      resetTitle: "Change your preferences",
+      resetDescription:
+        "You can reset your choice and bring the cookie notice back to decide again.",
+      resetButton: "Reset preferences",
+    },
   },
   home: {
     metadata: {

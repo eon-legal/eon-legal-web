@@ -54,6 +54,18 @@ export const dictionary = {
       googleReview: "Reseña en Google",
       starsAriaLabel: "{value} de 5 estrellas",
     },
+    cookieConsent: {
+      ariaLabel: "Aviso de cookies",
+      message:
+        "Utilizamos cookies analíticas para medir el uso de la web y mejorar nuestros servicios. Solo se activan si las aceptas.",
+      accept: "Aceptar",
+      reject: "Rechazar",
+      learnMore: "Más información",
+      resetTitle: "Cambiar tus preferencias",
+      resetDescription:
+        "Puedes restablecer tu elección y volver a mostrar el aviso de cookies para volver a decidir.",
+      resetButton: "Restablecer preferencias",
+    },
   },
   home: {
     metadata: {
