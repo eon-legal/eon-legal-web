@@ -140,11 +140,13 @@ export function webPageSchema({
   title,
   description,
   url,
+  dateModified,
 }: {
   locale: Locale;
   title: string;
   description: string;
   url?: string;
+  dateModified?: string;
 }): string {
   const resolvedUrl = url ?? localizedUrl(locale, "/");
   return jsonLdScript({
@@ -153,6 +155,7 @@ export function webPageSchema({
     description,
     url: resolvedUrl,
     inLanguage: hreflangTag[locale],
+    ...(dateModified ? { dateModified } : {}),
     isPartOf: {
       "@type": "WebSite",
       name: siteConfig.name,
@@ -176,6 +179,37 @@ export function faqPageSchema(
         text: item.answer,
       },
     })),
+  });
+}
+
+export function specialAnnouncementSchema({
+  locale,
+  name,
+  text,
+  url,
+  datePosted,
+  expires,
+}: {
+  locale: Locale;
+  name: string;
+  text: string;
+  url: string;
+  datePosted: string;
+  expires: string;
+}): string {
+  return jsonLdScript({
+    "@type": "SpecialAnnouncement",
+    name,
+    text,
+    url,
+    inLanguage: hreflangTag[locale],
+    datePosted,
+    expires,
+    category: "https://www.wikidata.org/wiki/Q17629376",
+    announcementLocation: {
+      "@type": "Country",
+      name: "Spain",
+    },
   });
 }
 

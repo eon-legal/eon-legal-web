@@ -11,6 +11,8 @@ export const servicesContentEn: Readonly<
   residencia: {
     title: "Residence permits",
     shortTitle: "Residence",
+    metaDescription:
+      "Spanish residence and work permits: employed, self-employed and family reunification. Full cycle management with online filing. Free initial consultation.",
     summary:
       "Residence and work permits — employed, self-employed, family reunification and long-term residency in Spain.",
     longDescription:
@@ -32,6 +34,8 @@ export const servicesContentEn: Readonly<
   arraigo: {
     title: "Arraigo and exceptional-circumstances permits",
     shortTitle: "Arraigo",
+    metaDescription:
+      "Regularise your status in Spain through social, employment-based or family arraigo. We assess your best route and manage the full case. Free consultation.",
     summary:
       "Regularisation through social, employment-based, family or training-based arraigo when the legal requirements are met.",
     longDescription:
@@ -52,6 +56,8 @@ export const servicesContentEn: Readonly<
   visados: {
     title: "Visas",
     shortTitle: "Visas",
+    metaDescription:
+      "Work, study, non-lucrative and family visas for Spain. Consulate coordination and eligibility review from A Coruña. Expert immigration lawyers.",
     summary:
       "Work, study, family reunification, non-lucrative and entrepreneur visas filed in coordination with Spanish consulates.",
     longDescription:
@@ -73,6 +79,8 @@ export const servicesContentEn: Readonly<
   nacionalidad: {
     title: "Spanish citizenship",
     shortTitle: "Citizenship",
+    metaDescription:
+      "Spanish citizenship by residency, option or Democratic Memory Law. Full dossier preparation and Ministry of Justice follow-up. Free initial consultation.",
     summary:
       "Citizenship by residency, by option, procedures under the Democratic Memory Law and passport management.",
     longDescription:
@@ -94,6 +102,8 @@ export const servicesContentEn: Readonly<
   "familiares-ue": {
     title: "Family members of EU citizens",
     shortTitle: "EU family",
+    metaDescription:
+      "Residence card for family members of EU citizens (Art. 10 & Art. 20). Application, renewal and permanent residence. Immigration lawyers in A Coruña.",
     summary:
       "Residence card for family members of EU citizens and EU family reunification visas.",
     longDescription:
@@ -113,6 +123,8 @@ export const servicesContentEn: Readonly<
   dgt: {
     title: "DGT procedures and general services",
     shortTitle: "DGT",
+    metaDescription:
+      "Foreign driving licence exchange, vehicle transfers and online administrative filings. DGT procedures handled from A Coruña. No-obligation consultation.",
     summary:
       "Driving licence exchange, vehicle transfers and online filing of immigration-related applications.",
     longDescription:
@@ -133,6 +145,45 @@ export const servicesContentEn: Readonly<
   "regularizacion-2026": {
     title: "Extraordinary regularisation 2026",
     shortTitle: "Regularisation 2026",
+    metaDescription:
+      "Apply for Spain's 2026 extraordinary regularization before the 30 June deadline. Eligibility review, Mercurio online filing & UTEX follow-up. Free consultation.",
+    highlightsHeading: "Who can apply for the 2026 extraordinary regularisation",
+    requirementsHeading: "Documents to evidence your stay in Spain",
+    bodyNote:
+      "The process has three key milestones: online filing opens on 16 April 2026 through the Mercurio platform of the Ministry of Inclusion, Social Security and Migration; in-person appointments start on 20 April at immigration offices; and the filing deadline closes definitively on 30 June 2026 with no extensions. The permit granted — or deemed granted by positive administrative silence — is valid for twelve months and includes social security registration and the regional health card. On expiry, the status can be consolidated through the standard routes of the Immigration Regulations, such as employed, self-employed or long-term residency.",
+    faqs: [
+      {
+        question:
+          "What is 'positive administrative silence' in the 2026 extraordinary regularisation?",
+        answer:
+          "If UTEX does not issue an express decision within the legal timeframe, administrative silence is positive: the initial residence and work permit is deemed granted. You do not need an express resolution to begin working legally in Spain.",
+      },
+      {
+        question:
+          "What private documents can evidence my stay for the 2026 regularisation?",
+        answer:
+          "Rental contracts, utility bills in your name (water, electricity, phone), bank statements or transfer receipts, payslips or employment contracts, and school enrolment certificates for children are all valid. The documents must collectively cover your continuous stay in Spain since before 1 January 2026.",
+      },
+      {
+        question:
+          "Can I apply if I have an unexecuted expulsion order?",
+        answer:
+          "It depends on the type of order and whether it is final or under appeal. Eon Legal carries out a preliminary eligibility review to determine whether the order affects eligibility before starting the case. In some scenarios the extraordinary regularisation can proceed even with prior administrative proceedings.",
+      },
+      {
+        question:
+          "What happens when the one-year regularisation permit expires?",
+        answer:
+          "The initial authorisation is valid for twelve months. Once it expires, you can apply for a renewal or transition to a long-term residence and work permit under the Immigration Regulations, provided you can evidence employment or economic activity.",
+      },
+      {
+        question:
+          "Can Eon Legal manage the application from any region in Spain?",
+        answer:
+          "Yes. The extraordinary regularisation is filed centrally with UTEX regardless of the applicant's region of residence. Eon Legal handles cases fully online from its A Coruña office, serving clients across all of Spain.",
+      },
+    ],
+    relatedServices: ["residencia", "arraigo"],
     summary:
       "Extraordinary process approved by Royal Decree that allows migrants already living in Spain to obtain an initial one-year residence and work permit.",
     longDescription:

@@ -1,3 +1,9 @@
+/**
+ * File >150 lines justified: single page route that owns metadata generation,
+ * JSON-LD schemas, and all rendering sections (hero, highlights, requirements,
+ * optional FAQ, optional related services, CTA). Splitting would require
+ * threading service and dict props across multiple files with no reuse benefit.
+ */
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -11,11 +17,14 @@ import {
   buildLanguageAlternates,
   canonicalFor,
 } from "@/lib/i18n/alternates";
-import { isLocale, locales, localizePath } from "@/lib/i18n/config";
+import { isLocale, locales, localizePath, ogLocale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
+import { REGULARIZACION_CAMPAIGN } from "@/lib/data/regularizacion-campaign";
 import {
   breadcrumbSchema,
+  faqPageSchema,
   legalServiceSchema,
+  specialAnnouncementSchema,
   webPageSchema,
 } from "@/lib/seo/jsonld";
 
@@ -47,7 +56,7 @@ export async function generateMetadata({
 
   const title = service.title;
   const socialTitle = `${service.title} | ${siteConfig.name}`;
-  const description = service.longDescription;
+  const description = service.metaDescription;
   const path = `/servicios/${service.id}`;
   const canonical = canonicalFor(locale, path);
 
@@ -63,7 +72,7 @@ export async function generateMetadata({
       description,
       url: canonical,
       type: "article",
-      locale: siteConfig.locale,
+      locale: ogLocale[locale],
     },
     twitter: { title: socialTitle, description },
     robots: { index: true, follow: true },
@@ -89,12 +98,14 @@ export default async function ServicePage({
       locale,
       title: `${service.title} · ${siteConfig.name}`,
       description: service.longDescription,
+      dateModified: "2026-04-26",
     }),
     legalServiceSchema({
       locale,
       name: `${service.title} — ${siteConfig.name}`,
       description: service.longDescription,
       serviceType: service.shortTitle,
+      includeAggregateRating: true,
     }),
     breadcrumbSchema(
       [
@@ -104,6 +115,21 @@ export default async function ServicePage({
       ],
       locale
     ),
+    ...(service.faqs
+      ? [faqPageSchema(service.faqs.map((f) => ({ ...f })), locale)]
+      : []),
+    ...(service.id === REGULARIZACION_CAMPAIGN.serviceId
+      ? [
+          specialAnnouncementSchema({
+            locale,
+            name: service.title,
+            text: service.longDescription,
+            url: canonicalFor(locale, path),
+            datePosted: REGULARIZACION_CAMPAIGN.onlineOpensISO.split("T")[0],
+            expires: REGULARIZACION_CAMPAIGN.deadlineISO.split("T")[0],
+          }),
+        ]
+      : []),
   ];
 
   const mailtoSubject = encodeURIComponent(
@@ -174,13 +200,21 @@ export default async function ServicePage({
                 {service.longDescription}
               </p>
             </Reveal>
+
+            {service.bodyNote && (
+              <Reveal delay={0.2}>
+                <p className="mt-6 max-w-3xl text-pretty text-base leading-relaxed text-muted md:text-lg">
+                  {service.bodyNote}
+                </p>
+              </Reveal>
+            )}
           </div>
         </section>
 
         <ServiceListSection
           headingId="service-highlights-heading"
           eyebrow={common.highlightsEyebrow}
-          heading={common.highlightsHeading}
+          heading={service.highlightsHeading ?? common.highlightsHeading}
           description={common.highlightsDescription}
           items={service.highlights}
           tone="background"
@@ -189,11 +223,99 @@ export default async function ServicePage({
         <ServiceListSection
           headingId="service-requirements-heading"
           eyebrow={common.requirementsEyebrow}
-          heading={common.requirementsHeading}
+          heading={service.requirementsHeading ?? common.requirementsHeading}
           description={common.requirementsDescription}
           items={service.requirements}
           tone="surface"
         />
+
+        {service.faqs && service.faqs.length > 0 && (
+          <section
+            aria-labelledby="service-faq-heading"
+            className="border-b border-border bg-background"
+          >
+            <div className="mx-auto max-w-6xl px-6 py-20 md:py-24 lg:px-10">
+              <Reveal>
+                <div className="mb-12 space-y-4">
+                  <div className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-subtle">
+                    <span aria-hidden="true" className="h-px w-8 bg-border-strong" />
+                    {common.serviceFaqEyebrow}
+                  </div>
+                  <h2
+                    id="service-faq-heading"
+                    className="font-display text-3xl font-semibold leading-tight tracking-tight text-foreground md:text-4xl"
+                  >
+                    {common.serviceFaqHeading}
+                  </h2>
+                </div>
+              </Reveal>
+              <dl className="divide-y divide-border">
+                {service.faqs.map((faq, i) => (
+                  <Reveal key={i} delay={i * 0.04}>
+                    <div className="py-8">
+                      <dt className="text-base font-semibold text-foreground md:text-lg">
+                        {faq.question}
+                      </dt>
+                      <dd className="mt-3 text-base leading-relaxed text-muted">
+                        {faq.answer}
+                      </dd>
+                    </div>
+                  </Reveal>
+                ))}
+              </dl>
+            </div>
+          </section>
+        )}
+
+        {service.relatedServices && service.relatedServices.length > 0 && (
+          <section
+            aria-labelledby="related-services-heading"
+            className="border-b border-border bg-surface"
+          >
+            <div className="mx-auto max-w-6xl px-6 py-20 md:py-24 lg:px-10">
+              <Reveal>
+                <div className="mb-10 space-y-4">
+                  <div className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-subtle">
+                    <span aria-hidden="true" className="h-px w-8 bg-border-strong" />
+                    {common.relatedEyebrow}
+                  </div>
+                  <h2
+                    id="related-services-heading"
+                    className="font-display text-3xl font-semibold leading-tight tracking-tight text-foreground md:text-4xl"
+                  >
+                    {common.relatedHeading}
+                  </h2>
+                </div>
+              </Reveal>
+              <StaggerList className="grid gap-px bg-border md:grid-cols-2" itemClassName="bg-surface">
+                {service.relatedServices.map((id) => {
+                  const related = getServiceById(id, locale);
+                  if (!related) return null;
+                  return (
+                    <Link
+                      key={id}
+                      href={localizePath(locale, `/servicios/${id}`)}
+                      className="group flex flex-col gap-3 p-8 transition-colors hover:bg-background"
+                    >
+                      <span className="font-mono text-xs uppercase tracking-[0.2em] text-subtle">
+                        {related.index} — {related.shortTitle}
+                      </span>
+                      <span className="font-display text-xl font-semibold text-foreground">
+                        {related.title}
+                      </span>
+                      <span className="text-sm leading-relaxed text-muted">
+                        {related.summary}
+                      </span>
+                      <span className="mt-1 font-mono text-xs text-subtle transition-colors group-hover:text-foreground">
+                        → {common.relatedViewLink}
+                      </span>
+                    </Link>
+                  );
+                })}
+              </StaggerList>
+            </div>
+          </section>
+        )}
 
         <section
           aria-labelledby="service-cta-heading"

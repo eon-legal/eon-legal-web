@@ -199,7 +199,7 @@ export const dictionary: Dictionary = {
     },
     services: {
       eyebrow: "Practice areas",
-      heading: "Six areas. One point of contact.",
+      heading: "Immigration services. One point of contact.",
       description:
         "We cover the full immigration cycle in Spain — from the initial eligibility review to the final document — with a single team assigned to your case.",
       card: {
@@ -244,7 +244,7 @@ export const dictionary: Dictionary = {
           imageAlt:
             "Professional portrait of the first partner at Eon Legal.",
           credentials: [
-            { label: "Education", value: "Univeristy of Havana" },
+            { label: "Education", value: "University of Havana" },
             { label: "Languages", value: "Spanish · English" },
           ],
         },
@@ -255,7 +255,7 @@ export const dictionary: Dictionary = {
           imageAlt:
             "Professional portrait of the second partner at Eon Legal.",
           credentials: [
-            { label: "Education", value: "Univeristy of Havana" },
+            { label: "Education", value: "University of Havana" },
             { label: "Languages", value: "Spanish · English" },
           ],
         },
@@ -342,6 +342,11 @@ export const dictionary: Dictionary = {
       ctaSecondary: "See all services",
       consultaSubjectPrefix: "Enquiry · ",
       notFoundTitle: "Service not found",
+      serviceFaqEyebrow: "Frequently asked questions",
+      serviceFaqHeading: "Questions about this service",
+      relatedEyebrow: "Related services",
+      relatedHeading: "You may also be interested in",
+      relatedViewLink: "View service",
     },
   },
   legal: {
