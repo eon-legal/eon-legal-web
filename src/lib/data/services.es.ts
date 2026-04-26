@@ -11,6 +11,8 @@ export const servicesContentEs: Readonly<
   residencia: {
     title: "Autorizaciones de residencia",
     shortTitle: "Residencia",
+    metaDescription:
+      "Permisos de residencia y trabajo en España: cuenta ajena, propia y reagrupación familiar. Gestión integral con presentación telemática. Consulta gratuita.",
     summary:
       "Permisos de residencia y trabajo por cuenta ajena, por cuenta propia, reagrupación familiar y larga duración en España.",
     longDescription:
@@ -32,6 +34,8 @@ export const servicesContentEs: Readonly<
   arraigo: {
     title: "Arraigo y circunstancias excepcionales",
     shortTitle: "Arraigo",
+    metaDescription:
+      "Regulariza tu situación por arraigo social, laboral o familiar en España. Analizamos la vía óptima y gestionamos tu expediente de principio a fin. Consulta gratis.",
     summary:
       "Regularización por arraigo social, laboral, familiar y para la formación cuando se acreditan los requisitos legales.",
     longDescription:
@@ -52,6 +56,8 @@ export const servicesContentEs: Readonly<
   visados: {
     title: "Visados",
     shortTitle: "Visados",
+    metaDescription:
+      "Visados de trabajo, estudios, no lucrativo y familia para España. Coordinación consular y revisión de viabilidad previa. Despacho de extranjería en A Coruña.",
     summary:
       "Tramitación coordinada con los consulados de España para visados de trabajo, estudios, reagrupación, no lucrativa y emprendedores.",
     longDescription:
@@ -73,6 +79,8 @@ export const servicesContentEs: Readonly<
   nacionalidad: {
     title: "Nacionalidad española",
     shortTitle: "Nacionalidad",
+    metaDescription:
+      "Nacionalidad española por residencia, opción o Ley de Memoria Democrática. Expediente completo con seguimiento ante el Ministerio de Justicia. Consulta gratis.",
     summary:
       "Nacionalidad por residencia, por opción, trámites de la Ley de Memoria Democrática y gestión de pasaporte.",
     longDescription:
@@ -94,6 +102,8 @@ export const servicesContentEs: Readonly<
   "familiares-ue": {
     title: "Familiares de ciudadanos UE",
     shortTitle: "Familia UE",
+    metaDescription:
+      "Tarjeta de residencia de familiar de ciudadano UE (art. 10 y art. 20). Tramitación, renovación y residencia permanente. Despacho especializado en A Coruña.",
     summary:
       "Tarjeta de residencia de familiar de ciudadano de la Unión Europea y visados de reunificación comunitaria.",
     longDescription:
@@ -113,6 +123,8 @@ export const servicesContentEs: Readonly<
   dgt: {
     title: "Trámites DGT y servicios generales",
     shortTitle: "DGT",
+    metaDescription:
+      "Canje de carnet de conducir extranjero, traspaso de vehículos y solicitudes telemáticas ante la Administración. Trámites DGT gestionados desde A Coruña.",
     summary:
       "Canje de permisos de conducir, traspaso de vehículos y presentación telemática de solicitudes en materia de extranjería.",
     longDescription:
@@ -133,6 +145,45 @@ export const servicesContentEs: Readonly<
   "regularizacion-2026": {
     title: "Regularización extraordinaria 2026",
     shortTitle: "Regularización 2026",
+    metaDescription:
+      "Solicita la regularización extraordinaria antes del 30 jun 2026. Revisión de viabilidad, presentación telemática Mercurio y seguimiento UTEX. Consulta gratis.",
+    highlightsHeading: "Quién puede solicitar la regularización extraordinaria 2026",
+    requirementsHeading: "Documentación para acreditar la estancia en España",
+    bodyNote:
+      "El proceso tiene tres hitos clave: la solicitud telemática se abre el 16 de abril de 2026 a través de la plataforma Mercurio del Ministerio de Inclusión, Seguridad Social y Migraciones; la atención presencial con cita previa arranca el 20 de abril en las oficinas de extranjería; y el plazo cierra de forma definitiva e improrrogable el 30 de junio de 2026. La autorización concedida —o presumida por silencio positivo administrativo— tiene una vigencia de doce meses e incluye número de afiliación a la Seguridad Social y tarjeta sanitaria. Al término del año, la situación puede consolidarse a través de las vías ordinarias del Reglamento de Extranjería, como la residencia por cuenta ajena, propia o de larga duración.",
+    faqs: [
+      {
+        question:
+          "¿Qué es el silencio positivo en la regularización extraordinaria 2026?",
+        answer:
+          "Si la UTEX no resuelve expresamente la solicitud en el plazo legal, el silencio administrativo opera de forma positiva: la autorización inicial de residencia y trabajo se entiende concedida. No es necesario obtener una resolución expresa para empezar a trabajar legalmente en España.",
+      },
+      {
+        question:
+          "¿Qué documentos privados acreditan la estancia para la regularización 2026?",
+        answer:
+          "Sirven contratos de arrendamiento, facturas de servicios a nombre del solicitante (agua, luz, teléfono), justificantes de ingreso o transferencia bancaria, nóminas o contratos laborales y certificados de matrícula escolar de hijos. El conjunto debe cubrir el período de permanencia desde antes del 1 de enero de 2026.",
+      },
+      {
+        question:
+          "¿Puedo solicitar la regularización si tengo una orden de expulsión no ejecutada?",
+        answer:
+          "Depende del tipo de resolución y de si está firme o pendiente de recurso. Eon Legal realiza una revisión previa de viabilidad para determinar si la orden afecta a la elegibilidad antes de iniciar el expediente. En algunos supuestos la regularización extraordinaria puede tramitarse incluso con antecedentes administrativos previos.",
+      },
+      {
+        question:
+          "¿Qué ocurre cuando caduca la autorización de un año de la regularización 2026?",
+        answer:
+          "La autorización inicial tiene una vigencia de doce meses. Al vencer, el titular puede solicitar su renovación o modificar la situación hacia un permiso de residencia y trabajo de larga duración previsto en el Reglamento de Extranjería, siempre que acredite actividad laboral o económica.",
+      },
+      {
+        question:
+          "¿Puede Eon Legal gestionar la solicitud desde cualquier comunidad autónoma?",
+        answer:
+          "Sí. La regularización extraordinaria se tramita de forma centralizada ante la Unidad de Tramitación de Expedientes de Extranjería (UTEX), independientemente de la comunidad autónoma de residencia. Eon Legal gestiona expedientes de forma telemática en todo el territorio español desde su sede en A Coruña.",
+      },
+    ],
+    relatedServices: ["residencia", "arraigo"],
     summary:
       "Proceso extraordinario aprobado por Real Decreto que permite a personas migrantes ya residentes en España obtener una autorización inicial de residencia y trabajo con vigencia de un año.",
     longDescription:
