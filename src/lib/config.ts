@@ -34,6 +34,9 @@ export const siteConfig = {
       "tarjeta comunitaria",
       "residencia de larga duración",
       "canje de carnet de conducir",
+      "regularización extraordinaria 2026",
+      "regularización migrantes España 2026",
+      "plataforma Mercurio regularización",
     ],
     en: [
       "Spanish immigration lawyers",
@@ -46,6 +49,8 @@ export const siteConfig = {
       "EU family member card",
       "long-term residency Spain",
       "driver licence exchange Spain",
+      "extraordinary regularization Spain 2026",
+      "Spain 2026 regularization migrants",
     ],
   },
   contact: {
