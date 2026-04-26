@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/config";
 import { getServiceById, serviceSlugs } from "@/lib/data/services";
 import { type Locale, isLocale, locales } from "@/lib/i18n/config";
 
-export const alt = "Eon Legal — Servicios de extranjería";
+export const alt = "Eon Legal Solutions — Immigration and residency law services in Spain";
 export const size = { width: 1200, height: 630 } as const;
 export const contentType = "image/png";
 
