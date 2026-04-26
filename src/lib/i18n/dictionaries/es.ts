@@ -198,7 +198,7 @@ export const dictionary = {
     },
     services: {
       eyebrow: "Áreas de práctica",
-      heading: "Seis áreas. Una sola interlocución.",
+      heading: "Servicios de extranjería. Una sola interlocución.",
       description:
         "Cubrimos el ciclo completo de extranjería en España: desde la primera valoración de viabilidad hasta la obtención del documento final, con un único equipo asignado a tu expediente.",
       card: {
@@ -341,6 +341,11 @@ export const dictionary = {
       ctaSecondary: "Ver todos los servicios",
       consultaSubjectPrefix: "Consulta · ",
       notFoundTitle: "Servicio no encontrado",
+      serviceFaqEyebrow: "Preguntas frecuentes",
+      serviceFaqHeading: "Dudas sobre este servicio",
+      relatedEyebrow: "Servicios relacionados",
+      relatedHeading: "También puede interesarte",
+      relatedViewLink: "Ver servicio",
     },
   },
   legal: {
