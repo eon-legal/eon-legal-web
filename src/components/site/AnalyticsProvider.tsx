@@ -24,9 +24,20 @@ export function AnalyticsProvider(): null {
   useEffect(() => {
     if (consent !== "granted") return;
     if (!pathname) return;
-    void getAnalyticsInstance().then(() => {
-      void trackPageView(pathname);
-    });
+
+    const init = (): void => {
+      void getAnalyticsInstance().then(() => {
+        void trackPageView(pathname);
+      });
+    };
+
+    // Defer Firebase init to idle time so it doesn't block interactions
+    if ("requestIdleCallback" in window) {
+      window.requestIdleCallback(init);
+    } else {
+      // Fallback for older browsers
+      setTimeout(init, 0);
+    }
   }, [consent, pathname]);
 
   return null;
