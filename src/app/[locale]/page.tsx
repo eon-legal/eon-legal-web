@@ -21,8 +21,9 @@ import { isLocale, locales, ogLocale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import {
   faqPageSchema,
-  legalServiceSchema,
+  localBusinessSchema,
   organizationSchema,
+  personSchema,
   webPageSchema,
 } from "@/lib/seo/jsonld";
 
@@ -69,16 +70,41 @@ export default async function HomePage({
   const { title, description } = dict.home.metadata;
   const faqs = getHomeFaqs(locale);
 
+  const lawyerExpertise =
+    locale === "es"
+      ? [
+          "Derecho de extranjería",
+          "Arraigo social",
+          "Nacionalidad española",
+          "Reagrupación familiar",
+          "Visados y residencia",
+        ]
+      : [
+          "Spanish immigration law",
+          "Social arraigo",
+          "Spanish citizenship",
+          "Family reunification",
+          "Visas and residency",
+        ];
+
   const jsonLd = [
     organizationSchema({
       locale,
       description: dict.site.brand.organizationDescription,
     }),
-    legalServiceSchema({
+    localBusinessSchema({
       locale,
       description,
-      includeAggregateRating: true,
     }),
+    ...dict.home.team.members.map((member) =>
+      personSchema({
+        locale,
+        name: member.name,
+        jobTitle: member.role,
+        description: member.bio,
+        knowsAbout: lawyerExpertise,
+      })
+    ),
     webPageSchema({ locale, title, description }),
     faqPageSchema(
       faqs.map((faq) => ({ ...faq })),

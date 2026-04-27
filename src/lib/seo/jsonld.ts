@@ -55,15 +55,21 @@ export function organizationSchema({
       addressRegion: siteConfig.contact.region,
       addressCountry: siteConfig.contact.countryCode,
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 43.3623,
+      longitude: -8.4115,
+    },
     contactPoint: {
       "@type": "ContactPoint",
       telephone: siteConfig.contact.phone,
       contactType: "Customer Service",
       email: siteConfig.contact.email,
       availableLanguage: ["es", "en"],
-      areaServed: "ES",
+      areaServed: ["ES-C", "ES-GA", "ES"],
     },
     sameAs: [
+      siteConfig.googleBusinessProfile.publicUrl,
       // Add social profiles here when available
       // "https://twitter.com/eonlegal",
       // "https://linkedin.com/company/eon-legal",
@@ -116,10 +122,11 @@ export function legalServiceSchema({
       name: siteConfig.name,
       url: localizedUrl(locale, "/"),
     },
-    areaServed: {
-      "@type": "Country",
-      name: "Spain",
-    },
+    areaServed: [
+      { "@type": "City", name: "A Coruña" },
+      { "@type": "AdministrativeArea", name: "Galicia" },
+      { "@type": "Country", name: "Spain" },
+    ],
     serviceType: resolvedServiceType,
     ...(includeAggregateRating
       ? {
@@ -225,5 +232,106 @@ export function breadcrumbSchema(
       name: item.name,
       item: localizedUrl(locale, item.url),
     })),
+  });
+}
+
+export function personSchema({
+  locale,
+  name,
+  jobTitle,
+  description,
+  knowsAbout,
+}: {
+  locale: Locale;
+  name: string;
+  jobTitle: string;
+  description: string;
+  knowsAbout: readonly string[];
+}): string {
+  return jsonLdScript({
+    "@type": "Person",
+    name,
+    jobTitle,
+    description,
+    worksFor: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: localizedUrl(locale, "/"),
+    },
+    knowsAbout: [...knowsAbout],
+    knowsLanguage: ["es", "en"],
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: siteConfig.contact.city,
+      addressRegion: siteConfig.contact.region,
+      addressCountry: siteConfig.contact.countryCode,
+    },
+  });
+}
+
+export function localBusinessSchema({
+  locale,
+  description,
+}: {
+  locale: Locale;
+  description: string;
+}): string {
+  return jsonLdScript({
+    "@type": ["LegalService", "LocalBusiness"],
+    name: siteConfig.name,
+    description,
+    url: localizedUrl(locale, "/"),
+    inLanguage: hreflangTag[locale],
+    image: `${siteConfig.url.replace(/\/$/, "")}${siteConfig.logo}`,
+    telephone: siteConfig.contact.phone,
+    email: siteConfig.contact.email,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: siteConfig.contact.address,
+      postalCode: siteConfig.contact.postalCode,
+      addressLocality: siteConfig.contact.city,
+      addressRegion: siteConfig.contact.region,
+      addressCountry: siteConfig.contact.countryCode,
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 43.3623,
+      longitude: -8.4115,
+    },
+    hasMap: siteConfig.googleBusinessProfile.publicUrl,
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "09:00",
+      closes: "18:00",
+    },
+    areaServed: [
+      {
+        "@type": "City",
+        name: "A Coruña",
+      },
+      {
+        "@type": "AdministrativeArea",
+        name: "Galicia",
+      },
+      {
+        "@type": "Country",
+        name: "Spain",
+      },
+    ],
+    serviceType: locale === "es" ? "Derecho de extranjería" : "Immigration law",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: siteConfig.rating.value,
+      reviewCount: siteConfig.rating.count,
+      bestRating: siteConfig.rating.bestRating,
+      worstRating: siteConfig.rating.worstRating,
+    },
+    provider: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: localizedUrl(locale, "/"),
+    },
+    sameAs: [siteConfig.googleBusinessProfile.publicUrl],
   });
 }

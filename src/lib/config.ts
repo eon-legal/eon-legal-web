@@ -37,6 +37,14 @@ export const siteConfig = {
       "regularización extraordinaria 2026",
       "regularización migrantes España 2026",
       "plataforma Mercurio regularización",
+      "abogados extranjería A Coruña",
+      "abogado arraigo A Coruña",
+      "despacho extranjería Galicia",
+      "regularización 2026 A Coruña",
+      "abogado extranjería Coruña",
+      "tramitación arraigo A Coruña",
+      "abogados nacionalidad A Coruña",
+      "visado trabajo A Coruña",
     ],
     en: [
       "Spanish immigration lawyers",
@@ -51,6 +59,10 @@ export const siteConfig = {
       "driver licence exchange Spain",
       "extraordinary regularization Spain 2026",
       "Spain 2026 regularization migrants",
+      "immigration lawyers A Coruña",
+      "immigration lawyer Galicia Spain",
+      "arraigo lawyer Coruña",
+      "Spanish visa A Coruña",
     ],
   },
   contact: {
@@ -70,8 +82,11 @@ export const siteConfig = {
     bestRating: 5,
     worstRating: 5,
     source: "Google",
-    sourceUrl:
-      "https://www.google.com/search?q=eon+legal+solutions+a+coruna",
+    sourceUrl: "https://maps.google.com/?cid=4037852907856911343",
+  },
+  googleBusinessProfile: {
+    cid: "4037852907856911343",
+    publicUrl: "https://maps.google.com/?cid=4037852907856911343",
   },
 } as const;
 

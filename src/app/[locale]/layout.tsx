@@ -72,6 +72,12 @@ export async function generateMetadata({
       ],
       apple: "/apple-touch-icon.png",
     },
+    other: {
+      "geo.region": "ES-C",
+      "geo.placename": "A Coruña",
+      "geo.position": "43.3623;-8.4115",
+      "ICBM": "43.3623, -8.4115",
+    },
     robots: {
       index: true,
       follow: true,
