@@ -65,6 +65,13 @@ export async function generateMetadata({
     keywords: [...siteConfig.keywords[locale]],
     authors: [...siteConfig.authors],
     creator: siteConfig.authors[0].name,
+    icons: {
+      icon: [
+        { url: "/favicon.svg", type: "image/svg+xml" },
+        { url: "/favicon.ico", sizes: "any" },
+      ],
+      apple: "/apple-touch-icon.png",
+    },
     robots: {
       index: true,
       follow: true,
