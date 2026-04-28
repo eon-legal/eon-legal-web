@@ -248,7 +248,7 @@ export const dictionary = {
           ],
         },
         {
-          name: "Yaimy Cruz",
+          name: "Yaymi Cruz",
           role: "Asociada Sénior · Abogada de extranjería",
           bio: "Coordina la tramitación documental y el seguimiento ante la Administración. Especializada en reagrupación familiar, visados y residencia por circunstancias excepcionales.",
           imageAlt:

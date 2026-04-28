@@ -249,7 +249,7 @@ export const dictionary: Dictionary = {
           ],
         },
         {
-          name: "Yaimy Cruz",
+          name: "Yaymi Cruz",
           role: "Senior Associate · Immigration lawyer",
           bio: "Coordinates documentary work and case tracking before the Administration. Specialised in family reunification, visas and residence on exceptional grounds.",
           imageAlt:
