@@ -87,7 +87,7 @@ export const dictionary: Dictionary = {
         "We use analytics cookies to measure site usage and improve our services. They only activate if you accept.",
       accept: "Accept",
       reject: "Reject",
-      learnMore: "Learn more",
+      learnMore: "View our cookie policy",
       resetTitle: "Change your preferences",
       resetDescription:
         "You can reset your choice and bring the cookie notice back to decide again.",

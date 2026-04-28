@@ -85,7 +85,7 @@ export const dictionary = {
         "Utilizamos cookies analíticas para medir el uso de la web y mejorar nuestros servicios. Solo se activan si las aceptas.",
       accept: "Aceptar",
       reject: "Rechazar",
-      learnMore: "Más información",
+      learnMore: "Ver nuestra política de cookies",
       resetTitle: "Cambiar tus preferencias",
       resetDescription:
         "Puedes restablecer tu elección y volver a mostrar el aviso de cookies para volver a decidir.",
