@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import dynamic from "next/dynamic";
 import { AboutSection } from "@/components/home/AboutSection";
@@ -10,6 +11,7 @@ import { UrgentBannerSection } from "@/components/home/UrgentBannerSection";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { UrgentModal } from "@/components/site/UrgentModal";
+import { SectionSkeleton } from "@/components/ui/SectionSkeleton";
 
 // Lazy-load below-the-fold sections to reduce initial JS
 const ProcessSection = dynamic(() =>
@@ -147,9 +149,15 @@ export default async function HomePage({
         <UrgentBannerSection dict={dict} locale={locale} />
         <ServicesSection dict={dict} locale={locale} />
         <AboutSection dict={dict} />
-        <TeamSection dict={dict} />
-        <ProcessSection dict={dict} />
-        <TestimonialsSection dict={dict} />
+        <Suspense fallback={<SectionSkeleton />}>
+          <TeamSection dict={dict} />
+        </Suspense>
+        <Suspense fallback={<SectionSkeleton />}>
+          <ProcessSection dict={dict} />
+        </Suspense>
+        <Suspense fallback={<SectionSkeleton />}>
+          <TestimonialsSection dict={dict} />
+        </Suspense>
         <FaqSection dict={dict} locale={locale} />
         <ContactSection dict={dict} />
       </main>
