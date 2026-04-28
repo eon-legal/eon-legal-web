@@ -20,7 +20,7 @@ export function AboutSection({ dict }: AboutSectionProps): React.ReactElement {
         <Reveal className="order-2 lg:order-1">
           <figure className="relative aspect-[4/5] w-full overflow-hidden rounded-md border border-border bg-surface">
             <Image
-              src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1400&q=80"
+              src="/about/office.webp"
               alt={t.imageAlt}
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"

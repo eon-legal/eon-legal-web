@@ -1,17 +1,36 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { notFound } from "next/navigation";
+import dynamic from "next/dynamic";
 import { AboutSection } from "@/components/home/AboutSection";
 import { ContactSection } from "@/components/home/ContactSection";
 import { FaqSection } from "@/components/home/FaqSection";
 import { HeroSection } from "@/components/home/HeroSection";
-import { ProcessSection } from "@/components/home/ProcessSection";
 import { ServicesSection } from "@/components/home/ServicesSection";
-import { TeamSection } from "@/components/home/TeamSection";
-import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { UrgentBannerSection } from "@/components/home/UrgentBannerSection";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { UrgentModal } from "@/components/site/UrgentModal";
+import { SectionSkeleton } from "@/components/ui/SectionSkeleton";
+
+// Lazy-load below-the-fold sections to reduce initial JS
+const ProcessSection = dynamic(() =>
+  import("@/components/home/ProcessSection").then((m) => ({
+    default: m.ProcessSection,
+  }))
+);
+
+const TeamSection = dynamic(() =>
+  import("@/components/home/TeamSection").then((m) => ({
+    default: m.TeamSection,
+  }))
+);
+
+const TestimonialsSection = dynamic(() =>
+  import("@/components/home/TestimonialsSection").then((m) => ({
+    default: m.TestimonialsSection,
+  }))
+);
 import { getHomeFaqs } from "@/lib/data/faqs";
 import {
   buildLanguageAlternates,
@@ -130,9 +149,15 @@ export default async function HomePage({
         <UrgentBannerSection dict={dict} locale={locale} />
         <ServicesSection dict={dict} locale={locale} />
         <AboutSection dict={dict} />
-        <TeamSection dict={dict} />
-        <ProcessSection dict={dict} />
-        <TestimonialsSection dict={dict} />
+        <Suspense fallback={<SectionSkeleton />}>
+          <TeamSection dict={dict} />
+        </Suspense>
+        <Suspense fallback={<SectionSkeleton />}>
+          <ProcessSection dict={dict} />
+        </Suspense>
+        <Suspense fallback={<SectionSkeleton />}>
+          <TestimonialsSection dict={dict} />
+        </Suspense>
         <FaqSection dict={dict} locale={locale} />
         <ContactSection dict={dict} />
       </main>
