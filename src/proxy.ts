@@ -25,15 +25,21 @@ export function proxy(request: NextRequest): NextResponse | undefined {
   const cookieLocale = request.cookies.get(LOCALE_COOKIE)?.value;
   const explicit =
     cookieLocale && isLocale(cookieLocale) ? cookieLocale : undefined;
+
+  // Root path always goes to defaultLocale so search engines get a stable
+  // canonical target. Accept-Language detection applies only to sub-paths
+  // where the user arrived without a locale prefix.
   const locale =
-    explicit ?? matchLocale(request.headers.get("accept-language")) ?? defaultLocale;
+    pathname === "/"
+      ? (explicit ?? defaultLocale)
+      : (explicit ?? matchLocale(request.headers.get("accept-language")) ?? defaultLocale);
 
   const target = new URL(request.nextUrl);
   target.pathname = `/${locale}${pathname === "/" ? "" : pathname}`;
   target.search = search;
   target.hash = hash;
 
-  return NextResponse.redirect(target);
+  return NextResponse.redirect(target, { status: 308 });
 }
 
 export const config = {
