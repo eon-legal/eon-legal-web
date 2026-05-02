@@ -10,6 +10,7 @@ export const servicesContentEn: Readonly<
 > = {
   "familiares-ue": {
     title: "EU family member residence card: rights and processing in Spain",
+    metaTitle: "EU family member residence card Spain",
     shortTitle: "EU Family",
     metaDescription:
       "EU family member residence card (art. 10, art. 20): requirements, processing time and renewal. Specialised lawyers. Free consultation.",
@@ -40,9 +41,11 @@ export const servicesContentEn: Readonly<
       "For renewal: documentation proving subsistence of family ties and EU citizenship of sponsor",
       "For access to permanent residency: continuous padron certificates for 5 years plus current family relationship documentation",
     ],
+    relatedServices: ["residencia", "dgt"],
   },
   residencia: {
     title: "Spanish residence permits: employee, self-employed and family reunification",
+    metaTitle: "Spain residence permit: work & family",
     shortTitle: "Residence",
     metaDescription:
       "Spanish residence permits: employee, self-employed, family reunification. Statutory timeline and requirements. Expert immigration lawyers. Free consultation.",
@@ -74,9 +77,11 @@ export const servicesContentEn: Readonly<
       "For renewals: proof of continuous employment or business activity; updated financial documentation",
       "For transition to long-term: proof of 5 years continuous residence (padron records, previous permit documentation, tax history)",
     ],
+    relatedServices: ["arraigo", "visados", "familiares-ue"],
   },
   arraigo: {
     title: "Arraigo permits: social, employment, family and training regularisation",
+    metaTitle: "Arraigo Spain: social and employment",
     shortTitle: "Arraigo",
     metaDescription:
       "Arraigo in Spain: social, employment-based and family permits for 2026. Requirements, documents and legal timeline. Specialised lawyers in A Coruña. Free consultation.",
@@ -104,9 +109,11 @@ export const servicesContentEn: Readonly<
       "Statutory declarations from 3–4 witnesses with knowledge dating 2+ years back (if no social arraigo report available)",
       "For appeals: proof of rejection filed with the Electronic Registry (REUE) within 1 month of decision",
     ],
+    relatedServices: ["residencia", "regularizacion-2026"],
   },
   visados: {
     title: "Spanish visas: work, study, non-lucrative and family",
+    metaTitle: "Spanish visas: work, study & family",
     shortTitle: "Visas",
     metaDescription:
       "Spanish visas: work, study, non-lucrative, family member. Consulate coordination and viability review. Statutory timeline and requirements. Free consultation.",
@@ -141,9 +148,11 @@ export const servicesContentEn: Readonly<
       "Valid health insurance policy with coverage in Spain (public or equivalent private coverage)",
       "Consulate-specific supplementary documentation (varies by consulate and nationality)",
     ],
+    relatedServices: ["residencia", "nacionalidad"],
   },
   dgt: {
     title: "Driver's license exchange and traffic administration for foreigners in Spain",
+    metaTitle: "Foreign driving licence exchange Spain",
     shortTitle: "Traffic & Driving",
     metaDescription:
       "Exchange foreign driving license to Spanish, vehicle transfers, DGT certificates and traffic administration. Processing from A Coruña. Free consultation.",
@@ -175,9 +184,11 @@ export const servicesContentEn: Readonly<
       "Proof of residence address in Spain (padron certificate)",
       "Proof of valid motor third-party liability insurance (if vehicle continues in use)",
     ],
+    relatedServices: ["familiares-ue", "residencia"],
   },
   nacionalidad: {
     title: "Spanish citizenship: residency, option and Democratic Memory Law",
+    metaTitle: "Spanish citizenship by residency",
     shortTitle: "Citizenship",
     metaDescription:
       "Spanish citizenship by residency (5 years), option, Democratic Memory Law. CCSE-DELE exams, full file, statutory timeline. Free consultation.",
@@ -211,9 +222,11 @@ export const servicesContentEn: Readonly<
       "Valid passport or travel document",
       "Documentation for oath ceremony at Civil Registry: valid identity document or passport for attendance",
     ],
+    relatedServices: ["residencia", "visados"],
   },
   "regularizacion-2026": {
     title: "Spain's 2026 extraordinary regularisation: Mercurio filing & UTEX processing",
+    metaTitle: "Spain 2026 extraordinary regularisation",
     shortTitle: "Regularisation 2026",
     metaDescription:
       "Apply for Spain's 2026 extraordinary regularization before 30 June. Eligibility review, Mercurio online filing & UTEX follow-up. Free consultation.",

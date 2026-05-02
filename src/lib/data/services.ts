@@ -14,6 +14,9 @@ import { servicesContentEs } from "@/lib/data/services.es";
 
 export interface LocalizedServiceContent {
   readonly title: string;
+  // Shorter variant for <title> tag / SERPs (≤38ch so total with brand ≤60ch).
+  // Falls back to title when absent.
+  readonly metaTitle?: string;
   readonly shortTitle: string;
   readonly summary: string;
   readonly metaDescription: string;

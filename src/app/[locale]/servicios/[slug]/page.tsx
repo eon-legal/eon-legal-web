@@ -54,14 +54,14 @@ export async function generateMetadata({
     return { title: dict.services.common.notFoundTitle };
   }
 
-  const title = service.title;
+  const metaTitle = service.metaTitle ?? service.title;
   const socialTitle = `${service.title} | ${siteConfig.name}`;
   const description = service.metaDescription;
   const path = `/servicios/${service.id}`;
   const canonical = canonicalFor(locale, path);
 
   return {
-    title,
+    title: metaTitle,
     description,
     alternates: {
       canonical,

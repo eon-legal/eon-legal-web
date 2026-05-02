@@ -10,6 +10,7 @@ export const servicesContentEs: Readonly<
 > = {
   residencia: {
     title: "Autorizaciones de residencia en España: empleado, autónomo y reagrupación",
+    metaTitle: "Autorización de residencia en España",
     shortTitle: "Residencia",
     metaDescription:
       "Autorización de residencia en España: cuenta ajena (empleado), cuenta propia (autónomo) y reagrupación familiar 2026. Plazo legal y documentos. Consulta gratis.",
@@ -41,9 +42,11 @@ export const servicesContentEs: Readonly<
       "Para renovaciones: prueba de actividad laboral continuada o actividad empresarial; documentación financiera actualizada",
       "Para paso a larga duración: justificación de 5 años de residencia continuada (certificados de empadronamiento, documentación de autorizaciones previas)",
     ],
+    relatedServices: ["arraigo", "visados", "familiares-ue"],
   },
   arraigo: {
     title: "Arraigo: social, laboral, familiar y para la formación",
+    metaTitle: "Arraigo social, laboral y familiar",
     shortTitle: "Arraigo",
     metaDescription:
       "Arraigo en España: social, laboral y familiar en 2026. Requisitos, documentos y plazo legal. Abogados especializados. Consulta gratis.",
@@ -71,9 +74,11 @@ export const servicesContentEs: Readonly<
       "Declaraciones juradas de 3-4 testigos con conocimiento que se remonte 2 o más años atrás (si no se dispone de informe de arraigo social)",
       "Para recursos: justificación de la presentación del escrito de recursos ante el Registro Electrónico (REUE) dentro del mes siguiente a la resolución",
     ],
+    relatedServices: ["residencia", "regularizacion-2026"],
   },
   visados: {
     title: "Visados para España: trabajo, estudios, no lucrativo y familia",
+    metaTitle: "Visados para España: trabajo y estudios",
     shortTitle: "Visados",
     metaDescription:
       "Visados para España: trabajo, estudios, no lucrativo, familia. Coordinación consular y revisión de viabilidad. Plazo legal y documentos. Consulta gratis.",
@@ -107,9 +112,11 @@ export const servicesContentEs: Readonly<
       "Justificación de medios económicos para subsistencia en España (varía por ruta y duración)",
       "Póliza de seguro médico con cobertura en España (público o privado equivalente)",
     ],
+    relatedServices: ["residencia", "nacionalidad"],
   },
   nacionalidad: {
     title: "Nacionalidad española: residencia, opción y Ley de Memoria Democrática",
+    metaTitle: "Nacionalidad española por residencia",
     shortTitle: "Nacionalidad",
     metaDescription:
       "Nacionalidad española por residencia (5 años), opción, Ley Memoria Democrática. Pruebas CCSE-DELE, expediente completo, plazo legal. Consulta gratis.",
@@ -143,9 +150,11 @@ export const servicesContentEs: Readonly<
       "Pasaporte válido o documento de viaje",
       "Documentación de jura ante Registro Civil: cédula de identidad o pasaporte válido para comparecencia",
     ],
+    relatedServices: ["residencia", "visados"],
   },
   "familiares-ue": {
     title: "Tarjeta de residencia de familiar de ciudadano UE: derechos y tramitación",
+    metaTitle: "Residencia de familiar de ciudadano UE",
     shortTitle: "Familia UE",
     metaDescription:
       "Tarjeta de residencia familiar UE (art. 10 y 20): requisitos, plazo de tramitación y renovación. Despacho especializado. Consulta gratis.",
@@ -176,9 +185,11 @@ export const servicesContentEs: Readonly<
       "Para renovación: documentación que acredite subsistencia del vínculo familiar y ciudadanía UE del titular",
       "Para acceso a residencia permanente: certificados de empadronamiento continuado durante 5 años + documentación del vínculo actual",
     ],
+    relatedServices: ["residencia", "dgt"],
   },
   dgt: {
     title: "Canje de carnet de conducir y trámites DGT para extranjeros en España",
+    metaTitle: "Canje de carnet de conducir en España",
     shortTitle: "DGT",
     metaDescription:
       "Canje de carnet de conducir extranjero a español, traspaso vehículos y certificaciones DGT. Tramitación desde A Coruña. Consulta gratis.",
@@ -210,9 +221,11 @@ export const servicesContentEs: Readonly<
       "Justificante de empadronamiento en España (para acreditar domicilio)",
       "Comprobante de seguro de responsabilidad civil vigente (si el vehículo sigue en uso)",
     ],
+    relatedServices: ["familiares-ue", "residencia"],
   },
   "regularizacion-2026": {
     title: "Regularización extraordinaria 2026: residencia y trabajo legal en España",
+    metaTitle: "Regularización extraordinaria 2026",
     shortTitle: "Regularización 2026",
     metaDescription:
       "Regularización extraordinaria 2026: permanencia antes 1 ene 2026, plazo 30 jun, Mercurio UTEX, silencio positivo. Viabilidad y presentación telemática. Consulta gratis.",
