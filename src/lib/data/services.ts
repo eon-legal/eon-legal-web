@@ -17,13 +17,13 @@ export interface LocalizedServiceContent {
   readonly shortTitle: string;
   readonly summary: string;
   readonly metaDescription: string;
-  readonly longDescription: string;
+  readonly longDescription: readonly string[];
   readonly highlights: readonly string[];
   readonly requirements: readonly string[];
   // Optional per-service overrides — leave undefined to use shared dict strings
   readonly highlightsHeading?: string;
   readonly requirementsHeading?: string;
-  readonly bodyNote?: string;
+  readonly bodyNote?: readonly string[];
   readonly faqs?: readonly { readonly question: string; readonly answer: string }[];
   readonly relatedServices?: readonly string[];
 }

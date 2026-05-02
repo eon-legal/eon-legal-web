@@ -93,17 +93,19 @@ export default async function ServicePage({
   const homeHref = localizePath(locale, "/");
   const servicesHref = `${homeHref}#servicios`;
 
+  const longDescriptionText = service.longDescription.join(" ");
+
   const jsonLd = [
     webPageSchema({
       locale,
       title: `${service.title} · ${siteConfig.name}`,
-      description: service.longDescription,
+      description: longDescriptionText,
       dateModified: "2026-04-26",
     }),
     legalServiceSchema({
       locale,
       name: `${service.title} — ${siteConfig.name}`,
-      description: service.longDescription,
+      description: longDescriptionText,
       serviceType: service.shortTitle,
       includeAggregateRating: true,
     }),
@@ -123,7 +125,7 @@ export default async function ServicePage({
           specialAnnouncementSchema({
             locale,
             name: service.title,
-            text: service.longDescription,
+            text: longDescriptionText,
             url: canonicalFor(locale, path),
             datePosted: REGULARIZACION_CAMPAIGN.onlineOpensISO.split("T")[0],
             expires: REGULARIZACION_CAMPAIGN.deadlineISO.split("T")[0],
@@ -196,16 +198,30 @@ export default async function ServicePage({
             </Reveal>
 
             <Reveal delay={0.15}>
-              <p className="mt-8 max-w-3xl text-pretty text-base leading-relaxed text-muted md:text-lg">
-                {service.longDescription}
-              </p>
+              <div className="mt-8 max-w-3xl space-y-4">
+                {service.longDescription.map((paragraph, i) => (
+                  <p
+                    key={i}
+                    className="text-pretty text-base leading-relaxed text-muted md:text-lg"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
             </Reveal>
 
             {service.bodyNote && (
               <Reveal delay={0.2}>
-                <p className="mt-6 max-w-3xl text-pretty text-base leading-relaxed text-muted md:text-lg">
-                  {service.bodyNote}
-                </p>
+                <div className="mt-6 max-w-3xl space-y-4">
+                  {service.bodyNote.map((paragraph, i) => (
+                    <p
+                      key={i}
+                      className="text-pretty text-base leading-relaxed text-muted md:text-lg"
+                    >
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
               </Reveal>
             )}
           </div>
