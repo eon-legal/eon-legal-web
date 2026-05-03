@@ -10,15 +10,15 @@ export const servicesContentEn: Readonly<
 > = {
   "familiares-ue": {
     title: "EU family member residence card: rights and processing in Spain",
-    metaTitle: "EU family member residence card Spain",
+    metaTitle: "EU family member residence card Spain: rights & processing",
     shortTitle: "EU Family",
     metaDescription:
-      "EU family member residence card (art. 10, art. 20): requirements, processing time and renewal. Specialised lawyers. Free consultation.",
+      "EU family member residence card Spain (art. 10 & 20): requirements, processing timeline and 5-year renewal. Specialised immigration lawyers. Free consultation.",
     summary:
       "Residence card for EU citizen family members: initial card, renewal and access to permanent residency status.",
     longDescription: [
-      "The EU family member residence card (TRF-UE) is the legal instrument recognising the right of residence of family members of EU citizens in Spain, regulated by Royal Decree 240/2007 and EU Treaties. Two categories exist: (1) Initial residence card (art. 10) — valid 5 years, renewable while family ties and EU citizenship of sponsor persist; (2) Permanent residence card (art. 20) — indefinite status after 5 years of continuous legal residence as EU family member.",
-      "The card covers spouse, registered same-sex partner, dependent children under 21, and dependent ascendants of the EU citizen. Processing time is 30 days from application to the Immigration Office (Oficina de Extranjería), though real timelines range 45–90 days depending on office volume.",
+      { h3: "Types of EU family member residence card", text: "The EU family member residence card (TRF-UE) is the legal instrument recognising the right of residence of family members of EU citizens in Spain, regulated by Royal Decree 240/2007 and EU Treaties. Two categories exist: (1) Initial residence card (art. 10) — valid 5 years, renewable while family ties and EU citizenship of sponsor persist; (2) Permanent residence card (art. 20) — indefinite status after 5 years of continuous legal residence as EU family member." },
+      { h3: "Rights and processing", text: "The card covers spouse, registered same-sex partner, dependent children under 21, and dependent ascendants of the EU citizen. Processing time is 30 days from application to the Immigration Office (Oficina de Extranjería), though real timelines range 45–90 days depending on office volume." },
       "Once issued, the TRF-UE holder has equal access to the Spanish labour market as Spanish citizens, with no sectoral or geographic restrictions.",
       "At Eon Legal, we manage the complete cycle: eligibility review, document coordination (marriage, registered partnership, proof of dependency), filing with Immigration Office, handling of 5-year renewals, and support for transition to permanent residency.",
     ],
@@ -41,20 +41,43 @@ export const servicesContentEn: Readonly<
       "For renewal: documentation proving subsistence of family ties and EU citizenship of sponsor",
       "For access to permanent residency: continuous padron certificates for 5 years plus current family relationship documentation",
     ],
+    sources: [
+      { label: "Royal Decree 240/2007 — EU citizens in Spain", url: "https://www.boe.es/eli/es/rd/2007/02/16/240/con" },
+      { label: "Organic Law 4/2000 — Immigration", url: "https://www.boe.es/eli/es/lo/2000/01/11/4/con" },
+      { label: "Ministry of Inclusion — Immigration procedures", url: "https://www.inclusion.gob.es/web/migraciones/en-tu-pais/tramites" },
+    ],
+    faqs: [
+      {
+        question: "Who can apply for the EU family member residence card in Spain?",
+        answer: "Spouse, registered partner, dependent children (under 21 or over 21 if still dependent), and dependent ascendants of the EU citizen sponsor. The family relationship must be legally documented.",
+      },
+      {
+        question: "What is the difference between the art. 10 and art. 20 residence card?",
+        answer: "Art. 10 is the initial 5-year renewable card; art. 20 is the permanent card granted after 5 years of continuous legal residence as an EU family member. The permanent card has no expiry date.",
+      },
+      {
+        question: "Can I work in Spain with the EU family member residence card?",
+        answer: "Yes, full access to the Spanish labour market without sectoral or geographic restrictions, equivalent rights to Spanish nationals.",
+      },
+      {
+        question: "What happens if the EU citizen sponsor leaves Spain?",
+        answer: "Family members who have resided legally in Spain for 3+ years may retain their residence rights even if the EU citizen departs. The specific outcome depends on individual circumstances and requires legal analysis.",
+      },
+    ],
     relatedServices: ["residencia", "dgt"],
   },
   residencia: {
     title: "Spanish residence permits: employee, self-employed and family reunification",
-    metaTitle: "Spain residence permit: work & family",
+    metaTitle: "Spain residence permit 2026: employee & self-employed",
     shortTitle: "Residence",
     metaDescription:
       "Spanish residence permits: employee, self-employed, family reunification. Statutory timeline and requirements. Expert immigration lawyers. Free consultation.",
     summary:
       "Residence and work permits for employees, self-employed workers, family reunification and long-term residency under Spanish Organic Law 4/2000.",
     longDescription: [
-      "Residence authorisation (autorización de residencia) is the primary legal route for foreign nationals to live and work in Spain, governed by Organic Law 4/2000 and its Implementing Regulation (Real Decreto 557/2011). Residence permits fall into two categories: temporary (1–3 years, renewable) and long-term (indefinite). Within temporary residence, the main routes are: (1) Employee (cuenta ajena) — tied to a specific employment contract; (2) Self-employed (cuenta propia) — requires a business plan and proof of economic viability; (3) Family reunification — for dependent family members of a Spanish resident or citizen; (4) Investor/entrepreneur — significant investment or business creation.",
-      "The statutory processing time is 3 months from complete file submission to the Immigration Office (Oficina de Extranjería), though typical resolution takes 4–8 months. After 5 years of continuous temporary residence, applicants become eligible for long-term residency (autorización de larga duración), which removes the renewal requirement and grants indefinite stay rights with free Schengen movement.",
-      "At Eon Legal, we manage the complete lifecycle: initial viability assessment, document coordination in the country of origin (employment contracts, birth certificates, financial statements), sworn translations and apostille, online filing with the competent Immigration Office, and proactive handling of administrative requests or renewal procedures.",
+      { h3: "Types of Spanish residence permit", text: "Residence authorisation (autorización de residencia) is the primary legal route for foreign nationals to live and work in Spain, governed by Organic Law 4/2000 and its Implementing Regulation (Real Decreto 557/2011). Residence permits fall into two categories: temporary (1–3 years, renewable) and long-term (indefinite). Within temporary residence, the main routes are: (1) Employee (cuenta ajena) — tied to a specific employment contract; (2) Self-employed (cuenta propia) — requires a business plan and proof of economic viability; (3) Family reunification — for dependent family members of a Spanish resident or citizen; (4) Investor/entrepreneur — significant investment or business creation." },
+      { h3: "Processing timelines", text: "The statutory processing time is 3 months from complete file submission to the Immigration Office (Oficina de Extranjería), though typical resolution takes 4–8 months. After 5 years of continuous temporary residence, applicants become eligible for long-term residency (autorización de larga duración), which removes the renewal requirement and grants indefinite stay rights with free Schengen movement." },
+      { h3: "How we manage your case", text: "At Eon Legal, we manage the complete lifecycle: initial viability assessment, document coordination in the country of origin (employment contracts, birth certificates, financial statements), sworn translations and apostille, online filing with the competent Immigration Office, and proactive handling of administrative requests or renewal procedures." },
       "Common approval barriers include insufficient financial evidence, labour market test failures (for employee permits), and document authentication issues — we anticipate and resolve these systematically.",
     ],
     highlights: [
@@ -77,14 +100,32 @@ export const servicesContentEn: Readonly<
       "For renewals: proof of continuous employment or business activity; updated financial documentation",
       "For transition to long-term: proof of 5 years continuous residence (padron records, previous permit documentation, tax history)",
     ],
+    faqs: [
+      {
+        question: "How long does a Spanish residence permit take to process?",
+        answer: "The statutory processing time is 3 months from complete file submission to the Immigration Office (Oficina de Extranjería), though in practice resolution typically takes 4–8 months depending on the autonomous community and application volume. At Eon Legal we proactively monitor the case, respond to administrative requests on time and anticipate documentary issues to minimise delays.",
+      },
+      {
+        question: "Can I work while my residence permit application is being processed?",
+        answer: "It depends on the type of permit requested. Residence and work authorisations (employee and self-employed routes) include work entitlement from the moment of a favourable resolution. Residence permits without work authorisation (family reunification, initial long-term residency) require a separate modification request to include work rights if paid employment is intended.",
+      },
+      {
+        question: "What happens if my residence permit application is refused?",
+        answer: "Two appeal routes exist: an administrative appeal (recurso de reposición) filed with the same Immigration Office within 1 month of notification, and a judicial appeal (recurso contencioso-administrativo) filed with the courts within 2 months. Eon Legal manages both procedures, analyses the grounds for refusal and prepares the legal and documentary arguments to reverse the decision.",
+      },
+      {
+        question: "How much money do I need to show for a Spanish residence permit?",
+        answer: "For an individual applicant, the minimum is €20,430 per year (updated annually in line with IPREM). For family reunification, the threshold increases according to the number of dependants. Evidence can be provided through bank statements, pay slips, pension records or any documented source of income.",
+      },
+    ],
     relatedServices: ["arraigo", "visados", "familiares-ue"],
   },
   arraigo: {
     title: "Arraigo permits: social, employment, family and training regularisation",
-    metaTitle: "Arraigo Spain: social and employment",
+    metaTitle: "Arraigo Spain 2026: social, employment, family & training",
     shortTitle: "Arraigo",
     metaDescription:
-      "Arraigo in Spain: social, employment-based and family permits for 2026. Requirements, documents and legal timeline. Specialised lawyers in A Coruña. Free consultation.",
+      "Arraigo in Spain: social, employment-based and family permits for 2026. Requirements, legal timeline and documents. Specialised lawyers. Free consultation.",
     summary:
       "Social, employment-based, family and training-based arraigo: regularisation routes for non-residents evidencing established ties in Spain.",
     longDescription: [
@@ -109,11 +150,29 @@ export const servicesContentEn: Readonly<
       "Statutory declarations from 3–4 witnesses with knowledge dating 2+ years back (if no social arraigo report available)",
       "For appeals: proof of rejection filed with the Electronic Registry (REUE) within 1 month of decision",
     ],
+    faqs: [
+      {
+        question: "What is the difference between social arraigo and employment-based arraigo?",
+        answer: "Social arraigo requires evidencing 2 years of continuous residence in Spain plus a social integration report issued by the autonomous community, together with a minimum 1-year employment contract. Employment-based arraigo requires proving at least 6 months of an employment relationship through a court judgment, Labour Inspectorate report or administrative resolution. The required documentation and processing timelines differ substantially between the two routes.",
+      },
+      {
+        question: "What options do I have if I cannot obtain the social integration report?",
+        answer: "In some cases, sworn statements from 3–4 witnesses with documented knowledge of the applicant's situation, supported by sufficient corroborating evidence (rental contracts, invoices, padron records), can supplement or strengthen the file when the official social integration report is unavailable or negative. Eon Legal assesses the real viability of the file before filing to avoid unfavourable decisions.",
+      },
+      {
+        question: "Does arraigo authorise me to work in Spain?",
+        answer: "Yes — social arraigo and employment-based arraigo both include work authorisation from the date of grant. Training-based arraigo does not automatically include work rights; the permit holder must apply separately for a modification to add work authorisation once the training is completed or the eligibility requirements are met.",
+      },
+      {
+        question: "How many times can I apply for arraigo?",
+        answer: "There is no legal limit on the number of arraigo applications. However, each refusal creates an administrative record and may complicate subsequent applications if substantially improved documentation or new grounds are not presented. Eon Legal recommends building a solid file from the first application to maximise the chances of success.",
+      },
+    ],
     relatedServices: ["residencia", "regularizacion-2026"],
   },
   visados: {
     title: "Spanish visas: work, study, non-lucrative and family",
-    metaTitle: "Spanish visas: work, study & family",
+    metaTitle: "Spanish visas 2026: work, study, non-lucrative & family",
     shortTitle: "Visas",
     metaDescription:
       "Spanish visas: work, study, non-lucrative, family member. Consulate coordination and viability review. Statutory timeline and requirements. Free consultation.",
@@ -148,11 +207,29 @@ export const servicesContentEn: Readonly<
       "Valid health insurance policy with coverage in Spain (public or equivalent private coverage)",
       "Consulate-specific supplementary documentation (varies by consulate and nationality)",
     ],
+    faqs: [
+      {
+        question: "How long does a long-stay Spanish visa take to process?",
+        answer: "The statutory consular processing time is 1 month from complete file submission, though many consulates apply extended real-world timelines of 30–60 days depending on application volumes. Once the visa is approved, the holder has 30 days from entry into Spain to apply for the Foreigner Identity Card (TIE) at the competent Immigration Office.",
+      },
+      {
+        question: "Can I apply for a non-lucrative visa if I have no employment in Spain?",
+        answer: "Yes. The non-lucrative visa is designed specifically for people who wish to reside in Spain without carrying out employment activity. The main requirement is demonstrating sufficient financial means — at least €1,644 per month (indexed annually) — through bank statements, salary, pension or any documented income source. No employment contract or Social Security registration is required.",
+      },
+      {
+        question: "What is the difference between a visa and a residence permit?",
+        answer: "A visa is the initial entry permit granted by the Spanish consulate in the country of origin, enabling entry into Spain for a defined period. A residence permit is the authorisation processed inside Spain that enables long-term legal stay and, depending on the type, also the right to work. A long-stay visa is in most cases the mandatory prior step before obtaining a subsequent residence permit.",
+      },
+      {
+        question: "What can I do if the consulate refuses my visa application?",
+        answer: "A consular refusal can be challenged through an administrative appeal (recurso de alzada) filed with the Embassy or the Secretary of State for Foreign Affairs within 1 month of notification, or through a judicial appeal filed with the courts within 2 months. Eon Legal analyses the grounds for refusal, strengthens the documentation and manages the relevant appeal to maximise the chances of a favourable outcome.",
+      },
+    ],
     relatedServices: ["residencia", "nacionalidad"],
   },
   dgt: {
     title: "Driver's license exchange and traffic administration for foreigners in Spain",
-    metaTitle: "Foreign driving licence exchange Spain",
+    metaTitle: "Foreign driving licence exchange in Spain: DGT guide",
     shortTitle: "Traffic & Driving",
     metaDescription:
       "Exchange foreign driving license to Spanish, vehicle transfers, DGT certificates and traffic administration. Processing from A Coruña. Free consultation.",
@@ -184,14 +261,32 @@ export const servicesContentEn: Readonly<
       "Proof of residence address in Spain (padron certificate)",
       "Proof of valid motor third-party liability insurance (if vehicle continues in use)",
     ],
+    faqs: [
+      {
+        question: "Are all foreign driving licences exchangeable for a Spanish licence?",
+        answer: "No. Only licences from countries with a reciprocity agreement with Spain, or signatories to the Vienna Convention on Road Traffic (1968), can be exchanged directly. For licences from countries without an agreement, a theoretical or practical driving test in Spain may be required. Eon Legal carries out a preliminary compatibility check of the foreign licence before starting the procedure.",
+      },
+      {
+        question: "How long does the foreign driving licence exchange take?",
+        answer: "The typical timeline is 2–4 weeks from complete documentation submission to the Provincial Traffic Office (Jefatura Provincial de Tráfico, JPT), though it can extend to 4–6 weeks depending on the office workload and whether consular verification of the original licence is required.",
+      },
+      {
+        question: "Can I drive in Spain while the licence exchange is being processed?",
+        answer: "Yes, subject to conditions. Non-Spanish residents in Spain may drive with their original foreign licence during the first year after establishing habitual residence. After that period, exchanging the licence becomes mandatory. During the exchange process, the DGT issues an interim receipt that legally authorises driving until the Spanish licence is issued.",
+      },
+      {
+        question: "Do I need a medical certificate to exchange my foreign driving licence?",
+        answer: "It depends on the licence category, the applicant's age and the specific regulations applicable to the country of origin. Generally, holders of category B licences (private cars) may be exempt if the licence is recent and the applicant is under 45. For heavy vehicle licences (C, D) or older applicants, a psychophysical medical certificate issued by a DGT-approved centre is required.",
+      },
+    ],
     relatedServices: ["familiares-ue", "residencia"],
   },
   nacionalidad: {
     title: "Spanish citizenship: residency, option and Democratic Memory Law",
-    metaTitle: "Spanish citizenship by residency",
+    metaTitle: "Spanish citizenship 2026: residency, option & descendants",
     shortTitle: "Citizenship",
     metaDescription:
-      "Spanish citizenship by residency (5 years), option, Democratic Memory Law. CCSE-DELE exams, full file, statutory timeline. Free consultation.",
+      "Spanish citizenship by residency (5 years), option and Democratic Memory Law. CCSE-DELE exams, complete file preparation, statutory timeline. Free consultation.",
     summary:
       "Citizenship by residency (5 years), by option, Democratic Memory Law routes, and Spanish passport management.",
     longDescription: [
@@ -222,14 +317,32 @@ export const servicesContentEn: Readonly<
       "Valid passport or travel document",
       "Documentation for oath ceremony at Civil Registry: valid identity document or passport for attendance",
     ],
+    faqs: [
+      {
+        question: "How long does Spanish citizenship by residency take to process?",
+        answer: "The statutory processing time is 1 year from complete file submission to the Ministry of Justice, though actual resolution typically takes 12–24 months due to application volumes. Eon Legal actively monitors the file, responds to Ministry requests and manages documentary issues that arise during processing.",
+      },
+      {
+        question: "What is the difference between citizenship by residency and citizenship by option?",
+        answer: "Citizenship by residency requires evidencing 5 years of continuous legal residence in Spain (2 years for nationals of Iberoamerican countries, Portugal, Philippines and Sephardic descent) and passing the CCSE and DELE B1 examinations. Citizenship by option is available to persons with Spanish ancestors — children, grandchildren or other descendants of a Spanish parent — without requiring prior residence or language tests in most cases. The documentary requirements and processing timelines differ significantly between the two routes.",
+      },
+      {
+        question: "Are the CCSE and DELE B1 examinations compulsory for Spanish citizenship?",
+        answer: "In general yes, but exemptions apply. Nationals of Spanish-speaking countries are exempt from the DELE B1 test (Spanish is already their native language). Persons under 18, individuals with a documented disability that prevents sitting the exams, and those obtaining citizenship by naturalisation letter are exempt from both tests. Eon Legal confirms at the initial consultation whether the applicant is exempt or which tests must be passed.",
+      },
+      {
+        question: "What is the Democratic Memory Law and who can apply under it?",
+        answer: "The Democratic Memory Law (Law 20/2022) and its predecessor Law 52/2007 (the Grandchildren Law) establish special routes to Spanish citizenship for descendants of people who suffered exile or persecution during the Spanish Civil War and the Franco dictatorship. Grandchildren and children of Republican exiles, persons stripped of nationality between 1939 and 1978, and other specific categories covered by both laws may be eligible. Eon Legal reviews eligibility and manages the complete file.",
+      },
+    ],
     relatedServices: ["residencia", "visados"],
   },
   "regularizacion-2026": {
     title: "Spain's 2026 extraordinary regularisation: Mercurio filing & UTEX processing",
-    metaTitle: "Spain 2026 extraordinary regularisation",
+    metaTitle: "Spain 2026 extraordinary regularisation: Mercurio filing",
     shortTitle: "Regularisation 2026",
     metaDescription:
-      "Apply for Spain's 2026 extraordinary regularization before 30 June. Eligibility review, Mercurio online filing & UTEX follow-up. Free consultation.",
+      "Apply for Spain's 2026 extraordinary regularisation before 30 June. Eligibility review, Mercurio online filing and UTEX follow-up. Free consultation.",
     highlightsHeading: "Who can apply for the 2026 extraordinary regularisation",
     requirementsHeading: "Documents to evidence your stay in Spain",
     bodyNote: [

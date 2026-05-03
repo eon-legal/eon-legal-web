@@ -10,15 +10,18 @@ export const servicesContentEs: Readonly<
 > = {
   residencia: {
     title: "Autorizaciones de residencia en España: empleado, autónomo y reagrupación",
-    metaTitle: "Autorización de residencia en España",
+    metaTitle: "Autorización de residencia en España: empleado y autónomo",
     shortTitle: "Residencia",
     metaDescription:
       "Autorización de residencia en España: cuenta ajena (empleado), cuenta propia (autónomo) y reagrupación familiar 2026. Plazo legal y documentos. Consulta gratis.",
     summary:
       "Autorizaciones de residencia y trabajo: empleado (cuenta ajena), autónomo (cuenta propia), reagrupación familiar y larga duración en España.",
     longDescription: [
+      { h3: "Tipos de autorización de residencia" },
       "La autorización de residencia es la vía legal principal para que personas extranjeras vivan y trabajen en España, regulada por la Ley Orgánica 4/2000 y su Reglamento (Real Decreto 557/2011). Las autorizaciones se dividen en dos categorías: temporal (1–3 años, renovable) y larga duración (indefinida). Dentro de la residencia temporal, las principales vías son: (1) Empleado (cuenta ajena) — vinculada a contrato laboral específico; (2) Autónomo (cuenta propia) — requiere plan de negocio y viabilidad económica; (3) Reagrupación familiar — familiares dependientes de un residente o ciudadano español; (4) Inversor/emprendedor — inversión significativa o creación empresarial.",
+      { h3: "Plazos de tramitación" },
       "El plazo legal de resolución es de 3 meses desde la presentación completa ante la Oficina de Extranjería, aunque la resolución efectiva suele extenderse entre 4 y 8 meses. Tras 5 años de residencia continuada con permiso temporal, los solicitantes pueden acceder a la larga duración, que elimina la necesidad de renovación y autoriza la libre circulación en el espacio Schengen.",
+      { h3: "Cómo gestionamos tu expediente" },
       "En Eon Legal, gestionamos el ciclo completo: valoración de viabilidad inicial, coordinación documental en origen (contratos, certificados de nacimiento, justificación de medios), traducciones juradas y apostilla, presentación telemática ante la Oficina de Extranjería competente, y tramitación de requerimientos administrativos o procedimientos de renovación.",
       "Las barreras comunes de aprobación incluyen justificación insuficiente de medios, denegación de prueba de mercado laboral (para visados de empleado) y problemas de autenticación documental — anticipamos y resolvemos estos obstáculos de forma proactiva.",
     ],
@@ -42,18 +45,43 @@ export const servicesContentEs: Readonly<
       "Para renovaciones: prueba de actividad laboral continuada o actividad empresarial; documentación financiera actualizada",
       "Para paso a larga duración: justificación de 5 años de residencia continuada (certificados de empadronamiento, documentación de autorizaciones previas)",
     ],
+    sources: [
+      { label: "Ley Orgánica 4/2000 de extranjería", url: "https://www.boe.es/eli/es/lo/2000/01/11/4/con" },
+      { label: "Real Decreto 557/2011 — Reglamento de extranjería", url: "https://www.boe.es/eli/es/rd/2011/04/20/557/con" },
+      { label: "Ministerio de Inclusión — Trámites de extranjería", url: "https://www.inclusion.gob.es/web/migraciones/en-tu-pais/tramites" },
+    ],
+    faqs: [
+      {
+        question: "¿Cuánto tarda en resolverse una autorización de residencia en España?",
+        answer: "El plazo legal de resolución es de 3 meses desde la presentación completa del expediente ante la Oficina de Extranjería, aunque en la práctica la resolución efectiva suele extenderse entre 4 y 8 meses según la comunidad autónoma y el volumen de solicitudes. En Eon Legal realizamos un seguimiento proactivo del expediente, respondemos a requerimientos administrativos en plazo y adelantamos posibles incidencias documentales para minimizar demoras.",
+      },
+      {
+        question: "¿Puedo trabajar mientras tramito mi autorización de residencia?",
+        answer: "Depende del tipo de autorización solicitada. Las autorizaciones de residencia y trabajo (cuenta ajena y cuenta propia) incluyen habilitación laboral desde la resolución favorable. Sin embargo, las autorizaciones de residencia sin trabajo (reagrupación familiar, larga duración inicial) requieren solicitar por separado la modificación que incluya autorización de trabajo si se desea realizar actividad laboral remunerada.",
+      },
+      {
+        question: "¿Qué pasa si me deniegan la autorización de residencia?",
+        answer: "Existen dos vías de impugnación: el recurso de reposición ante la misma Oficina de Extranjería, que debe interponerse en el plazo de 1 mes desde la notificación, y el recurso contencioso-administrativo ante los tribunales, con un plazo de 2 meses. Eon Legal gestiona ambos procedimientos, analiza los motivos de denegación y prepara la argumentación jurídica y documental para revertir la resolución.",
+      },
+      {
+        question: "¿Cuánto dinero necesito acreditar para la autorización de residencia?",
+        answer: "Para la autorización de residencia individual se exige un mínimo de €20.430 anuales, cifra que se actualiza cada año conforme al IPREM. En supuestos de reagrupación familiar el umbral se incrementa en función del número de personas a cargo. La acreditación puede realizarse mediante extracto bancario, nóminas, pensión o cualquier fuente de ingresos documentada.",
+      },
+    ],
     relatedServices: ["arraigo", "visados", "familiares-ue"],
   },
   arraigo: {
     title: "Arraigo: social, laboral, familiar y para la formación",
-    metaTitle: "Arraigo social, laboral y familiar",
+    metaTitle: "Arraigo social, laboral y familiar en España: guía 2026",
     shortTitle: "Arraigo",
     metaDescription:
-      "Arraigo en España: social, laboral y familiar en 2026. Requisitos, documentos y plazo legal. Abogados especializados. Consulta gratis.",
+      "Arraigo social, laboral y familiar en España 2026. Requisitos, documentos y plazo legal de tramitación. Abogados especializados en A Coruña. Consulta gratis.",
     summary:
       "Arraigo social, laboral, familiar y para la formación: vías de regularización para personas extranjeras que acreditan vínculos establecidos en España.",
     longDescription: [
+      { h3: "Vías de arraigo disponibles" },
       "El arraigo es una vía de regularización por circunstancias excepcionales conforme a los Artículos 51 y 52 de la Ley Orgánica 4/2000, que permite a personas extranjeras obtener una autorización de residencia acreditando vínculos continuados en España sin autorización previa. Existen cuatro vías: arraigo social (2 años de residencia + informe de inserción social), arraigo laboral (relación laboral de 6 meses), arraigo familiar (vínculo familiar documentado) y arraigo para la formación (estatus de estudiante).",
+      { h3: "Plazos y probabilidad de éxito" },
       "El plazo legal de resolución es de 3 meses desde la presentación completa ante la Oficina de Extranjería, aunque las resoluciones efectivas suelen extenderse entre 6 y 12 meses debido a requerimientos administrativos. Las tasas de aprobación para expedientes bien documentados rondan el 65–75%.",
       "En Eon Legal, valoramos individualmente cuál es la vía de arraigo más viable para tu situación, recopilamos la documentación probatoria (certificados de empadronamiento, contratos de trabajo, antecedentes penales, informes sociales), presentamos el expediente telemáticamente ante la Oficina de Extranjería competente, y te representamos en requerimientos administrativos, recursos de reposición o procedimientos contencioso-administrativos si es necesario.",
     ],
@@ -74,18 +102,43 @@ export const servicesContentEs: Readonly<
       "Declaraciones juradas de 3-4 testigos con conocimiento que se remonte 2 o más años atrás (si no se dispone de informe de arraigo social)",
       "Para recursos: justificación de la presentación del escrito de recursos ante el Registro Electrónico (REUE) dentro del mes siguiente a la resolución",
     ],
+    sources: [
+      { label: "Ley Orgánica 4/2000 de extranjería", url: "https://www.boe.es/eli/es/lo/2000/01/11/4/con" },
+      { label: "Real Decreto 557/2011 — Reglamento de extranjería", url: "https://www.boe.es/eli/es/rd/2011/04/20/557/con" },
+      { label: "Ministerio de Inclusión — Trámites de extranjería", url: "https://www.inclusion.gob.es/web/migraciones/en-tu-pais/tramites" },
+    ],
+    faqs: [
+      {
+        question: "¿Cuál es la diferencia entre arraigo social y arraigo laboral?",
+        answer: "El arraigo social requiere acreditar 2 años de residencia continuada en España más un informe de inserción social emitido por la comunidad autónoma, junto con un contrato de trabajo de al menos 1 año. El arraigo laboral exige demostrar una relación laboral de al menos 6 meses mediante sentencia judicial, acta de la Inspección de Trabajo o resolución administrativa. La documentación requerida y los plazos de tramitación difieren sustancialmente entre ambas vías.",
+      },
+      {
+        question: "¿Qué alternativas existen si no tengo informe de arraigo social?",
+        answer: "En algunos casos, declaraciones juradas de 3 o 4 testigos con conocimiento acreditado de la situación del solicitante, acompañadas de documentación probatoria suficiente (contratos de alquiler, facturas, empadronamientos), pueden complementar o reforzar el expediente cuando el informe oficial de inserción social no está disponible o es negativo. Eon Legal evalúa la viabilidad real del expediente antes de presentarlo para evitar resoluciones desfavorables.",
+      },
+      {
+        question: "¿El arraigo autoriza a trabajar en España?",
+        answer: "Sí. El arraigo social y el arraigo laboral incluyen autorización de trabajo desde la concesión. El arraigo para la formación, sin embargo, no incluye automáticamente habilitación laboral; el titular debe solicitar por separado la modificación que incorpore la autorización de trabajo una vez concluida la formación o cumplidos los requisitos.",
+      },
+      {
+        question: "¿Cuántas veces se puede solicitar el arraigo?",
+        answer: "No existe un límite legal en el número de solicitudes de arraigo. Sin embargo, cada resolución denegatoria crea antecedentes administrativos y puede dificultar solicitudes posteriores si no se presenta documentación sustancialmente mejorada o nuevos fundamentos. Eon Legal recomienda preparar un expediente sólido desde la primera solicitud para maximizar las probabilidades de éxito.",
+      },
+    ],
     relatedServices: ["residencia", "regularizacion-2026"],
   },
   visados: {
     title: "Visados para España: trabajo, estudios, no lucrativo y familia",
-    metaTitle: "Visados para España: trabajo y estudios",
+    metaTitle: "Visados para España: trabajo, estudios y familia 2026",
     shortTitle: "Visados",
     metaDescription:
       "Visados para España: trabajo, estudios, no lucrativo, familia. Coordinación consular y revisión de viabilidad. Plazo legal y documentos. Consulta gratis.",
     summary:
       "Visados de trabajo, estudios, no lucrativo, emprendedor y familiar de ciudadano español tramitados en coordinación con los consulados españoles.",
     longDescription: [
+      { h3: "Tipos de visado de larga duración" },
       "El visado es el requisito previo obligatorio para que personas extranjeras puedan entrar en España por un período superior a 90 días. Los visados se categorizan en dos tipos según la Ley Orgánica 4/2000: de corta duración (hasta 90 días) y de larga duración (superior a 90 días). Los visados de larga duración representan un compromiso de residencia y se conceden bajo diferentes supuestos: (1) Visado de trabajo (altamente cualificado o de empleado) — vinculado a contrato laboral español; (2) Visado no lucrativo — justificación de medios económicos sin vinculación laboral; (3) Visado de estudios — matrícula en institución española acreditada; (4) Visado de emprendedor/inversor — proyecto empresarial o inversión significativa; (5) Visado de familia — cónyuge o descendientes de ciudadano español.",
+      { h3: "Proceso consular y TIE" },
       "El plazo legal de resolución consular es de 1 mes, aunque muchos consulados aplican plazos ampliados (30–60 días) según volumen de solicitudes. Tras la aprobación consular, el solicitante debe obtener la Tarjeta de Identidad de Extranjero (TIE) en la Oficina de Extranjería española dentro de 30 días de entrada.",
       "En Eon Legal, gestionamos la tramitación consular completa: revisión previa de viabilidad en España (incluyendo evaluación de requisitos específicos del consulado), preparación del expediente (contratos, cartas de aceptación, justificación de medios), coordinación con el consulado competente en el país de origen, seguimiento del estado de solicitud, y acompañamiento en la obtención del TIE.",
       "Las dificultades comunes incluyen requisitos consulares variables por territorio (no existe criterio único nacional), cambios en normativa consular, y documentación insuficiente — solucionamos estas complejidades mediante contacto directo con consulados.",
@@ -112,11 +165,29 @@ export const servicesContentEs: Readonly<
       "Justificación de medios económicos para subsistencia en España (varía por ruta y duración)",
       "Póliza de seguro médico con cobertura en España (público o privado equivalente)",
     ],
+    faqs: [
+      {
+        question: "¿Cuánto tarda en tramitarse un visado de larga duración para España?",
+        answer: "El plazo legal de resolución consular es de 1 mes desde la presentación completa del expediente, aunque muchos consulados aplican plazos reales de 30–60 días según el volumen de solicitudes. Una vez aprobado el visado, el titular dispone de 30 días desde la entrada en España para solicitar la Tarjeta de Identidad de Extranjero (TIE) ante la Oficina de Extranjería competente.",
+      },
+      {
+        question: "¿Puedo solicitar un visado no lucrativo si no tengo trabajo en España?",
+        answer: "Sí. El visado no lucrativo está diseñado precisamente para personas que desean residir en España sin realizar actividad laboral. El requisito principal es demostrar medios económicos suficientes — al menos €1.644 al mes (índice actualizable anualmente) — mediante extracto bancario, nómina, pensión o cualquier fuente de ingresos documentada. No se exige contrato de trabajo ni alta en la Seguridad Social.",
+      },
+      {
+        question: "¿Qué diferencia hay entre el visado y la autorización de residencia?",
+        answer: "El visado es el permiso de entrada inicial, concedido por el consulado español en el país de origen, que habilita para entrar en España y permanecer durante un período determinado. La autorización de residencia es el permiso que se tramita dentro de España y habilita para la permanencia legal a largo plazo y, según el tipo, también para trabajar. El visado de larga duración es, en muchos casos, el paso previo obligatorio para obtener la autorización de residencia posterior.",
+      },
+      {
+        question: "¿Qué ocurre si el consulado deniega el visado?",
+        answer: "La denegación consular puede impugnarse mediante recurso de alzada ante la Embajada o la Secretaría de Estado de Asuntos Exteriores en el plazo de 1 mes desde la notificación, o mediante recurso contencioso-administrativo en vía judicial en el plazo de 2 meses. Eon Legal analiza los motivos de denegación, refuerza la documentación y gestiona el recurso correspondiente para maximizar las probabilidades de resolución favorable.",
+      },
+    ],
     relatedServices: ["residencia", "nacionalidad"],
   },
   nacionalidad: {
     title: "Nacionalidad española: residencia, opción y Ley de Memoria Democrática",
-    metaTitle: "Nacionalidad española por residencia",
+    metaTitle: "Nacionalidad española por residencia, opción e hijos",
     shortTitle: "Nacionalidad",
     metaDescription:
       "Nacionalidad española por residencia (5 años), opción, Ley Memoria Democrática. Pruebas CCSE-DELE, expediente completo, plazo legal. Consulta gratis.",
@@ -150,14 +221,32 @@ export const servicesContentEs: Readonly<
       "Pasaporte válido o documento de viaje",
       "Documentación de jura ante Registro Civil: cédula de identidad o pasaporte válido para comparecencia",
     ],
+    faqs: [
+      {
+        question: "¿Cuánto tiempo tarda en resolverse la nacionalidad española por residencia?",
+        answer: "El plazo legal de resolución es de 1 año desde la presentación completa del expediente ante el Ministerio de Justicia, aunque la resolución efectiva suele prolongarse entre 12 y 24 meses por el volumen de solicitudes. Eon Legal realiza un seguimiento activo del expediente, responde a requerimientos del Ministerio y gestiona las incidencias documentales que puedan surgir durante la tramitación.",
+      },
+      {
+        question: "¿Cuál es la diferencia entre la nacionalidad por residencia y la nacionalidad por opción?",
+        answer: "La nacionalidad por residencia requiere acreditar 5 años de residencia legal continuada en España (2 años para iberoamericanos, portugueses, filipinos y sefardíes) y superar las pruebas CCSE y DELE B1. La nacionalidad por opción se concede a quienes tienen ascendientes españoles — hijos, nietos u otros descendientes de padre o madre español — sin exigir residencia previa ni pruebas lingüísticas en la mayoría de los supuestos. Los requisitos documentales y los plazos de tramitación son distintos en cada vía.",
+      },
+      {
+        question: "¿Es obligatorio hacer las pruebas CCSE y DELE B1 para obtener la nacionalidad española?",
+        answer: "En general sí, pero existen exenciones. Quedan exentos de la prueba DELE B1 los nacionales de países hispanohablantes (que ya acreditan el español como lengua materna). Quedan exentos de ambas pruebas los menores de 18 años, las personas con discapacidad acreditada que les impida realizarlas, y quienes obtienen la nacionalidad por carta de naturaleza. Eon Legal verifica en la consulta inicial si el solicitante está exento o qué pruebas debe superar.",
+      },
+      {
+        question: "¿Qué es la Ley de Memoria Democrática y quién puede acogerse a ella?",
+        answer: "La Ley de Memoria Democrática (Ley 20/2022) y su predecesora la Ley 52/2007 (Ley de Nietos) establecen vías especiales de adquisición de la nacionalidad española para descendientes de personas que sufrieron exilio o persecución durante la Guerra Civil española y el franquismo. Pueden acogerse nietos e hijos de exiliados republicanos, de personas privadas de la nacionalidad entre 1939 y 1978, y otros supuestos específicos regulados en ambas normas. Eon Legal revisa la elegibilidad y gestiona el expediente completo.",
+      },
+    ],
     relatedServices: ["residencia", "visados"],
   },
   "familiares-ue": {
     title: "Tarjeta de residencia de familiar de ciudadano UE: derechos y tramitación",
-    metaTitle: "Residencia de familiar de ciudadano UE",
+    metaTitle: "Tarjeta de residencia familiar de ciudadano UE en España",
     shortTitle: "Familia UE",
     metaDescription:
-      "Tarjeta de residencia familiar UE (art. 10 y 20): requisitos, plazo de tramitación y renovación. Despacho especializado. Consulta gratis.",
+      "Tarjeta de residencia de familiar de ciudadano UE (art. 10 y 20): requisitos, plazo de tramitación y renovación. Despacho especializado. Consulta gratis.",
     summary:
       "Tarjeta de residencia de familiar de ciudadano de la Unión Europea: tramitación inicial, renovación y acceso a residencia permanente.",
     longDescription: [
@@ -185,14 +274,32 @@ export const servicesContentEs: Readonly<
       "Para renovación: documentación que acredite subsistencia del vínculo familiar y ciudadanía UE del titular",
       "Para acceso a residencia permanente: certificados de empadronamiento continuado durante 5 años + documentación del vínculo actual",
     ],
+    faqs: [
+      {
+        question: "¿Quién puede solicitar la tarjeta de residencia de familiar de ciudadano UE?",
+        answer: "Pueden solicitarla el cónyuge, la pareja de hecho registrada, los hijos menores de 21 años (o mayores dependientes) y los ascendientes a cargo del ciudadano de la Unión Europea residente en España. El vínculo familiar debe estar legalmente documentado.",
+      },
+      {
+        question: "¿Qué diferencia hay entre la tarjeta del art. 10 y la del art. 20?",
+        answer: "La tarjeta del artículo 10 es la tarjeta inicial, válida por 5 años y renovable mientras subsista el vínculo familiar y la ciudadanía UE del titular. La tarjeta del artículo 20 es la tarjeta de residencia permanente, que se concede tras 5 años de residencia legal continuada como familiar de ciudadano UE y no tiene fecha de caducidad.",
+      },
+      {
+        question: "¿Puedo trabajar en España con la tarjeta de familiar de ciudadano UE?",
+        answer: "Sí. La tarjeta de familiar de ciudadano UE otorga acceso pleno al mercado laboral español sin restricciones sectoriales ni geográficas, con los mismos derechos que los ciudadanos españoles.",
+      },
+      {
+        question: "¿Qué ocurre si el ciudadano UE titular abandona España?",
+        answer: "Los familiares que hayan residido legalmente en España durante 3 o más años pueden conservar su derecho de residencia aunque el ciudadano UE se marche. El resultado concreto depende de las circunstancias individuales y requiere un análisis jurídico específico del caso.",
+      },
+    ],
     relatedServices: ["residencia", "dgt"],
   },
   dgt: {
     title: "Canje de carnet de conducir y trámites DGT para extranjeros en España",
-    metaTitle: "Canje de carnet de conducir en España",
+    metaTitle: "Canje de carnet de conducir extranjero en España: DGT",
     shortTitle: "DGT",
     metaDescription:
-      "Canje de carnet de conducir extranjero a español, traspaso vehículos y certificaciones DGT. Tramitación desde A Coruña. Consulta gratis.",
+      "Canje de carnet de conducir extranjero a español, traspaso de vehículos y certificaciones DGT. Tramitación desde A Coruña para toda España. Consulta gratis.",
     summary:
       "Canje de permisos de conducir extranjeros, traspaso de vehículos, certificaciones y tramitación ante la Dirección General de Tráfico (DGT).",
     longDescription: [
@@ -221,14 +328,32 @@ export const servicesContentEs: Readonly<
       "Justificante de empadronamiento en España (para acreditar domicilio)",
       "Comprobante de seguro de responsabilidad civil vigente (si el vehículo sigue en uso)",
     ],
+    faqs: [
+      {
+        question: "¿Todos los carnets de conducir extranjeros son canjeables por un carnet español?",
+        answer: "No. Solo son canjeables directamente los permisos de países que tienen convenio de reciprocidad con España o que son signatarios de la Convención de Viena sobre Tráfico por Carretera de 1968. Para permisos de países sin convenio, puede ser necesario superar un examen teórico o de conducción en España. Eon Legal realiza una revisión previa de compatibilidad del permiso antes de iniciar el trámite.",
+      },
+      {
+        question: "¿Cuánto tiempo tarda el canje del carnet de conducir extranjero?",
+        answer: "El plazo habitual es de 2 a 4 semanas desde la presentación completa de la documentación ante la Jefatura Provincial de Tráfico (JPT) competente, aunque puede extenderse a 4–6 semanas según el volumen de la oficina y la necesidad de verificación consular del permiso original.",
+      },
+      {
+        question: "¿Puedo conducir en España mientras tramito el canje del carnet?",
+        answer: "Sí, con condiciones. Los extranjeros residentes en España pueden conducir con su permiso original durante el primer año desde que establecen su residencia habitual. Pasado ese período, es obligatorio tramitar el canje. Durante la tramitación del canje, la DGT expide un resguardo acreditativo que permite conducir legalmente hasta la obtención del permiso español.",
+      },
+      {
+        question: "¿Necesito un certificado médico para el canje del carnet de conducir?",
+        answer: "Depende de la categoría del permiso, la edad del solicitante y la normativa específica del consulado del país de origen. En general, los titulares de permisos de categoría B (turismos) pueden estar exentos si el permiso es reciente y el solicitante tiene menos de 45 años. Para vehículos pesados (C, D) o solicitantes mayores, el certificado médico psicotécnico emitido por un centro autorizado por la DGT es obligatorio.",
+      },
+    ],
     relatedServices: ["familiares-ue", "residencia"],
   },
   "regularizacion-2026": {
     title: "Regularización extraordinaria 2026: residencia y trabajo legal en España",
-    metaTitle: "Regularización extraordinaria 2026",
+    metaTitle: "Regularización extraordinaria 2026 en España: Mercurio",
     shortTitle: "Regularización 2026",
     metaDescription:
-      "Regularización extraordinaria 2026: permanencia antes 1 ene 2026, plazo 30 jun, Mercurio UTEX, silencio positivo. Viabilidad y presentación telemática. Consulta gratis.",
+      "Regularización extraordinaria 2026: permanencia antes 1 ene 2026, plazo 30 jun, Mercurio UTEX, silencio positivo. Presentación telemática. Consulta gratis.",
     highlightsHeading: "Legitimidades válidas para la regularización extraordinaria 2026",
     requirementsHeading: "Documentación para acreditar la estancia y vínculo en España",
     bodyNote: [
