@@ -199,14 +199,30 @@ export default async function ServicePage({
 
             <Reveal delay={0.15}>
               <div className="mt-8 max-w-3xl space-y-4">
-                {service.longDescription.map((paragraph, i) => (
-                  <p
-                    key={i}
-                    className="text-pretty text-base leading-relaxed text-muted md:text-lg"
-                  >
-                    {paragraph}
-                  </p>
-                ))}
+                {service.longDescription.map((item, i) => {
+                  if (typeof item === "string") {
+                    return (
+                      <p
+                        key={i}
+                        className="text-pretty text-base leading-relaxed text-muted md:text-lg"
+                      >
+                        {item}
+                      </p>
+                    );
+                  }
+                  return (
+                    <div key={i}>
+                      <h3 className="mt-6 font-semibold text-foreground">
+                        {item.h3}
+                      </h3>
+                      {item.text && (
+                        <p className="mt-2 text-pretty text-base leading-relaxed text-muted md:text-lg">
+                          {item.text}
+                        </p>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
             </Reveal>
 
