@@ -2,6 +2,35 @@
 
 All notable changes to Eon Legal Web are documented here. This project follows [Semantic Versioning](https://semver.org/).
 
+## [2.1.1] — 2026-05-04
+
+### Added
+- **FAQ Schema Expansion**: All 7 services now have 4-5 FAQs in both Spanish and English (previously 2 of 7)
+  - Added FaqPage JSON-LD schema to 9 previously missing service pages
+  - Translated FAQ content across languages for consistency
+  - Unlocks rich FAQ snippets in search results
+
+### Fixed
+- **Meta Title Optimization**: All 14 service page meta titles optimized to 50-60 character range (was 32-39)
+  - Added year signals and secondary keywords for improved SERP CTR
+  - Consistent across ES and EN locales
+  
+- **Meta Description Fine-tuning**: All descriptions within 149-160 character optimal range
+  - Trimmed 3 descriptions over limit (ES regularización, EN arraigo, EN familiares-ue)
+  - Expanded 5 short descriptions to maximize SERP real estate
+  
+- **longDescription Rendering**: Fixed React error when rendering h3-wrapped description items
+  - Component now correctly handles both string and `{h3, text}` objects
+  - Added DescriptionItem union type to services.ts
+  
+- **Type Definitions**: Restored missing `sources` field in LocalizedServiceContent interface
+  - Added flattenDescription() utility for JSON-LD generation
+
+### Quality Metrics
+- **FAQ Coverage**: 7/7 services with FaqPage schema (100%, up from 29%)
+- **Meta Tags**: 14/14 pages within optimal ranges
+- **Zero TypeScript Errors**: All type safety checks passing
+
 ## [2.1.0] — 2026-04-28
 
 ### 🎯 Content Optimization & GEO Enhancement (Phase 1-3 Complete)
