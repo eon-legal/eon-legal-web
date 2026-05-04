@@ -94,7 +94,7 @@ export function UrgentBannerSection({
               <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-white/55">
                 {t.criteria.eyebrow}
               </p>
-              <p className="font-display text-lg font-medium text-white">
+              <p className="font-display text-lg font-semibold text-white">
                 {t.criteria.heading}
               </p>
             </div>
@@ -123,7 +123,7 @@ export function UrgentBannerSection({
               <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-white/55">
                 {t.timeline.eyebrow}
               </p>
-              <p className="font-display text-lg font-medium text-white">
+              <p className="font-display text-lg font-semibold text-white">
                 {t.timeline.heading}
               </p>
             </div>
