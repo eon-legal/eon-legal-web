@@ -2,6 +2,26 @@
 
 All notable changes to Eon Legal Web are documented here. This project follows [Semantic Versioning](https://semver.org/).
 
+## [2.1.2] — 2026-05-10
+
+### Fixed
+- **SEO Indexing Issues**: Resolved Google indexing problems identified in SEO audit
+  - Fixed canonical URL mismatch by updating siteConfig.url to www.eonlegalsolutions.com
+  - Corrected reciprocal hreflang alternates between www and non-www versions
+  - Eliminated 308 trailing slash redirects by setting trailingSlash: false
+  
+- **Security Headers**: Added missing security headers required for proper crawling
+  - X-Content-Type-Options: nosniff (prevents MIME-sniffing)
+  - X-Frame-Options: DENY (prevents clickjacking)
+  - Referrer-Policy: strict-origin-when-cross-origin (controls referrer leakage)
+  
+- **Image Optimization**: Added lazy loading to below-fold decorative images
+
+### Quality Metrics
+- All canonical URLs now match actual page URLs
+- Reciprocal hreflang tags properly configured
+- Security headers enabled for all responses
+
 ## [2.1.1] — 2026-05-04
 
 ### Added
