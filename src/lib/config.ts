@@ -3,12 +3,26 @@
  * Update these values before production deploy.
  */
 
+/**
+ * Normalize a site URL: strip trailing slash, force https, and force the
+ * `www.` subdomain on the production host. Ensures canonical/hreflang
+ * tags never drift to non-www even if `NEXT_PUBLIC_SITE_URL` is set
+ * incorrectly in the deployment environment.
+ */
+function normalizeSiteUrl(raw: string): string {
+  const trimmed = raw.replace(/\/$/, "").replace(/^http:\/\//, "https://");
+  if (trimmed === "https://eonlegalsolutions.com") {
+    return "https://www.eonlegalsolutions.com";
+  }
+  return trimmed;
+}
+
 export const siteConfig = {
   name: "EonLegal Solutions",
   shortName: "EonLegal",
-  url:
-    process.env.NEXT_PUBLIC_SITE_URL ??
-    "https://www.eonlegalsolutions.com",
+  url: normalizeSiteUrl(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.eonlegalsolutions.com"
+  ),
   locale: "es_ES",
   language: "es",
   twitterHandle: "@eonlegal",
