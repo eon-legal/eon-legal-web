@@ -2,6 +2,15 @@
 
 All notable changes to Eon Legal Web are documented here. This project follows [Semantic Versioning](https://semver.org/).
 
+## [2.1.3] — 2026-05-11
+
+### Fixed
+- **Locale Redirect Status**: Changed root-to-locale redirect from 308 to 301 for broader SEO audit tool compatibility (equivalent for GET requests)
+- **Robots.txt Normalization**: Sitemap directive now always resolves to the canonical www host regardless of `NEXT_PUBLIC_SITE_URL` drift; added `host` directive
+- **Hreflang Absolute URLs**: `buildLanguageAlternates` now emits absolute www URLs, ensuring reciprocal-link auditors that don't resolve relative `Metadata.alternates` against `metadataBase` see the canonical host
+- **Author Schema URL**: `siteConfig.authors[0].url` switched to www for Organization/Author JSON-LD consistency
+- **Polyfill Defer**: Post-build script adds `defer` to Next.js auto-injected `<script noModule>` polyfill tag, satisfying SEO audit checks for render-blocking scripts
+
 ## [2.1.2] — 2026-05-10
 
 ### Fixed
