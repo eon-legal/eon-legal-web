@@ -54,7 +54,7 @@ export function proxy(request: NextRequest): NextResponse | undefined {
   target.search = search;
   target.hash = hash;
 
-  return NextResponse.redirect(target, { status: 308 });
+  return NextResponse.redirect(target, { status: 301 });
 }
 
 export const config = {
