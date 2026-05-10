@@ -2,6 +2,18 @@
 
 All notable changes to Eon Legal Web are documented here. This project follows [Semantic Versioning](https://semver.org/).
 
+## [2.1.4] — 2026-05-11
+
+### Fixed
+- **Hreflang Reciprocity (ERROR)**: Default locale (Spanish) now lives at the site root, eliminating the `/` → `/es` 301 redirect that made auditors treat `/` and `/es` as distinct one-way-linked pages.
+  - `buildLanguageAlternates` / `canonicalFor` emit bare paths for the default locale (no `/es` prefix)
+  - `localizePath` returns bare paths for the default locale
+  - `sitemap.xml` emits canonical bare paths and full reciprocal hreflang pairs per URL
+  - `next.config.ts` `beforeFiles` rewrites serve `/es/*` content at `/` paths; permanent redirects forward legacy `/es` and `/es/*` URLs to `/` and `/*`
+  - Proxy no longer auto-redirects `/` to `/es`; only handles non-www → www and `NEXT_LOCALE` cookie-based locale switching
+- **OG/Twitter Image Routes**: Added `beforeFiles` rewrites so social-crawler hits to `/opengraph-image` (after the prefix-strip redirect) resolve back to the underlying `/es/opengraph-image` route handler.
+- **Force www Normalization**: `siteConfig.url` normalizer now strips a non-www production host and forces `www.`, eliminating canonical drift when `NEXT_PUBLIC_SITE_URL` is set incorrectly in Vercel.
+
 ## [2.1.3] — 2026-05-11
 
 ### Fixed
