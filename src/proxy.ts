@@ -12,9 +12,24 @@ import {
  * redirects bare paths (e.g. `/servicios/residencia`) to the localized
  * variant, respecting an explicit `NEXT_LOCALE` cookie choice first, then
  * the `Accept-Language` header, and finally the default locale.
+ *
+ * Also ensures non-www traffic redirects to www for hreflang consistency.
  */
 export function proxy(request: NextRequest): NextResponse | undefined {
-  const { pathname, search, hash } = request.nextUrl;
+  const { hostname, pathname, search, hash } = request.nextUrl;
+
+  // Redirect non-www to www for consistent canonical URLs and hreflang tags
+  if (
+    hostname === "eonlegalsolutions.com" ||
+    (hostname &&
+      !hostname.startsWith("www.") &&
+      hostname !== "localhost" &&
+      !hostname.includes(":"))
+  ) {
+    const target = new URL(request.url);
+    target.hostname = `www.${hostname}`;
+    return NextResponse.redirect(target, { status: 301 });
+  }
 
   const hasLocaleInPath = locales.some(
     (locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)
