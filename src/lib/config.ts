@@ -17,7 +17,7 @@ export const siteConfig = {
   authors: [
     {
       name: "EonLegal Solutions",
-      url: "https://eonlegalsolutions.com",
+      url: "https://www.eonlegalsolutions.com",
     },
   ],
   keywords: {
