@@ -34,6 +34,19 @@ const nextConfig: NextConfig = {
         { source: "/cookies", destination: "/es/cookies" },
         { source: "/privacidad", destination: "/es/privacidad" },
         { source: "/servicios/:slug", destination: "/es/servicios/:slug" },
+        // OG/Twitter image routes live under /[locale]/, so when the
+        // canonical / -> /es redirect strips the prefix from a crawler's
+        // request, route the rewritten path back to the actual file.
+        { source: "/opengraph-image", destination: "/es/opengraph-image" },
+        { source: "/twitter-image", destination: "/es/twitter-image" },
+        {
+          source: "/servicios/:slug/opengraph-image",
+          destination: "/es/servicios/:slug/opengraph-image",
+        },
+        {
+          source: "/servicios/:slug/twitter-image",
+          destination: "/es/servicios/:slug/twitter-image",
+        },
       ],
       afterFiles: [],
       fallback: [],
