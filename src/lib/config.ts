@@ -8,7 +8,7 @@ export const siteConfig = {
   shortName: "EonLegal",
   url:
     process.env.NEXT_PUBLIC_SITE_URL ??
-    "https://eonlegalsolutions.com",
+    "https://www.eonlegalsolutions.com",
   locale: "es_ES",
   language: "es",
   twitterHandle: "@eonlegal",

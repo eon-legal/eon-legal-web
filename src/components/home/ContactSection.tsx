@@ -29,6 +29,7 @@ export function ContactSection({
             fill
             sizes="(min-width: 1024px) 60vw, 100vw"
             priority={false}
+            loading="lazy"
             className="pointer-events-none absolute inset-0 object-cover opacity-[0.08] grayscale"
           />
           <div
