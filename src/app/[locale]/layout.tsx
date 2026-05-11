@@ -67,10 +67,10 @@ export async function generateMetadata({
     creator: siteConfig.authors[0].name,
     icons: {
       icon: [
-        { url: "/favicon.svg", type: "image/svg+xml" },
-        { url: "/favicon.ico", sizes: "any" },
+        { url: "/favicon.ico", sizes: "48x48", type: "image/x-icon" },
+        { url: "/favicon.svg", type: "image/svg+xml", sizes: "any" },
       ],
-      apple: "/apple-touch-icon.png",
+      apple: { url: "/apple-touch-icon.png", sizes: "180x180" },
     },
     other: {
       "geo.region": "ES-C",
