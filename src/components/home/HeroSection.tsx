@@ -90,7 +90,7 @@ export function HeroSection({ dict }: HeroSectionProps): React.ReactElement {
 
         <aside aria-label={t.aside.ariaLabel} className="relative hidden lg:block">
           <div className="sticky top-28 space-y-6">
-            <figure className="relative aspect-[4/5] w-full overflow-hidden">
+            <figure className="relative aspect-4/5 w-full overflow-hidden">
               <Image
                 src="/hero/hero-image.webp"
                 alt={t.aside.figureAlt}

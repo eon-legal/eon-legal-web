@@ -70,15 +70,21 @@ export const hreflangTag: Readonly<Record<Locale, string>> = {
 /**
  * Builds a pathname prefixed with the given locale. Preserves query/hash
  * when `href` is a pathname only (the common case for internal links).
+ * The default locale lives at the site root, so its links omit the
+ * `/${locale}` prefix entirely.
  */
 export function localizePath(locale: Locale, href: string): string {
   if (href.startsWith("#") || href.startsWith("?")) return href;
   if (!href.startsWith("/")) return href;
-  if (href === "/") return `/${locale}`;
+  // Strip any existing locale prefix to get the bare pathname
+  let bare = href;
   for (const candidate of locales) {
     if (href === `/${candidate}` || href.startsWith(`/${candidate}/`)) {
-      return `/${locale}${href.slice(candidate.length + 1) || ""}` || `/${locale}`;
+      bare = href.slice(candidate.length + 1) || "/";
+      break;
     }
   }
-  return `/${locale}${href}`;
+  if (locale === defaultLocale) return bare === "/" ? "/" : bare;
+  if (bare === "/") return `/${locale}`;
+  return `/${locale}${bare}`;
 }

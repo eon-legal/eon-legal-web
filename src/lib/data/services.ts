@@ -12,18 +12,36 @@ import type { Locale } from "@/lib/i18n/config";
 import { servicesContentEn } from "@/lib/data/services.en";
 import { servicesContentEs } from "@/lib/data/services.es";
 
+export type DescriptionItem =
+  | string
+  | { readonly h3: string; readonly text?: string };
+
+export function flattenDescription(items: readonly DescriptionItem[]): string {
+  return items
+    .map((item) =>
+      typeof item === "string"
+        ? item
+        : [item.h3, item.text].filter(Boolean).join(" ")
+    )
+    .join(" ");
+}
+
 export interface LocalizedServiceContent {
   readonly title: string;
+  // Shorter variant for <title> tag / SERPs (≤38ch so total with brand ≤60ch).
+  // Falls back to title when absent.
+  readonly metaTitle?: string;
   readonly shortTitle: string;
   readonly summary: string;
   readonly metaDescription: string;
-  readonly longDescription: string;
+  readonly longDescription: readonly DescriptionItem[];
   readonly highlights: readonly string[];
   readonly requirements: readonly string[];
   // Optional per-service overrides — leave undefined to use shared dict strings
   readonly highlightsHeading?: string;
   readonly requirementsHeading?: string;
-  readonly bodyNote?: string;
+  readonly bodyNote?: readonly string[];
+  readonly sources?: readonly { readonly label: string; readonly url: string }[];
   readonly faqs?: readonly { readonly question: string; readonly answer: string }[];
   readonly relatedServices?: readonly string[];
 }

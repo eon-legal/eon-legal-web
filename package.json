@@ -1,12 +1,17 @@
 {
   "name": "eon-legal-web",
-  "version": "0.1.0",
+  "version": "2.1.4",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && node scripts/postbuild-defer-polyfill.mjs",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "type-check": "tsc --noEmit",
+    "version": "cat VERSION",
+    "version:patch": "npm version patch",
+    "version:minor": "npm version minor",
+    "version:major": "npm version major"
   },
   "dependencies": {
     "firebase": "^12.12.1",
@@ -21,8 +26,10 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "critters": "^0.0.23",
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
+    "png-to-ico": "^3.0.1",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

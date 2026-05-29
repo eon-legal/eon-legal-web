@@ -3,14 +3,26 @@
  * Update these values before production deploy.
  */
 
+/**
+ * Normalize a site URL: strip trailing slash, force https, and force the
+ * `www.` subdomain on the production host. Ensures canonical/hreflang
+ * tags never drift to non-www even if `NEXT_PUBLIC_SITE_URL` is set
+ * incorrectly in the deployment environment.
+ */
+function normalizeSiteUrl(raw: string): string {
+  const trimmed = raw.replace(/\/$/, "").replace(/^http:\/\//, "https://");
+  if (trimmed === "https://eonlegalsolutions.com") {
+    return "https://www.eonlegalsolutions.com";
+  }
+  return trimmed;
+}
+
 export const siteConfig = {
   name: "EonLegal Solutions",
   shortName: "EonLegal",
-  url:
-    process.env.NEXT_PUBLIC_SITE_URL ??
-    (process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : "http://localhost:3000"),
+  url: normalizeSiteUrl(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.eonlegalsolutions.com"
+  ),
   locale: "es_ES",
   language: "es",
   twitterHandle: "@eonlegal",
@@ -19,7 +31,7 @@ export const siteConfig = {
   authors: [
     {
       name: "EonLegal Solutions",
-      url: "https://eonlegalsolutions.com",
+      url: "https://www.eonlegalsolutions.com",
     },
   ],
   keywords: {
@@ -80,7 +92,11 @@ export const siteConfig = {
     value: 5,
     count: 18,
     bestRating: 5,
-    worstRating: 5,
+    // Schema.org `worstRating` is the lowest possible value on the scale,
+    // not the lowest received review. With a 1-5 star scale this must be
+    // 1 so Google's rich-results validator interprets the rating range
+    // correctly.
+    worstRating: 1,
     source: "Google",
     sourceUrl: "https://maps.google.com/?cid=4037852907856911343",
   },

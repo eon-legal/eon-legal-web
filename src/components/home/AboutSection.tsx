@@ -18,7 +18,7 @@ export function AboutSection({ dict }: AboutSectionProps): React.ReactElement {
     >
       <div className="mx-auto grid max-w-6xl gap-16 px-6 py-24 md:py-32 lg:grid-cols-[1fr_1.1fr] lg:gap-20 lg:px-10">
         <Reveal className="order-2 lg:order-1">
-          <figure className="relative aspect-[4/5] w-full overflow-hidden rounded-md border border-border bg-surface">
+          <figure className="relative aspect-4/5 w-full overflow-hidden rounded-md border border-border bg-surface">
             <Image
               src="/about/office.webp"
               alt={t.imageAlt}

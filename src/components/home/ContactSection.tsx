@@ -29,11 +29,12 @@ export function ContactSection({
             fill
             sizes="(min-width: 1024px) 60vw, 100vw"
             priority={false}
+            loading="lazy"
             className="pointer-events-none absolute inset-0 object-cover opacity-[0.08] grayscale"
           />
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute inset-0 bg-gradient-to-r from-surface via-surface/85 to-surface/60"
+            className="pointer-events-none absolute inset-0 bg-linear-to-r from-surface via-surface/85 to-surface/60"
           />
           <div
             aria-hidden="true"
