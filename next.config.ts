@@ -16,6 +16,17 @@ const nextConfig: NextConfig = {
   trailingSlash: false,
   async redirects() {
     return [
+      // Force apex (no-www) to canonical www host as a 308. Vercel's
+      // built-in apex redirect is a 307, which can leave the non-www
+      // variant lingering in Google's index. Matching on `host` here
+      // overrides the platform default with a permanent redirect that
+      // preserves the request path.
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "eonlegalsolutions.com" }],
+        destination: "https://www.eonlegalsolutions.com/:path*",
+        permanent: true,
+      },
       // Legacy /es paths permanently redirect to root-level equivalents.
       // The default locale (Spanish) now lives at the site root, so
       // /es and /es/foo are no longer canonical.
