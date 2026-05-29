@@ -92,7 +92,11 @@ export const siteConfig = {
     value: 5,
     count: 18,
     bestRating: 5,
-    worstRating: 5,
+    // Schema.org `worstRating` is the lowest possible value on the scale,
+    // not the lowest received review. With a 1-5 star scale this must be
+    // 1 so Google's rich-results validator interprets the rating range
+    // correctly.
+    worstRating: 1,
     source: "Google",
     sourceUrl: "https://maps.google.com/?cid=4037852907856911343",
   },
