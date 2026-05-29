@@ -34,7 +34,7 @@ export function ContactSection({
           />
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute inset-0 bg-gradient-to-r from-surface via-surface/85 to-surface/60"
+            className="pointer-events-none absolute inset-0 bg-linear-to-r from-surface via-surface/85 to-surface/60"
           />
           <div
             aria-hidden="true"
