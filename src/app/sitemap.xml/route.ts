@@ -2,6 +2,24 @@ import { siteConfig } from "@/lib/config";
 import { serviceSlugs } from "@/lib/data/services";
 import { defaultLocale, hreflangTag, locales } from "@/lib/i18n/config";
 
+// Deploy timestamp used as `lastmod` for every URL. Prefers Vercel's
+// build-time `VERCEL_GIT_COMMIT_SHA` linked deploy date via env, falling
+// back to module-init time. Module init in a serverless lambda fires on
+// cold start, not on every request, so the value is stable across the
+// life of one deployment and refreshes with each new build. Format:
+// YYYY-MM-DD (Google ignores time-of-day for sitemap lastmod).
+const DEPLOY_DATE = (() => {
+  // Vercel injects this at build time for every deployment.
+  const vercelEnv = process.env.VERCEL_DEPLOYMENT_CREATED_AT;
+  if (vercelEnv) {
+    const parsed = Number.parseInt(vercelEnv, 10);
+    if (Number.isFinite(parsed)) {
+      return new Date(parsed).toISOString().slice(0, 10);
+    }
+  }
+  return new Date().toISOString().slice(0, 10);
+})();
+
 export async function GET() {
   const rawBase = siteConfig.url.replace(/\/$/, "");
   const base = rawBase.includes("://www.")
@@ -14,30 +32,30 @@ export async function GET() {
     locale === defaultLocale ? "" : `/${locale}`;
 
   const routes = [
-    { path: "", freq: "weekly", priority: 1, modified: "2026-04-25" },
+    { path: "", freq: "weekly", priority: 1, modified: DEPLOY_DATE },
     {
       path: "/aviso-legal",
       freq: "yearly",
       priority: 0.3,
-      modified: "2026-04-25",
+      modified: DEPLOY_DATE,
     },
     {
       path: "/privacidad",
       freq: "yearly",
       priority: 0.3,
-      modified: "2026-04-25",
+      modified: DEPLOY_DATE,
     },
     {
       path: "/cookies",
       freq: "yearly",
       priority: 0.3,
-      modified: "2026-04-25",
+      modified: DEPLOY_DATE,
     },
     ...serviceSlugs.map((s) => ({
       path: `/servicios/${s.id}`,
       freq: "monthly",
       priority: 0.8,
-      modified: "2026-04-25",
+      modified: DEPLOY_DATE,
     })),
   ];
 
