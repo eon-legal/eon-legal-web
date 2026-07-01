@@ -25,8 +25,6 @@ const copy: Readonly<
       readonly separator: string;
       readonly headline: string;
       readonly reviewsSuffix: string;
-      readonly campaignKicker: string;
-      readonly campaignDeadline: string;
     }
   >
 > = {
@@ -35,16 +33,12 @@ const copy: Readonly<
     separator: "Especializado en extranjería",
     headline: "Extranjería, nacionalidad y residencia en España.",
     reviewsSuffix: "Google · {count} reseñas verificadas",
-    campaignKicker: "Boletín · Regularización extraordinaria 2026",
-    campaignDeadline: "Cierra 30 jun · 2026",
   },
   en: {
     eyebrow: "Law firm",
     separator: "Spanish immigration specialists",
     headline: "Immigration, residency and citizenship in Spain.",
     reviewsSuffix: "Google · {count} verified reviews",
-    campaignKicker: "Bulletin · Extraordinary regularisation 2026",
-    campaignDeadline: "Closes 30 Jun · 2026",
   },
 };
 
@@ -102,43 +96,6 @@ export default async function Image({
           }}
         >
           {rating}
-        </div>
-
-        <div
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            right: 0,
-            height: 56,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            padding: "0 80px",
-            borderBottom: "1px solid rgba(255,255,255,0.18)",
-            background: "rgba(255,255,255,0.04)",
-            fontSize: 18,
-            letterSpacing: 5,
-            textTransform: "uppercase",
-            color: "#FFFFFF",
-            fontWeight: 500,
-          }}
-        >
-          <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-            <div
-              style={{
-                width: 8,
-                height: 8,
-                borderRadius: 999,
-                background: "#FFFFFF",
-                display: "flex",
-              }}
-            />
-            <div style={{ display: "flex" }}>{t.campaignKicker}</div>
-          </div>
-          <div style={{ display: "flex", color: "#FFFFFF" }}>
-            {t.campaignDeadline}
-          </div>
         </div>
 
         <div

@@ -125,7 +125,7 @@ export const servicesContentEs: Readonly<
         answer: "No existe un límite legal en el número de solicitudes de arraigo. Sin embargo, cada resolución denegatoria crea antecedentes administrativos y puede dificultar solicitudes posteriores si no se presenta documentación sustancialmente mejorada o nuevos fundamentos. Eon Legal recomienda preparar un expediente sólido desde la primera solicitud para maximizar las probabilidades de éxito.",
       },
     ],
-    relatedServices: ["residencia", "regularizacion-2026"],
+    relatedServices: ["residencia"],
   },
   visados: {
     title: "Visados para España: trabajo, estudios, no lucrativo y familia",
@@ -347,84 +347,5 @@ export const servicesContentEs: Readonly<
       },
     ],
     relatedServices: ["familiares-ue", "residencia"],
-  },
-  "regularizacion-2026": {
-    title: "Regularización extraordinaria 2026: residencia y trabajo legal en España",
-    metaTitle: "Regularización extraordinaria 2026 en España: Mercurio",
-    shortTitle: "Regularización 2026",
-    metaDescription:
-      "Regularización extraordinaria 2026: permanencia antes 1 ene 2026, plazo 30 jun, Mercurio UTEX, silencio positivo. Presentación telemática. Consulta gratis.",
-    highlightsHeading: "Legitimidades válidas para la regularización extraordinaria 2026",
-    requirementsHeading: "Documentación para acreditar la estancia y vínculo en España",
-    bodyNote: [
-      "El Real Decreto de regularización extraordinaria abre una ventana única hasta el 30 de junio de 2026 para que personas migrantes ya residentes en España accedan a una autorización de residencia y trabajo de un año con acceso a la Seguridad Social y tarjeta sanitaria. El proceso tiene tres hitos clave: (1) solicitud telemática abre el 16 de abril de 2026, 24/7 a través de la plataforma única Mercurio del Ministerio de Inclusión, Seguridad Social y Migraciones; (2) atención presencial con cita previa arranca el 20 de abril en las Oficinas de Extranjería; (3) plazo cierra definitivamente el 30 de junio de 2026 (sin prórrogas).",
-      "La autorización concedida —o presumida por silencio positivo administrativo (art. 24 Ley de Procedimiento Administrativo Común)— tiene vigencia de doce meses e incluye número de afiliación a la Seguridad Social, tarjeta sanitaria y autorización para trabajar en cualquier sector sin restricción geográfica. Al término del año, la situación puede consolidarse hacia las vías ordinarias del Reglamento de Extranjería (residencia por cuenta ajena, propia, de larga duración, o familiares) siempre que se acredite continuidad de vínculo laboral o integración social. Esta regularización responde a triple legitimidad: social (respaldada por >700.000 firmas de iniciativa legislativa popular y ~900 asociaciones), política (apoyo parlamentario), y económica (respaldo de patronal y sindicatos para reforzar derechos laborales).",
-    ],
-    faqs: [
-      {
-        question:
-          "¿Qué es el silencio positivo en la regularización extraordinaria 2026?",
-        answer:
-          "El silencio administrativo positivo significa que si la UTEX no resuelve expresamente la solicitud dentro del plazo legal (entre 3-6 meses típicamente, máximo 1 año), la autorización de residencia y trabajo se entiende automáticamente concedida. No necesitas obtener una resolución expresa del Ministerio para empezar a trabajar legalmente. Esta presunción favorable es un mecanismo de protección procesal: después del silencio, la autorización es válida y puedes solicitar tu afiliación a la Seguridad Social y tarjeta sanitaria.",
-      },
-      {
-        question:
-          "¿Qué documentos privados acreditan la estancia para la regularización 2026?",
-        answer:
-          "Documentos privados válidos: (1) contratos de arrendamiento o recibos de alquiler con la dirección de residencia; (2) facturas de servicios a nombre del solicitante (agua, luz, gas, teléfono, internet); (3) extractos bancarios o justificantes de transferencia que demuestren presencia en la localidad; (4) nóminas o contratos laborales de cualquier período en España; (5) certificados de matrícula escolar de hijos en colegios españoles; (6) cartas de empleadores o referencias laborales con fechas; (7) recibos de servicios médicos o farmacéuticos; (8) facturas de compra con domicilio. El conjunto debe cubrir el período de permanencia desde antes del 1 de enero de 2026 de forma continua.",
-      },
-      {
-        question:
-          "¿Puedo solicitar la regularización si tengo una orden de expulsión no ejecutada?",
-        answer:
-          "Depende de múltiples factores: tipo de resolución (administrativa vs judicial), si está firme o pendiente de recurso, estado del procedimiento contencioso, fecha de emisión. Eon Legal realiza una revisión previa exhaustiva de viabilidad para determinar si la orden de expulsión afecta a la elegibilidad. En algunos supuestos la regularización extraordinaria puede tramitarse incluso con antecedentes administrativos previos si la orden no está firme o si concurren circunstancias que suspenden su ejecución. El análisis es individual por caso.",
-      },
-      {
-        question:
-          "¿Qué ocurre cuando caduca la autorización de un año de la regularización 2026?",
-        answer:
-          "La autorización inicial otorgada en esta regularización tiene vigencia de doce meses calendario. Al vencimiento (12 meses desde la concesión o silencio positivo), tienes dos opciones: (1) solicitar renovación del permiso por un año más si se mantiene el vínculo inicial (trabajo o circunstancia de origen); (2) modificar la situación migratoria hacia un permiso ordinario del Reglamento de Extranjería (residencia por cuenta ajena si tienes contrato de trabajo en vigor, residencia por cuenta propia si tienes actividad empresarial, larga duración si cumples 5 años de residencia continuada). La transición debe iniciarse antes de que expire el año para evitar períodos sin autorización.",
-      },
-      {
-        question:
-          "¿Puede Eon Legal gestionar la solicitud desde cualquier comunidad autónoma?",
-        answer:
-          "Sí. La regularización extraordinaria se tramita de forma centralizada ante la Unidad de Tramitación de Expedientes de Extranjería (UTEX) del Ministerio, independientemente de la comunidad autónoma donde residas. No hay oficinas autonómicas intermedias. Eon Legal gestiona expedientes de forma 100% telemática en todo el territorio español desde su sede en A Coruña: coordinación documental, preparación de solicitud, presentación en Mercurio, seguimiento ante UTEX, y respuesta a requerimientos sin necesidad de presencia física.",
-      },
-    ],
-    relatedServices: ["residencia", "arraigo"],
-    summary:
-      "Proceso extraordinario por Real Decreto que abre hasta 30 jun 2026 para personas migrantes residentes en España obtener autorización de residencia y trabajo de un año con Seguridad Social y tarjeta sanitaria.",
-    longDescription: [
-      "El Real Decreto de regularización extraordinaria 2026 es una iniciativa de triple legitimidad que abre una ventana única hasta el 30 de junio de 2026 para que miles de personas migrantes que ya conviven en España accedan a una autorización de residencia y trabajo de un año, número de afiliación a la Seguridad Social, y tarjeta sanitaria del territorio de residencia. La iniciativa tiene respaldo social (>700.000 firmas de Iniciativa Legislativa Popular más ~900 asociaciones), político (aprobación parlamentaria en su toma en consideración), y económico (apoyo expreso de patronal UGT-CCOO-CEOE por refuerzo de derechos laborales y seguridad jurídica en relaciones de trabajo).",
-      "El proceso está centralizado en la Unidad de Tramitación de Expedientes de Extranjería (UTEX) del Ministerio de Inclusión, Seguridad Social y Migraciones mediante la plataforma única Mercurio: solicitud telemática disponible 24/7 desde 16 abril, atención presencial desde 20 abril, plazo definitivo 30 junio. El silencio administrativo positivo (no resolución expresa dentro del plazo legal) genera automáticamente la autorización.",
-      "En Eon Legal, gestionamos el ciclo completo: revisión previa exhaustiva de viabilidad (evaluación de riesgos por antecedentes, órdenes administrativas, eligibilidad por legitimidad), recopilación y verificación de prueba de permanencia (documentos públicos y privados), presentación telemática en Mercurio, seguimiento del expediente ante UTEX, respuesta a requerimientos administrativos, y asesoramiento en la transición hacia vías ordinarias del Reglamento de Extranjería al término del año.",
-    ],
-    highlights: [
-      "Autorización de residencia y trabajo válida por 12 meses (renovable o convertible a vías ordinarias)",
-      "Alta y número de afiliación inmediata en Seguridad Social (dentro de 3 meses desde concesión/silencio)",
-      "Tarjeta sanitaria de cobertura universal del territorio de residencia",
-      "Presentación telemática 24/7 a través de plataforma Mercurio (16 abril – 30 junio 2026)",
-      "Pasarela hacia vías ordinarias de residencia (residencia por cuenta ajena, propia, larga duración, familia)",
-    ],
-    requirements: [
-      "Encontrarse en España de forma continuada antes del 1 de enero de 2026 bajo una de las tres legitimidades válidas:",
-      "Legitimidad social — permanencia comprobada con raíces establecidas (familia, vínculos comunitarios)",
-      "Legitimidad política — autorización por protección internacional o asilo en revisión/procedimiento",
-      "Legitimidad económica — trabajador con vínculo laboral demostrable o acceso a la Seguridad Social",
-      "Haber permanecido en territorio español de forma ininterrumpida al menos cinco meses en el momento de presentación de la solicitud (requisito mínimo para todas las legitimidades)",
-      "Carencia de antecedentes penales: no constar en registros españoles ni extranjeros por delitos graves; no tener orden de expulsión firme o en ejecución; no suponer una amenaza para el orden público o seguridad del Estado",
-      "Documentos públicos acreditativos de estancia — empadronamiento, inscripción en registro municipal, cita consular, registros públicos españoles",
-      "Documentos privados acreditativos de estancia — arrendamientos, facturas de servicios, nóminas, cartas de empleadores, extractos bancarios, matrícula escolar",
-      "Combinación de documentos públicos y privados para período completo desde antes del 1 de enero de 2026",
-      "Documentación de legitimidad social — empadronamiento continuado, certificado de arraigo comunitario o declaraciones de personas conocidas",
-      "Documentación de legitimidad política — certificado de Dirección General de Policía de solicitud de asilo o protección internacional, resolución de acogida provisional",
-      "Documentación de legitimidad económica — nóminas, contratos laborales, resolución de inscripción en Seguridad Social, número de afiliación o certificación de cotización",
-      "Pasaporte o documento de viaje válido y legible",
-      "Modelo de solicitud completado según instrucciones de UTEX en plataforma Mercurio (disponible en español e inglés)",
-      "Fotografía tipo carné o similar (especificaciones técnicas DGT)",
-      "Presentar solicitud antes del 30 de junio de 2026 sin prórroga: modalidad telemática 24/7 en Mercurio, o modalidad presencial previa cita en Oficina de Extranjería",
-      "En caso de requerimiento por UTEX: responder en plazo máximo de 10 días hábiles con documentación adicional solicitada o aclaraciones",
-    ],
   },
 };

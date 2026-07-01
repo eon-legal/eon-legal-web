@@ -21,8 +21,6 @@ This file tracks when each content section was last optimized and what version o
 | Visado familiar España | 2026-04-28 | Phase 1 | 90 | Published |
 | Diferencia arraigo laboral social | 2026-04-28 | Phase 1 | 89 | Published |
 | Consultas fuera A Coruña | 2026-04-28 | Phase 1 | 88 | Published |
-| Regularización 2026 aplicaciones | 2026-04-28 | Phase 1 | 93 | Published |
-| Plataforma Mercurio regularización | 2026-04-28 | Phase 1 | 94 | Published |
 
 ### English FAQs (src/lib/data/faqs.en.ts)
 | Item | Last Updated | Version | GEO Score | Status |
@@ -32,8 +30,6 @@ This file tracks when each content section was last optimized and what version o
 | Family member visa Spain | 2026-04-28 | Phase 1 | 90 | Published |
 | Employment-based vs social arraigo | 2026-04-28 | Phase 1 | 89 | Published |
 | Handle cases outside A Coruña | 2026-04-28 | Phase 1 | 88 | Published |
-| 2026 extraordinary regularisation filing | 2026-04-28 | Phase 1 | 93 | Published |
-| Mercurio platform regularisation | 2026-04-28 | Phase 1 | 94 | Published |
 
 ---
 
@@ -108,18 +104,6 @@ This file tracks when each content section was last optimized and what version o
 - **SEO Score**: 80/100
 - **Status**: Published ✅
 - **Notes**: Administrative processes for traffic authority (DGT)
-
-### Regularización-2026 (src/lib/data/services.es.ts & services.en.ts)
-- **Last Updated**: 2026-04-28
-- **Version**: Phase 3 (GEO Optimization)
-- **Word Count**: 680 Spanish / 720 English
-- **Legal Citations**: 4 (RD extraordinary regularisation, Art. 24 LRJSP, Mercurio platform)
-- **Data Points**: 10 (April 16-June 30, silencio positivo, €0 cost, 3 legitimacy grounds)
-- **GEO Score**: 95/100 ⭐
-- **SEO Score**: 86/100
-- **Status**: Published ✅
-- **Notes**: Highest GEO score tied with Arraigo; time-sensitive content with clear deadline
-
 ---
 
 ## Overall Content Quality Metrics (v2.1.0)
@@ -142,8 +126,8 @@ This file tracks when each content section was last optimized and what version o
 - **SEO Score** (EEAT): 82/100 — Strong for immigration law niche
 
 ### Content Coverage
-- **Services optimized**: 7/7 (100%)
-- **FAQ items optimized**: 7/7 (100%)
+- **Services optimized**: 6/6 (100%)
+- **FAQ items optimized**: 5/5 (100%)
 - **Bilingual parity**: 100% (all Spanish/English pairs maintained)
 - **Legal citations verified**: 100% against Spanish official sources
 - **Veto items**: 0 critical failures
@@ -171,7 +155,6 @@ Improvements planned:
 - Check Spanish immigration law changes
 - Verify decree/article citations remain current
 - Update timeline estimates based on recent case data
-- Monitor 2026 extraordinary regularisation deadline (June 30)
 
 ---
 

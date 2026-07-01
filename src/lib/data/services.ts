@@ -63,7 +63,6 @@ export const serviceSlugs: readonly ServiceSlug[] = [
   { id: "nacionalidad", index: "04" },
   { id: "familiares-ue", index: "05" },
   { id: "dgt", index: "06" },
-  { id: "regularizacion-2026", index: "07" },
 ] as const;
 
 const contentByLocale: Readonly<

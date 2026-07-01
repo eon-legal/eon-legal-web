@@ -7,10 +7,8 @@ import { ContactSection } from "@/components/home/ContactSection";
 import { FaqSection } from "@/components/home/FaqSection";
 import { HeroSection } from "@/components/home/HeroSection";
 import { ServicesSection } from "@/components/home/ServicesSection";
-import { UrgentBannerSection } from "@/components/home/UrgentBannerSection";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { SiteHeader } from "@/components/site/SiteHeader";
-import { UrgentModal } from "@/components/site/UrgentModal";
 import { SectionSkeleton } from "@/components/ui/SectionSkeleton";
 
 // Lazy-load below-the-fold sections to reduce initial JS
@@ -146,7 +144,6 @@ export default async function HomePage({
       <SiteHeader dict={dict.site} locale={locale} />
       <main id="main" className="flex-1">
         <HeroSection dict={dict} />
-        <UrgentBannerSection dict={dict} locale={locale} />
         <ServicesSection dict={dict} locale={locale} />
         <AboutSection dict={dict} />
         <Suspense fallback={<SectionSkeleton />}>
@@ -162,7 +159,6 @@ export default async function HomePage({
         <ContactSection dict={dict} />
       </main>
       <SiteFooter dict={dict.site} locale={locale} />
-      <UrgentModal dict={dict.site.urgent.modal} locale={locale} />
     </>
   );
 }

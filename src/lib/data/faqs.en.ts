@@ -34,16 +34,4 @@ export const homeFaqsEn: readonly FaqItem[] = [
     answer:
       "Yes. Eon Legal manages immigration files across all of Spain through online filing with the Administration (Immigration Offices, UTEX and other competent bodies), secure video consultations with end-to-end encryption, and digital document custody backed up physically at our A Coruña office. Our team coordinates all file management without requiring in-person client attendance, ensuring confidentiality and continuity throughout the process.",
   },
-  {
-    question:
-      "When can applications for the 2026 extraordinary regularisation process be filed?",
-    answer:
-      "The 2026 extraordinary regularisation process offers two simultaneous channels. The online channel opens Thursday 16 April 2026 and is available 24 hours daily throughout the application period, managed by the Immigration Case-Handling Unit (UTEX) via the Mercurio platform. Appointments for in-person filing can be requested from 16 April, with in-office attention beginning Monday 20 April. The deadline for filing through either channel is non-extendable: 30 June 2026.",
-  },
-  {
-    question:
-      "What is the Mercurio platform and what role does it play in the extraordinary regularisation?",
-    answer:
-      "Mercurio is the single platform of the Spanish Ministry of Inclusion, Social Security and Migration designed exclusively for the 2026 extraordinary regularisation process. Through Mercurio, applicants submit all required documentation: criminal records, proof of residence, and evidence of social, labour or political ties supporting the application. The Immigration Case-Handling Unit (UTEX) uses Mercurio to review files, request clarifications when necessary, and issue the initial one-year residence and work authorisation with access to Spain's Social Security system.",
-  },
 ];

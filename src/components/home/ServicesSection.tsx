@@ -1,7 +1,6 @@
 import { ServiceCard } from "@/components/home/ServiceCard";
 import { Reveal } from "@/components/ui/Reveal";
 import { StaggerList } from "@/components/ui/StaggerList";
-import { REGULARIZACION_CAMPAIGN } from "@/lib/data/regularizacion-campaign";
 import { getServices } from "@/lib/data/services";
 import type { Locale } from "@/lib/i18n/config";
 import type { Dictionary } from "@/lib/i18n/dictionaries/es";
@@ -16,12 +15,7 @@ export function ServicesSection({
   locale,
 }: ServicesSectionProps): React.ReactElement {
   const t = dict.home.services;
-  // The 2026 extraordinary regularisation has its own dedicated dispatch
-  // section (`UrgentBannerSection`) — exclude it from the regular grid to
-  // avoid duplicating campaign messaging on the landing.
-  const services = getServices(locale).filter(
-    (service) => service.id !== REGULARIZACION_CAMPAIGN.serviceId
-  );
+  const services = getServices(locale);
   return (
     <section
       id="servicios"

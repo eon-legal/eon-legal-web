@@ -19,12 +19,10 @@ import {
 } from "@/lib/i18n/alternates";
 import { isLocale, locales, localizePath, ogLocale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
-import { REGULARIZACION_CAMPAIGN } from "@/lib/data/regularizacion-campaign";
 import {
   breadcrumbSchema,
   faqPageSchema,
   legalServiceSchema,
-  specialAnnouncementSchema,
   webPageSchema,
 } from "@/lib/seo/jsonld";
 
@@ -119,18 +117,6 @@ export default async function ServicePage({
     ),
     ...(service.faqs
       ? [faqPageSchema(service.faqs.map((f) => ({ ...f })), locale)]
-      : []),
-    ...(service.id === REGULARIZACION_CAMPAIGN.serviceId
-      ? [
-          specialAnnouncementSchema({
-            locale,
-            name: service.title,
-            text: longDescriptionText,
-            url: canonicalFor(locale, path),
-            datePosted: REGULARIZACION_CAMPAIGN.onlineOpensISO.split("T")[0],
-            expires: REGULARIZACION_CAMPAIGN.deadlineISO.split("T")[0],
-          }),
-        ]
       : []),
   ];
 

@@ -20,10 +20,6 @@ export function SiteHeader({
     { href: "#proceso", label: dict.header.nav.process },
     { href: "#faq", label: dict.header.nav.faq },
   ];
-  const featuredNav = {
-    href: "#regularizacion-2026",
-    label: dict.header.nav.regularizacion,
-  };
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/70">
@@ -58,13 +54,6 @@ export function SiteHeader({
               {link.label}
             </a>
           ))}
-          <a
-            href={featuredNav.href}
-            className="hidden items-center gap-2 text-sm font-medium text-foreground transition-opacity hover:opacity-80 lg:inline-flex"
-          >
-            <span aria-hidden="true" className="pulse-dot text-foreground" />
-            {featuredNav.label}
-          </a>
         </nav>
 
         <div className="flex items-center gap-3">

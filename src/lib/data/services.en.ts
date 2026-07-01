@@ -168,7 +168,7 @@ export const servicesContentEn: Readonly<
         answer: "There is no legal limit on the number of arraigo applications. However, each refusal creates an administrative record and may complicate subsequent applications if substantially improved documentation or new grounds are not presented. Eon Legal recommends building a solid file from the first application to maximise the chances of success.",
       },
     ],
-    relatedServices: ["residencia", "regularizacion-2026"],
+    relatedServices: ["residencia"],
   },
   visados: {
     title: "Spanish visas: work, study, non-lucrative and family",
@@ -336,85 +336,5 @@ export const servicesContentEn: Readonly<
       },
     ],
     relatedServices: ["residencia", "visados"],
-  },
-  "regularizacion-2026": {
-    title: "Spain's 2026 extraordinary regularisation: Mercurio filing & UTEX processing",
-    metaTitle: "Spain 2026 extraordinary regularisation: Mercurio filing",
-    shortTitle: "Regularisation 2026",
-    metaDescription:
-      "Apply for Spain's 2026 extraordinary regularisation before 30 June. Eligibility review, Mercurio online filing and UTEX follow-up. Free consultation.",
-    highlightsHeading: "Who can apply for the 2026 extraordinary regularisation",
-    requirementsHeading: "Documents to evidence your stay in Spain",
-    bodyNote: [
-      "The process has three key milestones: online filing opens on 16 April 2026 through the Mercurio platform of the Ministry of Inclusion, Social Security and Migration; in-person appointments start on 20 April at immigration offices; and the filing deadline closes definitively on 30 June 2026 with no extensions.",
-      "The permit granted — or deemed granted by positive administrative silence — is valid for twelve months and includes social security registration and the regional health card. On expiry, the status can be consolidated through the standard routes of the Immigration Regulations, such as employed, self-employed or long-term residency.",
-    ],
-    faqs: [
-      {
-        question:
-          "What is 'positive administrative silence' in the 2026 extraordinary regularisation?",
-        answer:
-          "If UTEX does not issue an express decision within the legal timeframe, administrative silence is positive: the initial residence and work permit is deemed granted. You do not need an express resolution to begin working legally in Spain.",
-      },
-      {
-        question:
-          "What private documents can evidence my stay for the 2026 regularisation?",
-        answer:
-          "Rental contracts, utility bills in your name (water, electricity, phone), bank statements or transfer receipts, payslips or employment contracts, and school enrolment certificates for children are all valid. The documents must collectively cover your continuous stay in Spain since before 1 January 2026.",
-      },
-      {
-        question:
-          "Can I apply if I have an unexecuted expulsion order?",
-        answer:
-          "It depends on the type of order and whether it is final or under appeal. Eon Legal carries out a preliminary eligibility review to determine whether the order affects eligibility before starting the case. In some scenarios the extraordinary regularisation can proceed even with prior administrative proceedings.",
-      },
-      {
-        question:
-          "What happens when the one-year regularisation permit expires?",
-        answer:
-          "The initial authorisation is valid for twelve months. Once it expires, you can apply for a renewal or transition to a long-term residence and work permit under the Immigration Regulations, provided you can evidence employment or economic activity.",
-      },
-      {
-        question:
-          "Can Eon Legal manage the application from any region in Spain?",
-        answer:
-          "Yes. The extraordinary regularisation is filed centrally with UTEX regardless of the applicant's region of residence. Eon Legal handles cases fully online from its A Coruña office, serving clients across all of Spain.",
-      },
-    ],
-    relatedServices: ["residencia", "arraigo"],
-    summary:
-      "Extraordinary regularisation process by Royal Decree open until 30 June 2026 for migrants residing in Spain to obtain one-year residence and work permit with Social Security and public health coverage.",
-    longDescription: [
-      "The Royal Decree on extraordinary regularisation 2026 is a threefold-legitimacy initiative opening a unique window until 30 June 2026 for thousands of migrants already living in Spain to access a one-year residence and work permit, Social Security affiliation number, and public health card of their region of residence. The initiative has social legitimacy (backed by >700,000 signatures from Popular Legislative Initiative plus ~900 civil associations), political legitimacy (parliamentary approval), and economic legitimacy (explicit endorsement from employer federations and trade unions for strengthening worker rights and employment security).",
-      "The process is centralised with Spain's Immigration Case-Handling Unit (UTEX) via the single Mercurio platform operated by the Ministry of Inclusion, Social Security and Migration: online filing available 24/7 from 16 April, in-person appointments from 20 April, deadline 30 June 2026 (non-extendable). Administrative silence operating positively (no express resolution within statutory timeline) automatically grants the permit under Article 24 of the Common Administrative Procedure Act. Processing typically takes 3–6 months from filing to resolution or silence.",
-      "The issued permit — or presumed by administrative silence — grants 12 months validity plus immediate access to full labour market without sectoral restrictions and automatic Social Security enrollment. At year-end, the status converts to ordinary Immigration Regulations routes (employee residence, self-employed, long-term, family) provided continuous work or integration ties are evidenced.",
-      "At Eon Legal, we handle the complete cycle: exhaustive preliminary eligibility review (risk assessment for administrative orders, criminal records, eligibility by legitimacy grounds), gathering and verification of residency evidence (public records and private documentation), online filing through Mercurio, case tracking with UTEX, responses to administrative requests, and advisory support for transition to ordinary residency routes.",
-    ],
-    highlights: [
-      "Residence and work permit valid 12 months (renewable or convertible to ordinary routes)",
-      "Immediate Social Security registration and affiliation number (within 3 months of grant/silence)",
-      "Public health card covering the entire region of residence",
-      "24/7 online filing through Mercurio platform (16 April – 30 June 2026 deadline)",
-      "Pathway to ordinary residency routes (employee, self-employed, long-term, family residency)",
-    ],
-    requirements: [
-      "Continuous presence in Spain before 1 January 2026 under one of three valid legitimacy grounds:",
-      "Social legitimacy — established community roots (family, community ties)",
-      "Political legitimacy — international protection or asylum under review/processing",
-      "Economic legitimacy — demonstrated labour link or Social Security access",
-      "Minimum five months of continuous unbroken stay in Spanish territory at time of application",
-      "No criminal record (no entries in Spanish or foreign registers for serious offences; no standing or enforceable deportation order; no threat to public order or state security)",
-      "Public documents evidencing residence — municipal padrón registration, municipal registry records, consular citation, Spanish public records",
-      "Private documents evidencing residence — rental agreements, utility invoices (water, gas, electricity, telephone), bank statements, employment contracts, letters from employers, school enrolment of children",
-      "Combination of public and private documents for complete coverage from before 1 January 2026",
-      "Social legitimacy documentation — continuous padrón records plus community arraigo certificate or witness declarations",
-      "Political legitimacy documentation — certificate from Police Directorate General of asylum application or international protection status, provisional reception resolution",
-      "Economic legitimacy documentation — pay slips, employment contracts, Social Security registration confirmation or proof of affiliation and contribution history",
-      "Valid passport or travel document and legible",
-      "Completed application form per UTEX instructions on Mercurio platform (available Spanish and English)",
-      "Passport-style photograph (DGT technical specifications)",
-      "Application filed before 30 June 2026 (non-extendable): online 24/7 via Mercurio, or in-person at Immigration Office by prior appointment",
-      "If UTEX issues administrative request: respond within maximum 10 business days with additional documentation or clarification",
-    ],
   },
 };

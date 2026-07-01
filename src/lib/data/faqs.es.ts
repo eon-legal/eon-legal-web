@@ -33,16 +33,4 @@ export const homeFaqsEs: readonly FaqItem[] = [
     answer:
       "Sí. Eon Legal gestiona expedientes de extranjería en toda España mediante presentación telemática ante la Administración (Oficinas de Extranjería, UTEX, y otros órganos competentes), videoconsulta segura con encriptación end-to-end, y custodia documental digital con respaldo físico en nuestra oficina de A Coruña. Nuestro equipo coordina la tramitación sin necesidad de presencia física del cliente, garantizando confidencialidad y continuidad en cada expediente.",
   },
-  {
-    question:
-      "¿Cuándo se pueden presentar las solicitudes del proceso de regularización extraordinaria de 2026?",
-    answer:
-      "El proceso de regularización extraordinaria 2026 ofrece dos vías simultáneas. La vía telemática se abre el jueves 16 de abril de 2026 y permanece disponible las 24 horas del día durante todo el periodo de solicitud, gestionada por la Unidad de Tramitación de Expedientes de Extranjería (UTEX) mediante la plataforma Mercurio. La cita previa para atención presencial puede solicitarse desde el 16 de abril, con atención en oficinas a partir del lunes 20 de abril. El plazo para presentar por cualquiera de las dos vías finaliza improrrogablemente el 30 de junio de 2026.",
-  },
-  {
-    question:
-      "¿Qué es la plataforma Mercurio y qué papel tiene en la regularización extraordinaria?",
-    answer:
-      "Mercurio es la plataforma única del Ministerio de Inclusión, Seguridad Social y Migraciones diseñada exclusivamente para la tramitación del proceso de regularización extraordinaria 2026. A través de Mercurio se presenta toda la documentación requerida: antecedentes, justificación de permanencia y pruebas del vínculo social, laboral o político que fundamenta la solicitud. La Unidad de Tramitación de Expedientes de Extranjería (UTEX) utiliza Mercurio para revisar expedientes, solicitar subsanaciones cuando es necesario, y emitir la resolución de autorización inicial de residencia y trabajo de duración de un año con acceso a la Seguridad Social.",
-  },
 ];

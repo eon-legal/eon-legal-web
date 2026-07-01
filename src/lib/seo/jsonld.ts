@@ -189,37 +189,6 @@ export function faqPageSchema(
   });
 }
 
-export function specialAnnouncementSchema({
-  locale,
-  name,
-  text,
-  url,
-  datePosted,
-  expires,
-}: {
-  locale: Locale;
-  name: string;
-  text: string;
-  url: string;
-  datePosted: string;
-  expires: string;
-}): string {
-  return jsonLdScript({
-    "@type": "SpecialAnnouncement",
-    name,
-    text,
-    url,
-    inLanguage: hreflangTag[locale],
-    datePosted,
-    expires,
-    category: "https://www.wikidata.org/wiki/Q17629376",
-    announcementLocation: {
-      "@type": "Country",
-      name: "Spain",
-    },
-  });
-}
-
 export function breadcrumbSchema(
   items: ReadonlyArray<{ name: string; url: string }>,
   locale: Locale
